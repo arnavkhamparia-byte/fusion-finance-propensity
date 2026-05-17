@@ -28,12 +28,22 @@ const Field = ({ label, value, mono, highlight }) => (
   </div>
 )
 
-const ContactRow = ({ icon: Icon, label, value, color }) => {
+const COLOR_MAP = {
+  green:  { bg: 'bg-green/10',  text: 'text-green' },
+  blue:   { bg: 'bg-blue/10',   text: 'text-blue' },
+  indigo: { bg: 'bg-indigo/10', text: 'text-indigo' },
+  purple: { bg: 'bg-purple/10', text: 'text-purple' },
+  orange: { bg: 'bg-orange/10', text: 'text-orange' },
+  red:    { bg: 'bg-red/10',    text: 'text-red' },
+}
+
+const ContactRow = ({ icon: Icon, label, value, color = 'green' }) => {
   if (!value) return null
+  const c = COLOR_MAP[color] || COLOR_MAP.green
   return (
     <div className="flex items-center gap-3 py-2.5 border-b border-border/50 last:border-0">
-      <div className={`p-1.5 rounded-lg bg-${color || 'green'}/10`}>
-        <Icon size={14} className={`text-${color || 'green'}`} />
+      <div className={`p-1.5 rounded-lg ${c.bg}`}>
+        <Icon size={14} className={c.text} />
       </div>
       <div>
         <div className="text-xs text-t4">{label}</div>
@@ -463,7 +473,12 @@ export default function AccountDetail() {
               <div className="mt-4 pt-4 border-t border-border">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-t4 uppercase tracking-wide">DPD Risk Level</span>
-                  <span className={`badge border text-${riskLabel.color} border-${riskLabel.color}/20 bg-${riskLabel.color}/10`}>
+                  <span className={
+                    riskLabel.color === 'red' ? 'badge border bg-red/10 text-red border-red/20' :
+                    riskLabel.color === 'orange' ? 'badge border bg-orange/10 text-orange border-orange/20' :
+                    riskLabel.color === 'blue' ? 'badge border bg-blue/10 text-blue border-blue/20' :
+                    'badge border bg-border text-t3 border-border'
+                  }>
                     {riskLabel.label}
                   </span>
                 </div>
