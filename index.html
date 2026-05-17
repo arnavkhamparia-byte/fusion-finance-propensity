@@ -366,7 +366,8 @@
 // ═══════════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════════
-let ALL = [], FILTERED = [], EXPANDED = null;
+let ALL = [], FILTERED = [], EXPANDED = null, PAGE = 1;
+const PAGE_SIZE = 10;
 
 // ═══════════════════════════════════════════════════
 // BOOT
@@ -475,8 +476,49 @@ function renderCharts(data) {
 // ═══════════════════════════════════════════════════
 function renderTable() {
   const el = document.getElementById('accountTable');
-  if(!FILTERED.length){ el.innerHTML='<div class="empty">No accounts match your filters.</div>'; return; }
-  el.innerHTML = FILTERED.map(a=>accountRow(a)).join('');
+  if(!FILTERED.length){ el.innerHTML='<div class="empty">No accounts match your filters.</div>'; renderPagination(); return; }
+  const start = (PAGE-1)*PAGE_SIZE;
+  const pageAccounts = FILTERED.slice(start, start+PAGE_SIZE);
+  el.innerHTML = pageAccounts.map(a=>accountRow(a)).join('');
+  renderPagination();
+}
+
+function renderPagination() {
+  const total = FILTERED.length;
+  const totalPages = Math.max(1, Math.ceil(total/PAGE_SIZE));
+  const start = total===0 ? 0 : (PAGE-1)*PAGE_SIZE+1;
+  const end   = Math.min(PAGE*PAGE_SIZE, total);
+  let el = document.getElementById('pagination');
+  if(!el){ el=document.createElement('div'); el.id='pagination'; document.getElementById('accountTable').after(el); }
+
+  // Build page number buttons (show max 7 pages around current)
+  let pages = [];
+  for(let i=1;i<=totalPages;i++){
+    if(i===1||i===totalPages||Math.abs(i-PAGE)<=2) pages.push(i);
+    else if(pages[pages.length-1]!=='…') pages.push('…');
+  }
+
+  el.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding:12px 4px;">
+      <div style="font-size:12px;color:var(--text-4);">Showing <span style="color:var(--text-2);font-weight:600;">${start}–${end}</span> of <span style="color:var(--text-2);font-weight:600;">${total}</span> accounts</div>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <button onclick="goPage(${PAGE-1})" ${PAGE===1?'disabled':''} style="background:var(--bg-card);border:1px solid var(--border);color:${PAGE===1?'var(--text-4)':'var(--text-2)'};border-radius:7px;padding:6px 12px;font-size:12px;font-family:Inter,sans-serif;cursor:${PAGE===1?'default':'pointer'};transition:all .2s;" onmouseover="if(${PAGE>1})this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">← Prev</button>
+        ${pages.map(p=>p==='…'
+          ? `<span style="padding:0 4px;color:var(--text-4);font-size:13px;">…</span>`
+          : `<button onclick="goPage(${p})" style="background:${p===PAGE?'rgba(34,197,94,0.15)':'var(--bg-card)'};border:1px solid ${p===PAGE?'rgba(34,197,94,0.4)':'var(--border)'};color:${p===PAGE?'var(--green)':'var(--text-2)'};border-radius:7px;width:34px;height:34px;font-size:12px;font-weight:${p===PAGE?700:400};font-family:Inter,sans-serif;cursor:pointer;transition:all .2s;">${p}</button>`
+        ).join('')}
+        <button onclick="goPage(${PAGE+1})" ${PAGE===totalPages?'disabled':''} style="background:var(--bg-card);border:1px solid var(--border);color:${PAGE===totalPages?'var(--text-4)':'var(--text-2)'};border-radius:7px;padding:6px 12px;font-size:12px;font-family:Inter,sans-serif;cursor:${PAGE===totalPages?'default':'pointer'};transition:all .2s;" onmouseover="if(${PAGE<totalPages})this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">Next →</button>
+      </div>
+    </div>`;
+}
+
+function goPage(p) {
+  const totalPages = Math.ceil(FILTERED.length/PAGE_SIZE);
+  if(p<1||p>totalPages) return;
+  PAGE = p;
+  EXPANDED = null;
+  renderTable();
+  window.scrollTo({top: document.getElementById('accountTable').offsetTop - 80, behavior:'smooth'});
 }
 
 function accountRow(a) {
@@ -847,12 +889,13 @@ function applyFilters() {
   });
 
   EXPANDED = null;
+  PAGE = 1;
   renderTable();
   updateCount();
 }
 
 function updateCount() {
-  document.getElementById('resultCount').textContent = FILTERED.length + ' of 30 accounts';
+  document.getElementById('resultCount').textContent = FILTERED.length + ' of ' + ALL.length + ' accounts';
 }
 
 // ═══════════════════════════════════════════════════
