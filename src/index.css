@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: #0f1117;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #0f1117; }
+  ::-webkit-scrollbar-thumb { background: #2a2d35; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3a3d45; }
+}
+
+@layer components {
+  .tier-high   { @apply bg-green/10 text-green border border-green/20; }
+  .tier-medium { @apply bg-orange/10 text-orange border border-orange/20; }
+  .tier-low    { @apply bg-red/10 text-red border border-red/20; }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium
+           transition-colors duration-150 cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-green text-bg hover:bg-green/90;
+  }
+  .btn-ghost {
+    @apply btn bg-card border border-border text-t2 hover:border-border-h hover:text-t1;
+  }
+  .card {
+    @apply bg-card rounded-xl border border-border;
+  }
+  .tab-btn {
+    @apply px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-150 cursor-pointer;
+  }
+  .tab-active {
+    @apply bg-green/10 text-green;
+  }
+  .tab-inactive {
+    @apply text-t3 hover:text-t1 hover:bg-card;
+  }
+}
