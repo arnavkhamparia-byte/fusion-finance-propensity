@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propensity Score Report — Fusion Finance MFI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d24;
+      --bg-detail: #13161e;
+      --bg-hover: #1f2330;
+      --border: #2a2d35;
+      --border-hover: #3a3d45;
+      --green: #22c55e;
+      --orange: #f97316;
+      --red: #ef4444;
+      --blue: #3b82f6;
+      --purple: #8b5cf6;
+      --indigo: #818cf8;
+      --text: #ffffff;
+      --text-2: #d1d5db;
+      --text-3: #9ca3af;
+      --text-4: #6b7280;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* ── Header ── */
+    .header {
+      background: #141720;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 26px; font-weight: 900; color: var(--green); letter-spacing: -1px; }
+    .divider { width: 1px; height: 28px; background: var(--border); margin: 0 16px; }
+    .header-title { font-size: 15px; font-weight: 700; }
+    .header-sub { font-size: 11px; color: var(--text-3); margin-top: 1px; }
+    .pill { display: inline-flex; align-items: center; padding: 3px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+    .pill-green { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: var(--green); }
+
+    /* ── Main ── */
+    .main { padding: 24px 32px; max-width: 1600px; margin: 0 auto; }
+
+    /* ── KPI Cards ── */
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      transition: border-color .2s;
+    }
+    .kpi-card:hover { border-color: var(--border-hover); }
+    .kpi-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-4); margin-bottom: 8px; }
+    .kpi-value { font-size: 30px; font-weight: 800; line-height: 1; }
+    .kpi-sub { font-size: 11px; color: var(--text-3); margin-top: 5px; }
+
+    /* ── Charts ── */
+    .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .chart-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+    .chart-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .chart-sub { font-size: 11px; color: var(--text-4); margin-bottom: 16px; }
+
+    /* ── Filter Bar ── */
+    .filter-bar {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .filter-select, .search-input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .filter-select:focus, .search-input:focus { border-color: var(--green); }
+    .search-wrap { position: relative; }
+    .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-4); pointer-events: none; }
+    .search-input { padding-left: 32px; width: 220px; }
+    .search-input::placeholder { color: var(--text-4); }
+    .export-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-3);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all .2s;
+    }
+    .export-btn:hover { border-color: var(--green); color: var(--green); }
+    .result-count { font-size: 12px; color: var(--text-4); }
+
+    /* ── Table Header ── */
+    .table-header {
+      display: grid;
+      grid-template-columns: 44px 1.6fr 100px 180px 220px 130px 1fr 36px;
+      gap: 10px;
+      padding: 10px 16px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-4);
+      margin-bottom: 8px;
+    }
+
+    /* ── Account Row ── */
+    .account-row {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .account-row:hover { border-color: var(--border-hover); }
+    .account-row.expanded { border-color: var(--green); }
+    .row-main {
+      display: grid;
+      grid-template-columns: 44px 1.6fr 100px 180px 220px 130px 1fr 36px;
+      gap: 10px;
+      padding: 14px 16px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* ── Rank Badge ── */
+    .rank { width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; background: var(--border); color: var(--text-3); flex-shrink: 0; }
+    .rank.r1 { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .rank.r2 { background: rgba(209,213,219,0.12); color: #d1d5db; border: 1px solid rgba(209,213,219,0.25); }
+    .rank.r3 { background: rgba(217,119,6,0.12); color: #d97706; border: 1px solid rgba(217,119,6,0.3); }
+
+    /* ── Badges ── */
+    .badge { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: .3px; white-space: nowrap; }
+    .badge-high   { background: rgba(34,197,94,0.12);  color: var(--green);  border: 1px solid rgba(34,197,94,0.25); }
+    .badge-medium { background: rgba(249,115,22,0.12); color: var(--orange); border: 1px solid rgba(249,115,22,0.25); }
+    .badge-low    { background: rgba(239,68,68,0.12);  color: var(--red);    border: 1px solid rgba(239,68,68,0.25); }
+
+    /* ── Signals ── */
+    .signal-line { font-size: 10px; color: var(--text-4); display: flex; align-items: center; gap: 4px; }
+
+    /* ── History Dots ── */
+    .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+    .dot-green  { background: var(--green); }
+    .dot-orange { background: var(--orange); }
+    .dot-red    { background: var(--red); }
+    .pattern-label { font-size: 10px; font-weight: 700; margin-top: 3px; }
+
+    /* ── Chevron ── */
+    .chevron { font-size: 18px; color: var(--text-4); transition: transform .25s; display: flex; align-items: center; justify-content: center; }
+    .chevron.open { transform: rotate(90deg); }
+
+    /* ── Detail Panel ── */
+    .detail-panel { display: none; border-top: 1px solid var(--border); background: var(--bg-detail); padding: 22px 20px; }
+    .detail-panel.open { display: block; }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 24px; }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-4); margin-bottom: 12px; }
+
+    /* ── Mini stat cards ── */
+    .mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+    .mini-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+    .mini-card.red  { background: rgba(239,68,68,0.07);  border-color: rgba(239,68,68,0.2); }
+    .mini-card.green { background: rgba(34,197,94,0.07); border-color: rgba(34,197,94,0.2); }
+    .mini-label { font-size: 10px; color: var(--text-4); margin-bottom: 3px; }
+    .mini-val   { font-size: 15px; font-weight: 700; }
+
+    /* ── Narrative box ── */
+    .narrative-box { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+    .narrative-title { font-size: 10px; font-weight: 700; color: var(--green); letter-spacing: .8px; text-transform: uppercase; margin-bottom: 6px; }
+    .narrative-text { font-size: 13px; color: #e5e7eb; line-height: 1.65; }
+
+    /* ── Summary bubble ── */
+    .summary-bubble { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-size: 12px; color: var(--text-3); font-style: italic; line-height: 1.6; margin-bottom: 10px; }
+
+    /* ── Barrier box ── */
+    .barrier-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; margin-bottom: 10px; }
+
+    /* ── Action tag ── */
+    .action-tag { display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; }
+    .action-green  { background: rgba(34,197,94,0.1);  border: 1px solid rgba(34,197,94,0.3);  color: var(--green); }
+    .action-red    { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.3);  color: var(--red); }
+    .action-orange { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); color: var(--orange); }
+    .action-gray   { background: rgba(107,114,128,0.1); border: 1px solid rgba(107,114,128,0.3); color: var(--text-3); }
+
+    /* ── Score bars ── */
+    .score-bar-row { margin-bottom: 9px; }
+    .score-bar-meta { display: flex; justify-content: space-between; margin-bottom: 4px; }
+    .score-bar-label { font-size: 11px; color: var(--text-3); }
+    .score-bar-val   { font-size: 11px; font-weight: 600; color: var(--text-2); }
+    .score-bar-track { background: var(--border); border-radius: 4px; height: 5px; overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; transition: width .5s ease; }
+
+    /* ── Urgency strip ── */
+    .urgency { border-radius: 8px; padding: 8px 12px; font-size: 12px; font-weight: 600; margin-top: 8px; }
+    .urgency-red    { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.3);  color: var(--red); }
+    .urgency-orange { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); color: var(--orange); }
+    .urgency-gray   { background: rgba(107,114,128,0.08); border: 1px solid var(--border); color: var(--text-3); }
+
+    /* ── Waiver badge ── */
+    .waiver-badge { display: inline-flex; align-items: center; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); border-radius: 20px; padding: 3px 12px; font-size: 11px; font-weight: 600; color: var(--orange); margin-top: 6px; }
+
+    /* ── Tag chips ── */
+    .chip { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 20px; font-size: 10px; font-weight: 600; margin: 2px; }
+    .chip-indigo { background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.25); color: var(--indigo); }
+    .chip-green  { background: rgba(34,197,94,0.1);   border: 1px solid rgba(34,197,94,0.2);   color: var(--green); }
+    .chip-orange { background: rgba(249,115,22,0.1);  border: 1px solid rgba(249,115,22,0.2);  color: var(--orange); }
+    .chip-red    { background: rgba(239,68,68,0.1);   border: 1px solid rgba(239,68,68,0.2);   color: var(--red); }
+
+    /* ── Bonus / final score boxes ── */
+    .bonus-box { background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; padding: 9px 13px; display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+    .final-score-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 9px 13px; display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+
+    /* ── History list ── */
+    .history-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-4); margin-bottom: 4px; }
+    .history-dot  { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Empty state ── */
+    .empty { text-align: center; padding: 60px; color: var(--text-4); font-size: 14px; }
+
+    /* ── Action column in table ── */
+    .table-action { font-size: 11px; font-weight: 600; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <!-- ════ HEADER ════ -->
+  <header class="header">
+    <div style="display:flex;align-items:center;">
+      <div class="logo">OTO</div>
+      <div class="divider"></div>
+      <div>
+        <div class="header-title">AI Propensity Score Report</div>
+        <div class="header-sub">Fusion Finance MFI — Payment Likelihood Analysis</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div id="generated-at" style="font-size:11px;color:var(--text-4);"></div>
+      <div class="pill pill-green">30 Accounts Analysed</div>
+    </div>
+  </header>
+
+  <!-- ════ MAIN ════ -->
+  <main class="main">
+
+    <!-- KPI Row 1 -->
+    <div class="kpi-grid" id="kpi1"></div>
+    <!-- KPI Row 2 -->
+    <div class="kpi-grid" style="margin-bottom:16px;" id="kpi2"></div>
+
+    <!-- Charts -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">Portfolio Tier Distribution</div>
+        <div class="chart-sub">Breakdown of accounts by payment propensity tier</div>
+        <div style="height:200px;display:flex;align-items:center;justify-content:center;">
+          <canvas id="donutChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Propensity Score Spread</div>
+        <div class="chart-sub">Number of accounts per score range</div>
+        <div style="height:200px;">
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="search-wrap">
+        <svg class="search-icon" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" class="search-input" placeholder="Search name or loan number…" id="searchInput" oninput="applyFilters()">
+      </div>
+      <select class="filter-select" id="tierFilter" onchange="applyFilters()">
+        <option value="">All Tiers</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <select class="filter-select" id="barrierFilter" onchange="applyFilters()">
+        <option value="">All Barriers</option>
+        <option value="financial">Financial</option>
+        <option value="avoidance">Avoidance</option>
+        <option value="hardship">Hardship</option>
+        <option value="dispute">Dispute</option>
+        <option value="none">No Barrier</option>
+      </select>
+      <select class="filter-select" id="dispFilter" onchange="applyFilters()">
+        <option value="">All Dispositions</option>
+        <option value="Agree To Senior Manager Call">Agree To Senior Manager Call</option>
+        <option value="Financial Hardship">Financial Hardship</option>
+        <option value="Call Back Requested">Call Back Requested</option>
+        <option value="Unclear">Unclear</option>
+        <option value="Refuse To Pay">Refuse To Pay</option>
+        <option value="Connected">Connected</option>
+        <option value="Call Hang Up">Call Hang Up</option>
+      </select>
+      <select class="filter-select" id="sortBy" onchange="applyFilters()">
+        <option value="score_desc">Score ↓</option>
+        <option value="score_asc">Score ↑</option>
+        <option value="name_asc">Name A–Z</option>
+        <option value="pending_desc">Pending ↓</option>
+      </select>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:12px;">
+        <span class="result-count" id="resultCount"></span>
+        <button class="export-btn" onclick="exportCSV()">
+          <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download Excel
+        </button>
+      </div>
+    </div>
+
+    <!-- Table Header -->
+    <div class="table-header">
+      <div></div>
+      <div>Account</div>
+      <div>Score</div>
+      <div>Disposition</div>
+      <div>Signals</div>
+      <div>History</div>
+      <div>Recommended Action</div>
+      <div></div>
+    </div>
+
+    <!-- Account Table -->
+    <div id="accountTable"></div>
+
+  </main>
+
+<script>
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let ALL = [], FILTERED = [], EXPANDED = null;
+
+// ═══════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════
+async function init() {
+  const data = await fetch('data/propensity_results.json').then(r => r.json());
+  ALL = data.accounts;
+  FILTERED = [...ALL];
+
+  const d = new Date(data.generated_at);
+  document.getElementById('generated-at').textContent =
+    'Generated ' + d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) +
+    ' · ' + d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+
+  renderKPIs(data);
+  renderCharts(data);
+  renderTable();
+  updateCount();
+}
+
+// ═══════════════════════════════════════════════════
+// KPI CARDS
+// ═══════════════════════════════════════════════════
+function renderKPIs(data) {
+  const A = data.accounts;
+  const totalPending  = A.reduce((s,a) => s+(a.total_amount_pending||0),0);
+  const avgScore      = (A.reduce((s,a) => s+a.propensity_score,0)/A.length).toFixed(1);
+  const promises      = A.filter(a=>a.promise_made);
+  const today         = todayStr();
+  const actToday      = A.filter(a=>a.promise_made && a.promise_date && a.promise_date<=today);
+  const highRec       = A.filter(a=>a.tier==='High').reduce((s,a)=>s+expectedRecovery(a),0);
+  const medRec        = A.filter(a=>a.tier==='Medium').reduce((s,a)=>s+expectedRecovery(a),0);
+  const lowRec        = A.filter(a=>a.tier==='Low').reduce((s,a)=>s+expectedRecovery(a),0);
+
+  document.getElementById('kpi1').innerHTML =
+    kpi('Total Accounts','30','Portfolio size','var(--text-3)') +
+    kpi('High Tier', data.tier_summary.High, 'Est. recovery '+fmtCur(highRec),'var(--green)') +
+    kpi('Medium Tier', data.tier_summary.Medium, 'Est. recovery '+fmtCur(medRec),'var(--orange)') +
+    kpi('Low Tier', data.tier_summary.Low, 'Est. recovery '+fmtCur(lowRec),'var(--red)');
+
+  document.getElementById('kpi2').innerHTML =
+    kpi('Total Pending', fmtCur(totalPending), 'Across all 30 accounts','var(--text-3)') +
+    kpi('Avg Propensity Score', avgScore, 'Out of 100','var(--text-3)') +
+    kpi('Promise Pipeline', promises.length+' accounts', 'Payment committed by customer','var(--green)') +
+    kpi('Act Today', actToday.length+' accounts', actToday.length>0?'Promise due or overdue':'All promises future-dated', actToday.length>0?'var(--red)':'var(--text-3)');
+}
+
+function kpi(label,value,sub,color) {
+  return `<div class="kpi-card">
+    <div class="kpi-label">${label}</div>
+    <div class="kpi-value" style="color:${color};">${value}</div>
+    <div class="kpi-sub">${sub}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// CHARTS
+// ═══════════════════════════════════════════════════
+function renderCharts(data) {
+  // Donut
+  new Chart(document.getElementById('donutChart'),{
+    type:'doughnut',
+    data:{
+      labels:['High','Medium','Low'],
+      datasets:[{
+        data:[data.tier_summary.High, data.tier_summary.Medium, data.tier_summary.Low],
+        backgroundColor:['#22c55e','#f97316','#ef4444'],
+        borderWidth:0, hoverOffset:4
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'68%',
+      plugins:{
+        legend:{position:'right',labels:{color:'#9ca3af',font:{family:'Inter',size:12},padding:16,usePointStyle:true}},
+        tooltip:{callbacks:{label:c=>` ${c.label}: ${c.raw} accounts`}}
+      }
+    }
+  });
+
+  // Bar — score distribution
+  const buckets = [0,0,0,0,0];
+  data.accounts.forEach(a=>{ buckets[Math.min(Math.floor(a.propensity_score/20),4)]++; });
+  new Chart(document.getElementById('barChart'),{
+    type:'bar',
+    data:{
+      labels:['0–20','20–40','40–60','60–80','80–100'],
+      datasets:[{
+        data:buckets,
+        backgroundColor:['#ef4444','#f97316','#f97316','#22c55e','#22c55e'],
+        borderRadius:5, borderSkipped:false
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.raw} accounts`}}},
+      scales:{
+        x:{grid:{color:'#2a2d35'},ticks:{color:'#9ca3af',font:{family:'Inter'}}},
+        y:{grid:{color:'#2a2d35'},ticks:{color:'#9ca3af',font:{family:'Inter'},stepSize:1},beginAtZero:true}
+      }
+    }
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// TABLE
+// ═══════════════════════════════════════════════════
+function renderTable() {
+  const el = document.getElementById('accountTable');
+  if(!FILTERED.length){ el.innerHTML='<div class="empty">No accounts match your filters.</div>'; return; }
+  el.innerHTML = FILTERED.map(a=>accountRow(a)).join('');
+}
+
+function accountRow(a) {
+  const sColor = a.propensity_score>=65?'var(--green)':a.propensity_score>=40?'var(--orange)':'var(--red)';
+  const rClass  = a.rank===1?'r1':a.rank===2?'r2':a.rank===3?'r3':'';
+  const isOpen  = EXPANDED===a.loan_number;
+  const dots    = historyDots(a);
+  const pattern = historyPattern(a);
+  const pColor  = patternColor(pattern);
+  const action  = recommendedAction(a);
+  const aColor  = actionColor(action);
+
+  return `<div class="account-row${isOpen?' expanded':''}" id="row-${a.loan_number}">
+    <div class="row-main" onclick="toggleExpand('${a.loan_number}')">
+      <!-- Rank -->
+      <div class="rank ${rClass}">#${a.rank}</div>
+
+      <!-- Account -->
+      <div>
+        <div style="font-weight:700;font-size:14px;">${a.name}</div>
+        <div style="font-size:11px;color:var(--text-4);margin-top:2px;">${a.city} &middot; ${a.loan_number}</div>
+        <div style="font-size:11px;color:var(--text-4);margin-top:1px;">₹${fmtNum(a.total_amount_pending)} pending</div>
+      </div>
+
+      <!-- Score -->
+      <div>
+        <div style="font-size:26px;font-weight:800;color:${sColor};line-height:1;">${a.propensity_score}</div>
+        <div style="margin-top:4px;"><span class="badge badge-${a.tier.toLowerCase()}">${a.tier}</span></div>
+      </div>
+
+      <!-- Disposition -->
+      <div style="font-size:12px;font-weight:500;color:var(--text-2);line-height:1.4;">${a.disposition}</div>
+
+      <!-- Signals -->
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        ${sigLine('Engagement', a.engagement_level)}
+        ${sigLine('Commitment', a.commitment_strength)}
+        ${sigLine('Barrier', a.barrier_type||'none')}
+      </div>
+
+      <!-- History -->
+      <div>
+        <div style="display:flex;gap:4px;margin-bottom:3px;">${dots}</div>
+        <div class="pattern-label" style="color:${pColor};">${pattern}</div>
+      </div>
+
+      <!-- Action -->
+      <div class="table-action" style="color:${aColor};">${action}</div>
+
+      <!-- Chevron -->
+      <div class="chevron${isOpen?' open':''}">›</div>
+    </div>
+
+    <!-- Detail -->
+    <div class="detail-panel${isOpen?' open':''}">${isOpen?detailPanel(a):''}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// DETAIL PANEL
+// ═══════════════════════════════════════════════════
+function detailPanel(a) {
+  const {waiver, recovery} = waiverInfo(a);
+  const narrative = recoveryNarrative(a);
+  const action    = recommendedAction(a);
+  const aClass    = actionClass(action);
+  const urgency   = promiseUrgency(a);
+  const bd        = a.score_breakdown;
+  const engTag    = engagementTag(a);
+  const sColor    = a.propensity_score>=65?'var(--green)':a.propensity_score>=40?'var(--orange)':'var(--red)';
+
+  return `<div class="detail-grid">
+
+    <!-- ── COL 1: Account & Financial ── -->
+    <div>
+      <div class="section-label">Account & Financial</div>
+      <div class="mini-cards">
+        <div class="mini-card">
+          <div class="mini-label">Loan Amount</div>
+          <div class="mini-val">₹${fmtNum(a.loan_amount)}</div>
+        </div>
+        <div class="mini-card">
+          <div class="mini-label">EMI Amount</div>
+          <div class="mini-val">₹${fmtNum(a.emi_amount)}</div>
+        </div>
+        <div class="mini-card red">
+          <div class="mini-label">Total Pending</div>
+          <div class="mini-val" style="color:var(--red);">₹${fmtNum(a.total_amount_pending)}</div>
+        </div>
+        <div class="mini-card green">
+          <div class="mini-label">Expected Recovery</div>
+          <div class="mini-val" style="color:var(--green);">₹${fmtNum(recovery)}</div>
+        </div>
+      </div>
+
+      <div style="font-size:11px;color:var(--text-4);margin-bottom:3px;">DPD Bucket</div>
+      <div style="font-size:13px;color:var(--text-2);margin-bottom:6px;">${a.dpd_bucket}</div>
+      <div class="waiver-badge">${waiver} Available</div>
+
+      ${urgency ? `<div style="margin-top:10px;">${urgency}</div>` : ''}
+
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+        <div style="font-size:11px;color:var(--text-4);margin-bottom:4px;">Call Activity</div>
+        <div style="font-size:18px;font-weight:700;">${a.total_calls} <span style="font-size:12px;font-weight:400;color:var(--text-4);">total calls</span></div>
+        <div style="font-size:12px;color:var(--text-4);margin-top:2px;">${a.total_payments} payments recorded &nbsp;·&nbsp; Last: ${a.last_payment_date||'None'}</div>
+      </div>
+    </div>
+
+    <!-- ── COL 2: Call Intelligence ── -->
+    <div>
+      <div class="section-label">Call Intelligence</div>
+
+      <div class="narrative-box">
+        <div class="narrative-title">Recovery Assessment</div>
+        <div class="narrative-text">${narrative}</div>
+      </div>
+
+      <div style="font-size:10px;color:var(--text-4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Call Summary</div>
+      <div class="summary-bubble">"${a.summary}"</div>
+
+      ${barrierAdvice(a.barrier_type)}
+
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:10px;">
+        <span style="font-size:10px;color:var(--text-4);">Profile:</span>
+        <span class="chip chip-indigo">${engTag}</span>
+        ${a.tone_shift==='improved'?'<span class="chip chip-green">↑ Tone Improved</span>':a.tone_shift==='worsened'?'<span class="chip chip-red">↓ Tone Worsened</span>':''}
+        ${a.customer_initiated_resolution?'<span class="chip chip-green">Customer Initiated</span>':''}
+        ${a.promise_made?`<span class="chip chip-orange">Promise: ${a.promise_date||'date TBD'}</span>`:''}
+        ${a.specific_amount_discussed?'<span class="chip chip-orange">₹ Amount Discussed</span>':''}
+      </div>
+
+      <div style="margin-top:14px;">
+        <div style="font-size:10px;color:var(--text-4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px;">Recommended Action</div>
+        <div class="action-tag ${aClass}">${action}</div>
+      </div>
+    </div>
+
+    <!-- ── COL 3: Score Breakdown ── -->
+    <div>
+      <div class="section-label">Score Breakdown</div>
+
+      ${scoreBar('Disposition',   bd.disposition_score,  30, '#22c55e')}
+      ${scoreBar('Commitment',    bd.commitment_score,   20, '#22c55e')}
+      ${scoreBar('Engagement',    bd.engagement_score,   15, '#3b82f6')}
+      ${scoreBar('Sentiment',     bd.sentiment_score,    10, '#8b5cf6')}
+      ${scoreBar('Call History',  bd.history_score,      10, '#f97316')}
+      ${scoreBar('DPD Bucket',    bd.dpd_score,          10, '#f97316')}
+      ${scoreBar('Call Duration', bd.duration_score,      5, '#6b7280')}
+
+      <div class="bonus-box">
+        <span style="font-size:12px;color:var(--text-3);">Bonus Points</span>
+        <span style="font-size:15px;font-weight:700;color:var(--green);">+${bd.bonus_points}</span>
+      </div>
+      <div class="final-score-box">
+        <span style="font-size:12px;color:var(--text-3);">Final Score</span>
+        <span style="font-size:22px;font-weight:800;color:${sColor};">${a.propensity_score}</span>
+      </div>
+
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+        <div class="section-label" style="margin-bottom:8px;">Call History Pattern</div>
+        <div style="display:flex;gap:5px;margin-bottom:5px;">${historyDots(a)}</div>
+        <div style="font-size:11px;font-weight:700;color:${patternColor(historyPattern(a))};margin-bottom:8px;">${historyPattern(a)}</div>
+        ${(a.previous_dispositions||[]).map(d=>`
+          <div class="history-item">
+            <span class="history-dot" style="background:${dotColor(d)};"></span>
+            <span>${d}</span>
+          </div>`).join('')}
+      </div>
+    </div>
+
+  </div>`;
+}
+
+// ─── Components ──────────────────────────────────────────────────
+function scoreBar(label, val, max, color) {
+  const pct = Math.min(100, Math.round((val/max)*100));
+  return `<div class="score-bar-row">
+    <div class="score-bar-meta">
+      <span class="score-bar-label">${label}</span>
+      <span class="score-bar-val">${val.toFixed(1)} / ${max}</span>
+    </div>
+    <div class="score-bar-track">
+      <div class="score-bar-fill" style="width:${pct}%;background:${color};"></div>
+    </div>
+  </div>`;
+}
+
+function sigLine(label, val) {
+  const c = {high:'var(--green)',medium:'var(--orange)',low:'var(--red)',
+             strong:'var(--green)',moderate:'var(--orange)',weak:'var(--red)',none:'var(--text-4)',
+             financial:'var(--orange)',avoidance:'var(--red)',hardship:'var(--purple)',dispute:'var(--red)'};
+  return `<div class="signal-line">${label}: <span style="color:${c[val]||'var(--text-3)'};font-weight:600;">${val}</span></div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// INTELLIGENCE FUNCTIONS
+// ═══════════════════════════════════════════════════
+
+function recoveryNarrative(a) {
+  const d=a.disposition, c=a.commitment_strength, e=a.engagement_level, b=a.barrier_type;
+  if(d==='Agree To Senior Manager Call') {
+    if(c==='strong') return 'Customer gave an explicit, confident commitment and agreed to senior manager outreach. Highest priority in the portfolio — act immediately while intent is fresh.';
+    if(c==='moderate' && a.customer_initiated_resolution) return 'Customer proactively asked about resolution options and agreed to a senior manager callback. High recovery likelihood — escalate now before momentum is lost.';
+    if(c==='moderate' && a.tone_shift==='improved') return 'Customer started hesitant but warmed up and agreed to senior manager call. Tone improvement is a strong positive signal — follow up promptly.';
+    if(c==='moderate') return 'Customer agreed to senior manager callback with genuine engagement. Good recovery signal — schedule the callback without delay.';
+    return 'Customer agreed to senior manager outreach. Confirm the callback is scheduled and maintain momentum.';
+  }
+  if(d==='Call Back Requested') {
+    if(c==='moderate'||c==='strong') return 'Customer requested a specific callback with positive intent. They are open to further discussion — ensure punctual callback to build on this opening.';
+    return 'Customer asked for a callback but showed limited commitment. Use the scheduled call to move toward senior manager agreement.';
+  }
+  if(d==='Financial Hardship') {
+    if(e==='high'&&(c==='moderate'||c==='weak')) return 'Genuine financial hardship reported but customer remained highly engaged. They may respond well to an empathetic waiver offer — approach with sensitivity.';
+    if(e==='high') return 'Active financial hardship with high engagement. Customer is not hostile — allow a short cooling-off period then approach with a structured waiver settlement.';
+    return 'Customer is facing active financial hardship. Pause collection pressure. Re-engage in 2–3 weeks with a compassionate, waiver-focused approach.';
+  }
+  if(d==='Refuse To Pay') {
+    if(b==='avoidance') return 'Customer is deliberately avoiding payment. Consider switching to a more formal approach — field visit mention or legal notice may prompt a response.';
+    return 'Customer actively refused to engage. Low near-term recovery likelihood. Allow a cooling-off period and try an alternate channel.';
+  }
+  if(d==='Unclear') {
+    if(e==='medium'||e==='high') return 'Conversation happened but outcome was ambiguous. Customer showed some engagement — a targeted follow-up with a specific settlement offer may convert this.';
+    return 'Call ended without a clear signal. A different agent approach or a specific offer may help break the deadlock.';
+  }
+  if(d==='Information Conveyed') return 'Agent conveyed all consequences but customer gave no signal. They are now aware — a follow-up call in 2–3 days often prompts a decision.';
+  if(d==='Connected') {
+    if(e==='high') return 'Call connected with high engagement but no conclusive outcome. Customer is reachable and responsive — a structured next call should yield results.';
+    return 'Call connected but without a meaningful outcome. Try a more direct, offer-led approach in the next attempt.';
+  }
+  return 'Limited engagement recorded. Review the call history pattern and consider a different approach or channel.';
+}
+
+function recommendedAction(a) {
+  const today = todayStr();
+  if(a.promise_made && a.promise_date) {
+    const days = daysDiff(a.promise_date, today);
+    if(days<0)  return '⚠ Promise Overdue — Follow Up Now';
+    if(days===0) return '⚡ Promise Due Today — Call Now';
+    if(days<=3)  return `📅 Follow Up in ${days} day${days>1?'s':''} (${a.promise_date})`;
+  }
+  if(a.disposition==='Agree To Senior Manager Call') return '🎯 Escalate to Senior Manager';
+  if(a.disposition==='Call Back Requested')          return '📞 Schedule Callback';
+  if(a.barrier_type==='financial' && a.engagement_level!=='low') return '💰 Offer Waiver Settlement';
+  if(a.barrier_type==='hardship')  return '🤝 Empathy Approach + Flexible Timeline';
+  if(a.barrier_type==='avoidance') return '📱 Switch to WhatsApp / SMS';
+  if(a.barrier_type==='dispute')   return '🔍 Verify Loan Before Contact';
+  if(a.engagement_level==='low' && a.commitment_strength==='none') return '⏳ Cooling-Off — Retry in 7 Days';
+  if(a.engagement_level==='high')  return '🎯 Escalate to Senior Manager';
+  return '📞 Standard Follow-Up Call';
+}
+
+function actionClass(action) {
+  if(action.includes('Overdue')||action.includes('Today')) return 'action-red';
+  if(action.includes('Escalate')||action.includes('Offer Waiver')||action.includes('Follow Up')||action.includes('Schedule')) return 'action-green';
+  if(action.includes('WhatsApp')||action.includes('Cooling')||action.includes('Empathy')||action.includes('Verify')) return 'action-orange';
+  return 'action-gray';
+}
+
+function actionColor(action) {
+  if(action.includes('Overdue')||action.includes('Today')) return 'var(--red)';
+  if(action.includes('Escalate')||action.includes('Offer Waiver')||action.includes('Follow Up')||action.includes('Schedule')) return 'var(--green)';
+  if(action.includes('WhatsApp')||action.includes('Cooling')||action.includes('Empathy')||action.includes('Verify')) return 'var(--orange)';
+  return 'var(--text-4)';
+}
+
+function waiverInfo(a) {
+  const b=(a.dpd_bucket||'').toUpperCase();
+  let pct=0, label='Standard Terms';
+  if(b.includes('SETTLEMENT NOT ALLOWED')){ pct=0; label='No Settlement'; }
+  else if(b.includes('70%')){ pct=70; label='70% Waiver'; }
+  else if(b.includes('60%')){ pct=60; label='60% Waiver'; }
+  else if(b.includes('50%')){ pct=50; label='50% Waiver'; }
+  const recovery = pct>0 ? Math.round((a.total_amount_pending||0)*(1-pct/100)) : (a.total_amount_pending||0);
+  return { waiver:label, recovery };
+}
+
+function expectedRecovery(a){ return waiverInfo(a).recovery; }
+
+function historyDots(a) {
+  return (a.previous_dispositions||[]).map(d=>`<span class="dot" style="background:${dotColor(d)};" title="${d}"></span>`).join('');
+}
+
+function dotColor(d) {
+  const pos=['Agree To Senior Manager Call','Requested Settlement','Call Back Requested'];
+  const neg=['Refuse To Pay','Call Hang Up','Call Hang Up->LESS THEN 20sec','not-connected','no-answer','Wrong Number','Failed'];
+  return pos.includes(d)?'var(--green)':neg.includes(d)?'var(--red)':'var(--orange)';
+}
+
+function historyPattern(a) {
+  const disps=a.previous_dispositions||[];
+  if(!disps.length) return 'No History';
+  const pos=['Agree To Senior Manager Call','Requested Settlement','Call Back Requested'];
+  const neg=['Refuse To Pay','Call Hang Up','Call Hang Up->LESS THEN 20sec','not-connected','no-answer'];
+  const scores=disps.map(d=>pos.includes(d)?1:neg.includes(d)?-1:0);
+  const recent=scores.slice(0,2).reduce((s,v)=>s+v,0);
+  const older =scores.slice(2).reduce((s,v)=>s+v,0);
+  const total =scores.reduce((s,v)=>s+v,0);
+  if(scores.length>=2 && recent>older && recent>=0) return 'Improving';
+  if(scores.length>=2 && recent<older && recent<0)  return 'Declining';
+  if(total>=1) return 'Consistently Positive';
+  if(total<=-2) return 'Consistently Negative';
+  return 'Volatile';
+}
+
+function patternColor(p) {
+  if(p==='Improving'||p==='Consistently Positive') return 'var(--green)';
+  if(p==='Declining'||p==='Consistently Negative') return 'var(--red)';
+  return 'var(--orange)';
+}
+
+function engagementTag(a) {
+  const e=a.engagement_level, c=a.commitment_strength;
+  if(e==='high'&&(c==='strong'||c==='moderate')) return 'Ready to Pay';
+  if(e==='high'&&(c==='weak'||c==='none'))       return 'Needs Nudge';
+  if(e==='medium'&&(c==='strong'||c==='moderate')) return 'Promising';
+  if(e==='medium'&&(c==='weak'||c==='none'))     return 'Warming Up';
+  return 'Hard Case';
+}
+
+function promiseUrgency(a) {
+  if(!a.promise_made||!a.promise_date) return '';
+  const today=todayStr();
+  const days=daysDiff(a.promise_date,today);
+  if(days<0)  return `<div class="urgency urgency-red">⚠ Promise Overdue (${a.promise_date})</div>`;
+  if(days===0) return `<div class="urgency urgency-red">⚡ Promise Due TODAY</div>`;
+  if(days<=3)  return `<div class="urgency urgency-orange">📅 Promise due in ${days} day${days>1?'s':''} (${a.promise_date})</div>`;
+  return `<div class="urgency urgency-gray">Promise date: ${a.promise_date}</div>`;
+}
+
+function barrierAdvice(b) {
+  const map={
+    financial:{ color:'var(--orange)', title:'Financial Barrier', text:'Genuine lack of funds detected. Recommend offering the available waiver settlement or EMI restructuring option.' },
+    avoidance:{ color:'var(--red)',    title:'Avoidance Behaviour', text:'Deliberate avoidance pattern identified. Consider escalating with a field visit mention or legal notice reference.' },
+    hardship: { color:'var(--purple)', title:'Active Hardship', text:'Customer is facing a personal crisis. Use an empathetic tone and offer a flexible repayment timeline — do not push for immediate payment.' },
+    dispute:  { color:'var(--red)',    title:'Loan in Dispute', text:'Customer disputes loan details. Verify internally before any further collection attempt.' },
+    none:     { color:'var(--green)',  title:'No Barrier', text:'No significant payment obstacle detected. Customer is willing — focus on confirming concrete next steps.' }
+  };
+  const info = map[b]||map.none;
+  return `<div class="barrier-box" style="border-left:3px solid ${info.color};">
+    <div style="font-size:10px;font-weight:700;color:${info.color};text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;">${info.title}</div>
+    <div style="font-size:12px;color:var(--text-3);line-height:1.55;">${info.text}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// FILTERS & SORT
+// ═══════════════════════════════════════════════════
+function applyFilters() {
+  const q    = document.getElementById('searchInput').value.toLowerCase();
+  const tier = document.getElementById('tierFilter').value;
+  const bar  = document.getElementById('barrierFilter').value;
+  const disp = document.getElementById('dispFilter').value;
+  const sort = document.getElementById('sortBy').value;
+
+  FILTERED = ALL.filter(a => {
+    if(q && !a.name.toLowerCase().includes(q) && !a.loan_number.includes(q)) return false;
+    if(tier && a.tier!==tier) return false;
+    if(bar  && a.barrier_type!==bar) return false;
+    if(disp && a.disposition!==disp) return false;
+    return true;
+  });
+
+  FILTERED.sort((a,b)=>{
+    if(sort==='score_asc')    return a.propensity_score - b.propensity_score;
+    if(sort==='name_asc')     return a.name.localeCompare(b.name);
+    if(sort==='pending_desc') return (b.total_amount_pending||0)-(a.total_amount_pending||0);
+    return b.propensity_score - a.propensity_score;
+  });
+
+  EXPANDED = null;
+  renderTable();
+  updateCount();
+}
+
+function updateCount() {
+  document.getElementById('resultCount').textContent = FILTERED.length + ' of 30 accounts';
+}
+
+// ═══════════════════════════════════════════════════
+// EXPAND / COLLAPSE
+// ═══════════════════════════════════════════════════
+function toggleExpand(loan) {
+  EXPANDED = EXPANDED===loan ? null : loan;
+  renderTable();
+  if(EXPANDED) {
+    setTimeout(()=>{
+      const el=document.getElementById('row-'+EXPANDED);
+      if(el) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+    },60);
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// EXPORT CSV
+// ═══════════════════════════════════════════════════
+function exportCSV() {
+  const H = ['Rank','Loan Number','Name','City','Tier','Score','Disposition',
+             'Commitment','Engagement','Barrier','Promise Made','Promise Date',
+             'Tone Shift','Customer Initiated','Specific Amount','Summary',
+             'Total Calls','Total Pending','Loan Amount','DPD Bucket'];
+  const rows = FILTERED.map(a=>[
+    a.rank, a.loan_number, a.name, a.city, a.tier, a.propensity_score,
+    a.disposition, a.commitment_strength, a.engagement_level, a.barrier_type,
+    a.promise_made?'Yes':'No', a.promise_date||'',
+    a.tone_shift, a.customer_initiated_resolution?'Yes':'No',
+    a.specific_amount_discussed?'Yes':'No',
+    `"${(a.summary||'').replace(/"/g,'""')}"`,
+    a.total_calls, a.total_amount_pending, a.loan_amount, a.dpd_bucket
+  ]);
+  const csv = [H,...rows].map(r=>r.join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download = 'propensity_report_fusion_finance.csv';
+  a.click();
+}
+
+// ═══════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════
+function fmtNum(n){ return n||n===0 ? Math.round(n).toLocaleString('en-IN') : '—'; }
+function fmtCur(n){
+  if(n>=10000000) return '₹'+(n/10000000).toFixed(2)+'Cr';
+  if(n>=100000)   return '₹'+(n/100000).toFixed(1)+'L';
+  if(n>=1000)     return '₹'+(n/1000).toFixed(1)+'K';
+  return '₹'+Math.round(n).toLocaleString('en-IN');
+}
+function todayStr(){ return new Date().toISOString().split('T')[0]; }
+function daysDiff(dateStr, fromStr){
+  return Math.ceil((new Date(dateStr)-new Date(fromStr))/86400000);
+}
+
+// Boot
+init();
+</script>
+</body>
+</html>

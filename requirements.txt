@@ -1,0 +1,5 @@
+google-genai>=1.57.0
+asyncpg
+python-dotenv
+pandas
+openpyxl
