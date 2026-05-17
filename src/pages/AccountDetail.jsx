@@ -72,9 +72,9 @@ const ScorePill = ({ label, value, max }) => {
 }
 
 const SCORE_BREAKDOWN_MAXES = {
-  disposition_score: 30,
-  commitment_score: 20,
-  engagement_score: 15,
+  disposition_score: 10,
+  commitment_score: 28,
+  engagement_score: 22,
   sentiment_score: 10,
   duration_score: 5,
   history_score: 10,
