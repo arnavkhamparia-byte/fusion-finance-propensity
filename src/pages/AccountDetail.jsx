@@ -77,9 +77,9 @@ const SCORE_BREAKDOWN_MAXES = {
   engagement_score: 22,
   sentiment_score: 10,
   duration_score: 5,
-  history_score: 10,
-  dpd_score: 5,
-  bonus_points: 10,
+  history_score: 15,
+  dpd_score: 10,
+  bonus_points: 13,
 }
 const SCORE_LABELS = {
   disposition_score: 'Disposition',
@@ -233,6 +233,32 @@ export default function AccountDetail() {
             </div>
           </div>
         </div>
+
+        {/* ── Mismatch / Skip warning banners ── */}
+        {account.recording_mismatch && (
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-orange/30 bg-orange/5">
+            <AlertCircle size={16} className="text-orange shrink-0 mt-0.5" />
+            <div>
+              <div className="text-sm font-semibold text-orange">Recording Mismatch Detected</div>
+              <div className="text-xs text-t3 mt-0.5">
+                Gemini analysed a Stage-1 call (no real conversation) despite the DB recording a
+                positive disposition. Score and signals are based on the DB disposition for accuracy.
+              </div>
+            </div>
+          </div>
+        )}
+        {account.recording_skipped_short_duration && (
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-border bg-detail">
+            <AlertCircle size={16} className="text-t4 shrink-0 mt-0.5" />
+            <div>
+              <div className="text-sm font-semibold text-t2">Recording Skipped — Too Short</div>
+              <div className="text-xs text-t3 mt-0.5">
+                Call duration was under 20 seconds. Gemini analysis was skipped to save cost.
+                Score is based on DB disposition only; AI signal fields are set to neutral defaults.
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* ── Tabs ── */}
         <div className="flex gap-1 bg-detail p-1 rounded-xl border border-border w-fit">

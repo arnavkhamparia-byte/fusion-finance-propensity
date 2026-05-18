@@ -1,12 +1,15 @@
 """
-Step 1: Fetch account data from DB for all 30 accounts in the recordings folder.
+Step 1: Fetch account data from DB using a batch query.
 
-For each loan number (filename), pulls:
-  - account_details: core account info
-  - activity_taskactivity: last 15 AI call entries (disposition history)
-  - account_payments: payment history
+Replaces the old approach of reading loan numbers from local filenames.
+Now discovers accounts directly from the DB — no MP3 files needed locally.
+
+For each account returned by the batch query, also fetches:
+  - call history  (last 15 AI calls)
+  - payment history
 
 Output: data/account_data.json
+  Each entry includes call_recording_url for use by analyze_recordings.py.
 """
 
 import os
@@ -18,21 +21,11 @@ from dotenv import load_dotenv
 # Load .env from parent directory
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
 
-BASE_DIR      = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RECORDINGS_DIR = os.path.join(BASE_DIR, "recordings")
-OUTPUT_FILE   = os.path.join(BASE_DIR, "data", "account_data.json")
+BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_FILE = os.path.join(BASE_DIR, "data", "account_data.json")
 
 
-def get_loan_numbers():
-    """Extract loan numbers from recording filenames."""
-    numbers = []
-    for f in sorted(os.listdir(RECORDINGS_DIR)):
-        if f.lower().endswith((".mp3", ".wav", ".ogg")):
-            numbers.append(os.path.splitext(f)[0])
-    return numbers
-
-
-async def fetch_all(loan_numbers: list) -> dict:
+async def fetch_all() -> dict:
     conn = await asyncpg.connect(
         host=os.environ["DB_HOST"],
         port=int(os.environ.get("DB_PORT", 5432)),
@@ -41,37 +34,60 @@ async def fetch_all(loan_numbers: list) -> dict:
         password=os.environ["DB_PASS"],
     )
 
+    # ── Batch query: most recent positive-disposition AI call per account ─────
+    # DISTINCT ON ensures one row per loan_number (most recent call wins).
+    # Adjust assigned_to_id values and INTERVAL as needed.
+    batch_rows = await conn.fetch(
+        """
+        SELECT DISTINCT ON (ad.loan_number)
+            ad.id             AS account_id,
+            ad.loan_number,
+            ad.name,
+            ad.city,
+            ad.loan_amount,
+            ad.dpd_bucket,
+            ad.emi_amount,
+            ad.total_amount_pending,
+            ad.assigned_to_id,
+            t.call_recording_url,
+            t.disposition      AS qualifying_disposition,
+            t.call_duration    AS qualifying_call_duration,
+            t.processed_at     AS latest_call_at
+        FROM activity_taskactivity t
+        JOIN account_details ad ON ad.id = t.account_id
+        WHERE t.activity_type = 'AI Call'
+          AND t.disposition IN (
+              'Agree To Senior Manager Call',
+              'Financial Hardship',
+              'Requested Settlement'
+          )
+          AND ad.assigned_to_id IN (50, 68)
+          AND t.processed_at >= CURRENT_DATE - INTERVAL '13 days'
+        ORDER BY ad.loan_number, t.processed_at DESC
+        """
+    )
+
+    print(f"\nBatch query returned {len(batch_rows)} accounts\n")
+
     results = {}
 
-    for loan_number in loan_numbers:
+    for row in batch_rows:
+        acct_base = dict(row)
+        loan_number = acct_base["loan_number"]
+        account_id  = acct_base["account_id"]
+
         print(f"  Fetching: {loan_number}", end=" ... ")
 
-        # ── Account details ──────────────────────────────────────────
-        account = await conn.fetchrow(
-            """
-            SELECT id, loan_number, name, city,
-                   loan_amount, dpd_bucket, emi_amount, total_amount_pending,
-                   assigned_to_id
-            FROM account_details
-            WHERE loan_number = $1
-            """,
-            loan_number,
-        )
-
-        if not account:
-            print("NOT FOUND — skipping")
-            continue
-
-        acct = dict(account)
-        account_id = acct["id"]
-
-        # Decimals → float for JSON
+        # Decimals → float for JSON serialisation
         for col in ("loan_amount", "emi_amount", "total_amount_pending"):
-            if acct.get(col) is not None:
-                acct[col] = float(acct[col])
+            if acct_base.get(col) is not None:
+                acct_base[col] = float(acct_base[col])
 
-        # ── Call history (last 15 AI calls) ──────────────────────────
-        rows = await conn.fetch(
+        if acct_base.get("latest_call_at"):
+            acct_base["latest_call_at"] = acct_base["latest_call_at"].isoformat()
+
+        # ── Call history (last 15 AI calls) ──────────────────────────────────
+        history_rows = await conn.fetch(
             """
             SELECT id, disposition, sentiment, summary,
                    call_duration, processed_at, channel
@@ -85,13 +101,13 @@ async def fetch_all(loan_numbers: list) -> dict:
         )
 
         call_history = []
-        for r in rows:
+        for r in history_rows:
             entry = dict(r)
             if entry.get("processed_at"):
                 entry["processed_at"] = entry["processed_at"].isoformat()
             call_history.append(entry)
 
-        # ── Payment history ───────────────────────────────────────────
+        # ── Payment history ───────────────────────────────────────────────────
         pay_rows = await conn.fetch(
             """
             SELECT id, amount_paid, payment_date, payment_status
@@ -113,40 +129,36 @@ async def fetch_all(loan_numbers: list) -> dict:
             payments.append(entry)
 
         results[loan_number] = {
-            "account": acct,
-            "call_history": call_history,
-            "payments": payments,
+            "account":                    acct_base,
+            "call_recording_url":         acct_base.get("call_recording_url"),
+            "qualifying_disposition":     acct_base.get("qualifying_disposition"),
+            "qualifying_call_duration":   acct_base.get("qualifying_call_duration"),
+            "call_history":               call_history,
+            "payments":                   payments,
         }
 
-        print(f"OK  ({acct['name']}, DPD: {acct['dpd_bucket']}, "
-              f"{len(call_history)} calls, {len(payments)} payments)")
+        print(f"OK  ({acct_base['name']}, DPD: {acct_base['dpd_bucket']}, "
+              f"{len(call_history)} calls, {len(payments)} payments, "
+              f"recording: {'yes' if acct_base.get('call_recording_url') else 'MISSING'})")
 
     await conn.close()
     return results
 
 
 async def main():
-    loan_numbers = get_loan_numbers()
-    print(f"\nFound {len(loan_numbers)} recordings in {RECORDINGS_DIR}\n")
-
-    if not loan_numbers:
-        print("No recordings found. Place .mp3 files in the recordings/ folder.")
-        return
-
-    data = await fetch_all(loan_numbers)
+    data = await fetch_all()
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w") as f:
         json.dump(data, f, indent=2, default=str)
 
-    print(f"\nDone. Data for {len(data)}/{len(loan_numbers)} accounts saved to:")
+    missing_url = [ln for ln, v in data.items() if not v.get("call_recording_url")]
+    print(f"\nDone. {len(data)} accounts saved to:")
     print(f"  {OUTPUT_FILE}")
-
-    missing = set(loan_numbers) - set(data.keys())
-    if missing:
-        print(f"\nWARNING — {len(missing)} loan numbers not found in DB:")
-        for m in sorted(missing):
-            print(f"  {m}")
+    if missing_url:
+        print(f"\nWARNING — {len(missing_url)} accounts have no call_recording_url:")
+        for ln in missing_url:
+            print(f"  {ln}")
 
 
 if __name__ == "__main__":

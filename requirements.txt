@@ -3,3 +3,5 @@ asyncpg
 python-dotenv
 pandas
 openpyxl
+boto3
+requests

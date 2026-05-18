@@ -407,8 +407,20 @@ export default function Dashboard() {
                       </td>
 
                       {/* Disposition */}
-                      <td className="px-4 py-3 text-xs text-t2 max-w-[180px] truncate">
-                        {account.disposition || '—'}
+                      <td className="px-4 py-3 text-xs text-t2 max-w-[180px]">
+                        <div className="flex items-center gap-1.5">
+                          <span className="truncate">{account.disposition || '—'}</span>
+                          {account.recording_mismatch && (
+                            <span title="Recording mismatch — score based on DB disposition">
+                              <AlertTriangle size={11} className="text-orange shrink-0" />
+                            </span>
+                          )}
+                          {account.recording_skipped_short_duration && (
+                            <span title="Recording skipped — call under 20 seconds">
+                              <AlertTriangle size={11} className="text-t4 shrink-0" />
+                            </span>
+                          )}
+                        </div>
                       </td>
 
                       {/* Reachable */}
