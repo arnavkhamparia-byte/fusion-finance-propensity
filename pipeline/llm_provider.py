@@ -11,6 +11,22 @@ import os
 
 logger = logging.getLogger("LLMProvider")
 
+# Token usage of the most recent generate() call, for cost logging in
+# benchmarks. Keys: text_input_tokens, audio_input_tokens, output_tokens,
+# total_input_tokens. Read it immediately after the call; arms must run
+# sequentially (this is a plain module global, not task-local).
+LAST_USAGE: dict = {}
+
+
+def _set_usage(text_in, audio_in, out, total_in):
+    global LAST_USAGE
+    LAST_USAGE = {
+        "text_input_tokens": text_in or 0,
+        "audio_input_tokens": audio_in or 0,
+        "output_tokens": out or 0,
+        "total_input_tokens": total_in or 0,
+    }
+
 
 async def generate(
     provider_model: str,
@@ -72,6 +88,14 @@ async def _generate_gemini(
         client.aio.models.generate_content(model=model, contents=contents, config=config),
         timeout=timeout_s,
     )
+    um = getattr(response, "usage_metadata", None)
+    if um:
+        audio_in = 0
+        for d in (getattr(um, "prompt_tokens_details", None) or []):
+            if str(getattr(d, "modality", "")).endswith("AUDIO"):
+                audio_in = getattr(d, "token_count", 0) or 0
+        total_in = getattr(um, "prompt_token_count", 0) or 0
+        _set_usage(total_in - audio_in, audio_in, getattr(um, "candidates_token_count", 0), total_in)
     return response.text
 
 
@@ -124,6 +148,20 @@ async def _generate_openai(
             client.chat.completions.create(**kwargs), timeout=timeout_s
         )
     except openai.BadRequestError as e:
+        if "temperature" in str(e) and "temperature" in kwargs:
+            # gpt-5.x reasoning models only accept the default temperature.
+            logger.warning(f"{model} rejected temperature, retrying without it")
+            del kwargs["temperature"]
+            response = await asyncio.wait_for(
+                client.chat.completions.create(**kwargs), timeout=timeout_s
+            )
+            u = getattr(response, "usage", None)
+            if u:
+                details = getattr(u, "prompt_tokens_details", None)
+                audio_in = (getattr(details, "audio_tokens", 0) or 0) if details else 0
+                total_in = getattr(u, "prompt_tokens", 0) or 0
+                _set_usage(total_in - audio_in, audio_in, getattr(u, "completion_tokens", 0), total_in)
+            return response.choices[0].message.content
         if "response_format" not in str(e) or "response_format" not in kwargs:
             raise
         # gpt-audio models reject response_format — retry without it.
@@ -135,4 +173,10 @@ async def _generate_openai(
             client.chat.completions.create(**kwargs), timeout=timeout_s
         )
 
+    u = getattr(response, "usage", None)
+    if u:
+        details = getattr(u, "prompt_tokens_details", None)
+        audio_in = (getattr(details, "audio_tokens", 0) or 0) if details else 0
+        total_in = getattr(u, "prompt_tokens", 0) or 0
+        _set_usage(total_in - audio_in, audio_in, getattr(u, "completion_tokens", 0), total_in)
     return response.choices[0].message.content
