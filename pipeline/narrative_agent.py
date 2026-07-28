@@ -20,6 +20,7 @@ from pipeline.db_context import get_recent_interactions, get_latest_context
 from pipeline.context_utils import repair_and_parse_json, clean_repetitive_words
 from pipeline.llm_provider import generate
 from prompts.narrative_emi import NARRATIVE_PROMPT_STATIC, NARRATIVE_PROMPT_DYNAMIC_TEMPLATE
+from prompts.narrative_emi_noaudio import NARRATIVE_PROMPT_STATIC_NOAUDIO
 
 load_dotenv()
 
@@ -48,6 +49,20 @@ class NarrativeOutput(BaseModel):
     account_status: str
     language: str
     commitments: list[Commitment] = []
+
+
+class NarrativeOutputNoAudio(BaseModel):
+    """No-audio variant of the contract: `language` is removed from the model's
+    output entirely — the pipeline is Hindi-only, so language is fixed
+    deterministically in code (NO_AUDIO_LANGUAGE), never asked of the model."""
+    narrative: str
+    account_status: str
+    commitments: list[Commitment] = []
+
+
+# Language returned by update_account_narrative when use_audio=False.
+# Hindi-only scope for the no-audio pipeline.
+NO_AUDIO_LANGUAGE = "Hindi"
 
 
 # Temporal words the narrative/account_status must never contain — absolute
@@ -102,6 +117,21 @@ def _commitment_key(c: dict) -> tuple:
 # `analysis["date"]` (see disposition_agent.py current_dt). history_retriever
 # falls back to plain YYYY-MM-DD (from transcript_date) if `date` is missing.
 _CALL_DATE_FORMATS = ("%A, %B %d, %Y %I:%M %p", "%Y-%m-%d")
+
+
+def _parse_call_date(raw) -> Optional[str]:
+    """Normalize a history record's "date" stamp to YYYY-MM-DD, or None."""
+    if not raw:
+        return None
+    for fmt in _CALL_DATE_FORMATS:
+        try:
+            return datetime.strptime(str(raw), fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    try:
+        return datetime.fromisoformat(str(raw)).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
 
 
 def _backstop_missing_ptp(history_list: list, commitments: list, account_id) -> list:
@@ -160,11 +190,23 @@ async def update_account_narrative(
     audio_mime_type: str = "audio/mpeg",
     client: str = "fusion_mfi_emi",
     model: str = "gemini-2.5-flash",
+    use_audio: bool = True,
+    expected_call_date: str = None,
 ):
     """
     Fetches history and generates updated narrative/status using AI.
     Returns (narrative, account_status, history_list, language, commitments).
     Read-only — never writes to the database.
+
+    use_audio=False runs the no-audio (Hindi-only) variant: audio_path is
+    ignored, the newest history record stands in for the current call, the
+    model is not asked for `language` (returned as NO_AUDIO_LANGUAGE), and
+    everything else — guards, merge, backstop, caps — is identical.
+
+    expected_call_date ("YYYY-MM-DD", optional, no-audio mode): freshness
+    guard — warns if the newest history record is not from this date, i.e.
+    the disposition row for the call being processed hasn't landed yet and
+    the update would be built on stale history.
     """
     if client == "fusion_mfi_telecall":
         client = "fusion_mfi_emi"
@@ -180,6 +222,17 @@ async def update_account_narrative(
         history_str = "No previous interactions."
     else:
         history_str = json.dumps(history_list, indent=2, default=str)
+
+    # Freshness guard (no-audio mode): the newest history record IS the current
+    # call, so if it predates the call being processed the update is stale.
+    if not use_audio and expected_call_date:
+        latest_date = _parse_call_date(history_list[0].get("date")) if history_list else None
+        if latest_date != expected_call_date:
+            logger.warning(
+                f"Narrative Agent: STALE HISTORY for Account {account_id} — newest history record "
+                f"is dated {latest_date!r}, expected call date {expected_call_date!r}. The disposition "
+                f"row for the current call may not have been written yet."
+            )
 
     # 1b. Fetch previous narrative so the agent updates its own memory
     # instead of rebuilding from the 10-call history window each time.
@@ -213,7 +266,7 @@ async def update_account_narrative(
         # Prepare content parts
         content_parts = []
 
-        if audio_path and os.path.exists(audio_path):
+        if use_audio and audio_path and os.path.exists(audio_path):
             logger.info(f"Narrative Agent: Audio detected at {audio_path}. Adding to analysis.")
             mime_type = audio_mime_type or ("audio/mpeg" if audio_path.endswith(".mp3") else "audio/wav")
             def _read_file_sync(p: str) -> bytes:
@@ -222,8 +275,11 @@ async def update_account_narrative(
             raw_bytes = await asyncio.to_thread(_read_file_sync, audio_path)
             content_parts.append({"audio_bytes": raw_bytes, "mime_type": mime_type})
             audio_context = "\n\nThis is the audio of the last call. Use it to gain deeper insights into the customer's sentiment and tone."
-        else:
+        elif use_audio:
             logger.warning("Narrative Agent: No audio found. Proceeding with text only.")
+            audio_context = ""
+        else:
+            logger.info("Narrative Agent: no-audio mode — newest history record stands in for the current call.")
             audio_context = ""
 
         # 3. Call AI to generate new narrative, status and behavior
@@ -238,13 +294,15 @@ async def update_account_narrative(
 
         # Single-prompt form (no caching for the benchmark) — same construction
         # as the production non-cached fallback path.
-        content_parts.append(NARRATIVE_PROMPT_STATIC.rstrip() + "\n\n---\n\n" + dynamic_block)
+        static_prompt = NARRATIVE_PROMPT_STATIC if use_audio else NARRATIVE_PROMPT_STATIC_NOAUDIO
+        output_schema = NarrativeOutput if use_audio else NarrativeOutputNoAudio
+        content_parts.append(static_prompt.rstrip() + "\n\n---\n\n" + dynamic_block)
 
         resp_text = await generate(
             provider_model=model,
             system=None,
             user_parts=content_parts,
-            schema=NarrativeOutput.model_json_schema(),
+            schema=output_schema.model_json_schema(),
             max_output_tokens=8000,
             timeout_s=GEMINI_TIMEOUT_S,
         )
@@ -264,7 +322,9 @@ async def update_account_narrative(
             result = repair_and_parse_json(resp_text)
             narrative = result.get("narrative", "")
             account_status = result.get("account_status", "")
-            language = result.get("language", "") or ""
+            # No-audio mode is Hindi-only: language is fixed in code, never
+            # read from the model (the field isn't in the schema there).
+            language = (result.get("language", "") or "") if use_audio else NO_AUDIO_LANGUAGE
             commitments = _filter_commitments(result.get("commitments"), account_id)
             # Deterministic merge: the model may only ADD entries or UPDATE
             # outcomes — never erase history. Re-append any previous commitment
@@ -311,6 +371,10 @@ if __name__ == "__main__":
     parser.add_argument("--audio_path", type=str, help="Optional path to the latest call recording.")
     parser.add_argument("--model", type=str, default="gemini-2.5-flash", help="Model to benchmark (gemini* -> Vertex, else OpenAI).")
     parser.add_argument("--client", type=str, default="fusion_mfi_emi", help="Client name (fusion_mfi_emi only).")
+    parser.add_argument("--no_audio", action="store_true",
+                        help="No-audio (Hindi-only) mode: newest history record stands in for the current call.")
+    parser.add_argument("--expected_call_date", type=str, default=None,
+                        help="YYYY-MM-DD freshness guard for --no_audio: warn if the newest history record is older.")
 
     args = parser.parse_args()
 
@@ -319,4 +383,6 @@ if __name__ == "__main__":
         audio_path=args.audio_path,
         client=args.client,
         model=args.model,
+        use_audio=not args.no_audio,
+        expected_call_date=args.expected_call_date,
     ))
