@@ -34,7 +34,7 @@ from pipeline.prompt_builder import build_prompt_blocks  # noqa: E402
 
 RESULTS_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "data", "promptbuilder_ab_results.json",
+    "data", "promptbuilder_ab_results_run2.json",
 )
 NARRATIVE_RUN_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -113,6 +113,7 @@ async def run_account(acct: dict) -> dict:
             previous_blocks=json.loads(json.dumps(ctx.get("prompt_blocks"), default=str)) if ctx.get("prompt_blocks") else None,
             commitments=json.loads(json.dumps(commitments, default=str)),
             model=arm["model"],
+            strict_amounts=True,
         )
         usage = dict(llm_provider.LAST_USAGE)
         out["arms"][arm["key"]] = {

@@ -19,6 +19,7 @@ from pydantic import BaseModel, Field
 from pipeline.llm_provider import generate
 from pipeline.context_utils import repair_and_parse_json
 from prompts.prompt_builder_emi import PROMPT_BUILDER_SYSTEM
+from prompts.prompt_builder_emi_strict import PROMPT_BUILDER_SYSTEM_STRICT
 
 load_dotenv()
 
@@ -208,6 +209,7 @@ async def build_prompt_blocks(
     previous_blocks: dict | None = None,
     commitments: list | None = None,
     model: str = "gemini-2.5-flash",
+    strict_amounts: bool = False,
 ) -> dict | None:
     """
     Selects block versions + generates customer-specific addendums via LLM.
@@ -290,7 +292,7 @@ RECENT HISTORY:
     try:
         resp_text = await generate(
             provider_model=model,
-            system=PROMPT_BUILDER_SYSTEM,
+            system=PROMPT_BUILDER_SYSTEM_STRICT if strict_amounts else PROMPT_BUILDER_SYSTEM,
             user_parts=[user_message],
             schema=PromptBuilderOutput.model_json_schema(),
             max_output_tokens=8000,
