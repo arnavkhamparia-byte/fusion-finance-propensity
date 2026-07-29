@@ -120,6 +120,47 @@ def _openai_messages(system: str | None, user_parts: list) -> list:
     return messages
 
 
+def _azure_client_and_deployment(model: str):
+    """For "azure:<deployment>" models: build an AsyncAzureOpenAI client from
+    AZURE_OPENAI_TARGET_URL (+AZURE_OPENAI_API_KEY). The target URL may be a
+    full Foundry target (.../openai/deployments/<dep>/chat/completions?api-version=...)
+    — endpoint, deployment and api-version are parsed out of it. A deployment
+    given in the model name (azure:<dep>) or AZURE_OPENAI_DEPLOYMENT overrides
+    the URL's deployment. Falls back to api-version 2024-12-01-preview."""
+    import re as _re
+    import openai
+
+    target = os.environ.get("AZURE_OPENAI_TARGET_URL", "")
+    api_key = os.environ.get("AZURE_OPENAI_API_KEY", "")
+    if not target or not api_key:
+        raise RuntimeError(
+            "Azure model requested but AZURE_OPENAI_TARGET_URL / AZURE_OPENAI_API_KEY "
+            "are not set in .env"
+        )
+    m = _re.match(r"(https://[^/]+)", target)
+    if not m:
+        raise RuntimeError(f"Cannot parse endpoint from AZURE_OPENAI_TARGET_URL: {target!r}")
+    endpoint = m.group(1)
+    url_dep = None
+    dep_m = _re.search(r"/deployments/([^/?]+)", target)
+    if dep_m:
+        url_dep = dep_m.group(1)
+    ver_m = _re.search(r"api-version=([^&]+)", target)
+    api_version = ver_m.group(1) if ver_m else "2024-12-01-preview"
+
+    name_dep = model.split(":", 1)[1] if ":" in model else ""
+    deployment = name_dep or os.environ.get("AZURE_OPENAI_DEPLOYMENT") or url_dep
+    if not deployment:
+        raise RuntimeError(
+            "No Azure deployment name: put it in the model (azure:<deployment>), "
+            "in AZURE_OPENAI_DEPLOYMENT, or use a target URL containing /deployments/<name>/"
+        )
+    client = openai.AsyncAzureOpenAI(
+        azure_endpoint=endpoint, api_key=api_key, api_version=api_version
+    )
+    return client, deployment
+
+
 async def _generate_openai(
     model: str,
     system: str | None,
@@ -130,7 +171,10 @@ async def _generate_openai(
 ) -> str:
     import openai
 
-    client = openai.AsyncOpenAI()
+    if model.startswith("azure:"):
+        client, model = _azure_client_and_deployment(model)
+    else:
+        client = openai.AsyncOpenAI()
     kwargs = {
         "model": model,
         "messages": _openai_messages(system, user_parts),
