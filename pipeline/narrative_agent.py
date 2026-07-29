@@ -326,9 +326,16 @@ async def update_account_narrative(
             result = repair_and_parse_json(resp_text)
             narrative = result.get("narrative", "")
             account_status = result.get("account_status", "")
-            # No-audio mode is Hindi-only: language is fixed in code, never
-            # read from the model (the field isn't in the schema there).
-            language = (result.get("language", "") or "") if use_audio else NO_AUDIO_LANGUAGE
+            # No-audio mode: language is never read from the model (the field
+            # isn't in the schema there). It comes from the newest history
+            # record — the disposition agent detects it from the call audio
+            # and stamps it into its output — falling back to NO_AUDIO_LANGUAGE.
+            if use_audio:
+                language = result.get("language", "") or ""
+            else:
+                language = NO_AUDIO_LANGUAGE
+                if history_list and isinstance(history_list[0], dict) and history_list[0].get("language"):
+                    language = history_list[0]["language"]
             commitments = _filter_commitments(result.get("commitments"), account_id)
             # Deterministic merge: the model may only ADD entries or UPDATE
             # outcomes — never erase history. Re-append any previous commitment
