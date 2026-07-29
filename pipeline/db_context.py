@@ -82,7 +82,7 @@ async def get_latest_context(account_id: int, client: str = "fusion_mfi_emi") ->
     """Return the latest stored context for an account (narrative, account_status,
     combined_intelligence) from ai_account_latest_contexts, or None."""
     query = """
-        SELECT narrative, account_status, combined_intelligence
+        SELECT narrative, account_status, combined_intelligence, prompt_blocks
         FROM ai_account_latest_contexts
         WHERE account_id = $1
     """
@@ -100,8 +100,15 @@ async def get_latest_context(account_id: int, client: str = "fusion_mfi_emi") ->
             combined_intelligence = json.loads(combined_intelligence)
         except Exception:
             combined_intelligence = None
+    prompt_blocks = row["prompt_blocks"]
+    if isinstance(prompt_blocks, str):
+        try:
+            prompt_blocks = json.loads(prompt_blocks)
+        except Exception:
+            prompt_blocks = None
     return {
         "narrative": row["narrative"],
         "account_status": row["account_status"],
         "combined_intelligence": combined_intelligence,
+        "prompt_blocks": prompt_blocks,
     }

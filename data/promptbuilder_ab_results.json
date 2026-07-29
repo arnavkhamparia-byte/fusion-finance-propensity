@@ -1,0 +1,2312 @@
+{
+  "results": [
+    {
+      "account_id": 123667,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Customer Name]: This customer has been largely unreachable, with nine consecutive unreached attempts followed by a call where their voice was unintelligible. Randheer should approach this call as a fresh start, focusing on building trust by first introducing the purpose of the call and understanding their current situation before attempting to secure a small repayment restart."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 14.1,
+          "usage": {
+            "text_input_tokens": 7763,
+            "audio_input_tokens": 0,
+            "output_tokens": 285,
+            "total_input_tokens": 7763
+          },
+          "cost_usd": 0.003041
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Name]: unreachable / avoidant, with no meaningful prior interaction. The pattern is repeated non-connects followed by one unintelligible connected attempt, so there is no real behavioral commitment to anchor on yet. Open by calmly stating the purpose, acknowledge the long contact gap, and first try to get a clear conversation before pushing any repayment restart."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given or broken. There is no amount anchor, so start with a fresh full-EMI ask and only move to a smaller restart if the customer explicitly says they cannot do full payment. Use a light consequence nudge only after you have confirmed they can talk and understand the purpose."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste, main Fusion Finance se bol raha hoon. Pichhle kai calls connect nahi hue the, aur kal ki call mein bhi awaaz clear nahi thi.\nCustomer: Haan, boliye.\nRandheer: Main aapki EMI situation samajhna chahta hoon. Kya aap is mahine full payment kar sakte hain, ya koi clear date de sakte hain?\nCustomer: Mujhe abhi dekhna padega.\nRandheer: Theek hai, phir aap mujhe ek pakki date aur method bata dijiye, taaki main us hisaab se note kar sakun."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.5,
+          "usage": {
+            "text_input_tokens": 6920,
+            "audio_input_tokens": 0,
+            "output_tokens": 421,
+            "total_input_tokens": 6920
+          },
+          "cost_usd": 0.002572
+        }
+      }
+    },
+    {
+      "account_id": 182185,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Kulvinder Kaur: This customer has been unreachable directly, with a third party consistently providing a relocation reason. She has not spoken on any prior connected calls. Randheer should open by acknowledging the callback request arranged by the third party, then gently emphasize the importance of direct communication to resolve her EMI."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": "KNOWN REASON CONTEXT: A third party disclosed on athais July do hazaar chhabis that Kulvinder Kaur is in Canada for chaar mahine. Randheer should acknowledge this information and gently ask Kulvinder to confirm, then transition to discussing how this affects her EMI payments. Redirect script hint: 'Kulvinder ji, aapke parivaar ne bataya ki aap Canada mein hain. Kya aap iski pushti kar sakti hain? Hum samajhte hain ki kabhi-kabhi aisi sthitiyan aa jaati hain, lekin humein aapki EMI ke baare mein baat karni hogi.'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Hello Kulvinder ji, main Randheer bol raha hoon Fusion Finance se. Aapke parivaar ne kal athais July ko humein call karne ke liye kaha tha. Kya aap abhi baat karne ke liye upalabdha hain?\nKulvinder: (Silence/hesitation)\nRandheer: Kulvinder ji, hum jaante hain ki aap Canada mein hain, jaisa ki aapke parivaar ne bataya. Hum aapki EMI ke baare mein baat karne ke liye yahan hain. Kya aap humein bata sakti hain ki aapko kya pareshani aa rahi hai?\nKulvinder: Main abhi thoda busy hoon.\nRandheer: Koi baat nahi Kulvinder ji, hum bas aapki EMI ki sthiti samajhna chahte hain. Kya hum paanch minute ke liye baat kar sakte hain? Yeh bahut zaroori hai."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 17.8,
+          "usage": {
+            "text_input_tokens": 9533,
+            "audio_input_tokens": 0,
+            "output_tokens": 605,
+            "total_input_tokens": 9533
+          },
+          "cost_usd": 0.004372
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Kulvinder Kaur: unreachable borrower with a relocation-related third-party explanation. She has never spoken directly on any connected call, and the last connected attempt on 2026-07-28 was still only a third-party interaction. Open by acknowledging the arranged callback and use a gentle, direct bridge to speak with Kulvinder herself, since the real blocker is lack of borrower contact rather than a payment objection."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": "KNOWN REASON CONTEXT:\nA third party stated on 2026-07-28 that Kulvinder is in Canada for four months. Treat this as unconfirmed context, not an accepted excuse; if she repeats it, acknowledge briefly and redirect with: \"Samajh gaya, lekin Kulvinder ji se khud baat karke hi next step fix karna hoga. Kya aap abhi line par hain?\""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given by the borrower. The only live lead is the third party\u2019s offer on 2026-07-28 to connect Kulvinder by evening, so this call should start as a callback confirmation and then move to first direct contact, not as a broken-promise recovery. Use no amount anchor yet; first secure borrower speech and only then explore a small commitment if she engages."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Kulvinder ji, 28 July ko callback ke liye bola gaya tha, isliye main aapko hi connect kar raha hoon.\"\nKulvinder: \"Haan, boliye.\"\nRandheer: \"Aap Canada mein hain, yeh baat mujhe batayi gayi thi. Main bas aapse seedha samajhna chahta hoon ki payment ka next step kya ho sakta hai.\"\nKulvinder: \"Main abhi confirm nahi kar sakti.\"\nRandheer: \"Theek hai, phir aap mujhe ek chhota sa exact date bata dijiye jab aap baat karke clear kar sakti hain.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 8437,
+            "audio_input_tokens": 0,
+            "output_tokens": 561,
+            "total_input_tokens": 8437
+          },
+          "cost_usd": 0.003231
+        }
+      }
+    },
+    {
+      "account_id": 213915,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Customer: This customer exhibits an UNREACHABLE and AVOIDANT pattern, having ignored 9 prior call attempts. The single connected call on atthais July was cut short due to poor network quality, preventing any meaningful engagement or reason disclosure. Randheer should open directly but non-threateningly, acknowledging the previous technical issue, and if engagement is established, gently probe for a reason before attempting to secure any payment commitment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste, main Randheer Fusion Finance se bol raha hoon. Pichli baar atthais July ko network ki wajah se hamari baat poori nahi ho paayi thi. Kya aap abhi sun pa rahe hain?\"\nCustomer: \"Haan, abhi theek hai.\"\nRandheer: \"Achha. Aapki EMI baki hai. Kya aap bata sakte hain ki aapko payment karne mein kya dikkat aa rahi hai?\"\nCustomer: \"Mujhe thoda time chahiye.\"\nRandheer: \"Theek hai, aap kab tak thoda payment kar sakte hain?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 19.5,
+          "usage": {
+            "text_input_tokens": 7913,
+            "audio_input_tokens": 0,
+            "output_tokens": 439,
+            "total_input_tokens": 7913
+          },
+          "cost_usd": 0.003471
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Name]: Unreachable and avoidant, with one brief connected attempt that ended in a poor-quality hang up and no commitment. The customer has shown low engagement and no reason for non-payment has ever been disclosed. Open directly, keep it brief, and if they respond even a little, move immediately to one specific reason question and a small, realistic payment ask."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, and there is no broken promise history. Use a fresh full-EMI push first; if the customer resists, keep the ask small and concrete rather than drifting into a long explanation. Do not use consequence nudge immediately unless they start avoiding after engaging."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste, main Fusion Finance se bol raha hoon. Aapka EMI payment pending hai, main sirf iske liye call kar raha hoon.\nCustomer: Haan, boliye.\nRandheer: Pichhli baar line clear nahi thi. Is baar ek seedha sawaal \u2014 payment mein kya dikkat aa rahi hai?\nCustomer: Abhi kuch keh nahi sakta.\nRandheer: Theek hai, phir aap kitna arrange kar sakte hain aur kis tareekh tak?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.3,
+          "usage": {
+            "text_input_tokens": 7060,
+            "audio_input_tokens": 0,
+            "output_tokens": 475,
+            "total_input_tokens": 7060
+          },
+          "cost_usd": 0.002715
+        }
+      }
+    },
+    {
+      "account_id": 131300,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Narayan Devi: This customer has been unreachable for previous attempts. A third party provided a specific callback time for Narayan Devi. Randheer should open the call by referencing the callback request for 'aaj baarah baje' to establish context and rapport, as this will likely be the first direct interaction with Narayan Devi."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nAGENT: \"Namaste Narayan Devi ji, main Randheer Fusion Finance se bol raha hoon. Pichli baar aapke ghar se kisi ne bataya tha ki aapko 'aaj baarah baje' ke aas paas call karein. Kya abhi baat karne ka sahi samay hai?\"\nNARAYAN DEVI: \"Haan, theek hai.\"\nAGENT: \"Dhanyavaad. Humne aapko aapki EMI ke baare mein baat karne ke liye call kiya hai. Kya aapko iske baare mein jaankari hai?\"\nNARAYAN DEVI: \"Ji, thodi bahut.\"\nAGENT: \"Theek hai, main aapko poori jaankari de deta hoon.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 16.7,
+          "usage": {
+            "text_input_tokens": 7991,
+            "audio_input_tokens": 0,
+            "output_tokens": 444,
+            "total_input_tokens": 7991
+          },
+          "cost_usd": 0.003507
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Narayan Devi: unreachable / first direct explore call after many failed attempts. She has not spoken directly before, and the only live contact so far was a polite third party who asked for a callback around 12 PM on 29 July 2026. Open by referencing that callback request so the call feels expected, then quickly verify identity and move gently into purpose."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been locked with Narayan Devi, and there is no broken promise history. Use a fresh collection approach: first establish direct contact, then ask for a small, specific payment date only if she engages. Since the last live contact was a third party callback request for 29 July 2026 around 12 PM, keep the opening aligned to that callback and do not sound like a surprise follow-up."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Narayan Devi ji, kal nahi, aapke liye 29 July 2026 around 12 PM ka callback note tha, isliye main baat kar raha hoon.\nNarayan Devi: Haan, boliye.\nRandheer: Main aapke EMI ke baare mein short mein baat karna chahta hoon. Kya aap is waqt thoda sa time de sakti hain?\nNarayan Devi: Haan, bataiye.\nRandheer: Agar aap full amount abhi nahi kar pa rahi hain, to aap kis date tak kuch payment arrange kar sakti hain?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 3.9,
+          "usage": {
+            "text_input_tokens": 7149,
+            "audio_input_tokens": 0,
+            "output_tokens": 445,
+            "total_input_tokens": 7149
+          },
+          "cost_usd": 0.002677
+        }
+      }
+    },
+    {
+      "account_id": 186736,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sandeep Kaur: This customer is avoidant and has been consistently difficult to engage. On July eighteen, she explicitly refused to discuss the loan and vaguely implied a dispute regarding loan ownership. Randheer should approach with a firm but empathetic tone, acknowledging the prior refusal and implied dispute, and attempt to clarify the nature of the dispute to move towards resolution."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: On July eighteen, Sandeep Kaur vaguely implied that the loan might not be hers or someone else is responsible. Randheer should acknowledge this implied dispute directly and seek clarification. Redirect script hint: 'Sandeep ji, pichli baar aapne is loan ke baare mein baat karne se mana kar diya tha aur kaha tha ki yeh loan aapka nahi hai ya koi aur zimmedaar hai. Kya aap is vishay par thoda aur prakash daal sakti hain?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: 'Namaste Sandeep Kaur ji, main Randheer bol raha hoon Fusion Finance se. Hum aapke EMI ke baare mein baat karne ke liye call kar rahe hain.'\nSandeep Kaur: 'Maine pehle bhi kaha hai, Sandeep Kaur se baat mat karo. Aur yeh loan mera nahi hai.'\nRandheer: 'Sandeep ji, hum samajh sakte hain ki aapko kuch galatfehmi ho sakti hai. Pichli baar aapne bataya tha ki yeh loan aapka nahi hai ya koi aur zimmedaar hai. Kya aap is vishay par thoda aur prakash daal sakti hain taaki hum isko theek se samajh paayein?'\nSandeep Kaur: 'Mujhe is baare mein baat nahi karni.'\nRandheer: 'Sandeep ji, hum aapki baat sunne ke liye yahan hain. Agar koi galatfehmi hai toh hum use suljhane mein aapki madad karna chahte hain. Kya aap bata sakti hain ki aapko kya lagta hai ki is loan ke saath kya samasya hai?'"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 27.0,
+          "usage": {
+            "text_input_tokens": 10288,
+            "audio_input_tokens": 0,
+            "output_tokens": 639,
+            "total_input_tokens": 10288
+          },
+          "cost_usd": 0.004684
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sandeep Kaur: avoidant with dispute/confusion signals and repeated non-engagement. She has explicitly refused to discuss the loan, said 'Don't talk,' and recent connects were third-party/wrong-number style, so the borrower may be hard to reach. Open briefly, verify identity only if needed, and do not over-explain; move fast to a calm, direct EMI ask only if she is the borrower."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nOn July 18, Sandeep Kaur refused to discuss the loan and implied the loan may not be hers or someone else is responsible. Treat this as a dispute/confusion signal, not as an excuse to debate; if she repeats it, say in Hindi: 'Main samajh gaya, par agar aap borrower hain to main sirf account clarification ke liye baat kar raha hoon. Agar aap galat person hain to main note kar leta hoon.'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Sandeep Kaur ji, main EMI ke liye baat kar raha hoon.\nSandeep Kaur: Mujhe is baare mein baat nahi karni.\nRandheer: Theek hai, main zyada nahi kheenchunga. Agar aap borrower hain, to bas itna bata dijiye ki aap account ke liye sahi person hain ya nahi.\nSandeep Kaur: Main baat nahi karungi.\nRandheer: Samajh gaya. Main note kar leta hoon, aur agar aap hi borrower hain to kripya account clarification ke liye ek seedha jawab de dijiye."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.1,
+          "usage": {
+            "text_input_tokens": 9077,
+            "audio_input_tokens": 0,
+            "output_tokens": 574,
+            "total_input_tokens": 9077
+          },
+          "cost_usd": 0.003417
+        }
+      }
+    },
+    {
+      "account_id": 156125,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Rekha Anil Pawar: This customer has a pattern of unreachability, with nine prior attempts before the first connected call. On the first connected call on athais July, she disputed the loan, asking 'Who is this?' and 'Which loan have you started?'. Randheer should approach the call directly to address the loan dispute, acknowledging the previous communication difficulties due to poor network."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: On athais July, Rekha Anil Pawar disputed the loan, stating 'Who is this?' and 'Which loan have you started?'. Randheer should acknowledge this dispute directly and state the purpose of the call is to clarify the loan details. Redirect script hint: 'Rekha ji, pichli baar aapne loan ke baare mein jaankari maangi thi. Hum aapko isi vishay par baat karne ke liye call kar rahe hain.'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY: No prior PTP commitments have been made by Rekha Anil Pawar. Given the active loan dispute, Randheer should not attempt to secure a PTP on this call. The focus is on resolving the dispute."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE: Randheer: \"Namaste Rekha Anil Pawar ji. Main Randheer, Fusion Finance se bol raha hoon. Pichli baar athais July ko network ki dikkat ke kaaran humari baat poori nahi ho paayi thi. Aapne humare loan ke baare mein jaankari maangi thi.\" Rekha: \"Haan, mujhe samajh nahi aa raha yeh kaun sa loan hai aur aap kaun hain.\" Randheer: \"Rekha ji, aapne Fusion Finance se ek loan liya tha. Hum isi ke baare mein baat karne ke liye call kar rahe hain. Kya aapko yaad hai aapne kaun sa loan liya tha?\" Rekha: \"Mujhe koi loan yaad nahi hai.\" Randheer: \"Theek hai Rekha ji, main aapko is loan ki poori jaankari deta hoon. Kripya dhyan se suniye.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 21.2,
+          "usage": {
+            "text_input_tokens": 7940,
+            "audio_input_tokens": 0,
+            "output_tokens": 631,
+            "total_input_tokens": 7940
+          },
+          "cost_usd": 0.003959
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Rekha Anil Pawar: dispute + unreachable pattern. She has 9 prior unreached attempts and on the first connect she questioned the loan itself, so she is not in a payment-ready mindset yet. Open directly, keep it brief, and if she engages even a little, move immediately to one clear reason question before asking for any small, realistic payment date."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nThe only disclosed issue so far is dispute/confusion on the July 28, 2026 call, when she asked 'Who is this?' and 'Which loan have you started?'. Reference it briefly as a clarification issue, not as an excuse: 'Rekha ji, pichhli baar aapko loan ko lekar confusion tha, main bas usi ko clear karna chahta hoon.' Then redirect: 'Aap bata sakti hain kis wajah se aapko ye loan samajh nahi aa raha?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo prior PTP was given or honored in the connected history. Use a fresh full-EMI push only if she stops disputing and becomes willing to discuss payment; otherwise do not force a commitment. Since there is no broken promise history, do not use accountability framing or consequence-heavy language upfront."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Rekha ji, main Fusion Finance se EMI ke baare mein baat kar raha hoon. Pichhli baar aapko loan ko lekar confusion tha, isliye main pehle clear karna chahta hoon.\nRekha: Mujhe samajh nahi aa raha kaunsa loan hai.\nRandheer: Theek hai Rekha ji, aap bas itna bata dijiye ki kya aapko loan details verify karni hain ya EMI ke baare mein baat karni hai?\nRekha: Haan, details dekhni hain.\nRandheer: Theek hai, phir main short mein batata hoon aur agar aap comfortable hon to aap payment ka koi chhota sa date bhi bata dijiye."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.3,
+          "usage": {
+            "text_input_tokens": 7088,
+            "audio_input_tokens": 0,
+            "output_tokens": 565,
+            "total_input_tokens": 7088
+          },
+          "cost_usd": 0.002902
+        }
+      }
+    },
+    {
+      "account_id": 98196,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Raisha ji: This customer exhibits an avoidant and unreachable pattern, having not engaged in any of the ten prior call attempts. In the last connected call on atthais July, Raisha ji remained silent despite Randheer's attempts to confirm audibility. Randheer should open directly but non-threateningly, keeping the initial statement brief. If any engagement occurs, immediately probe for a specific reason for non-payment, then attempt to secure any small PTP."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 16.6,
+          "usage": {
+            "text_input_tokens": 7769,
+            "audio_input_tokens": 0,
+            "output_tokens": 313,
+            "total_input_tokens": 7769
+          },
+          "cost_usd": 0.003113
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Raisha: avoidant and unreachable across ten attempts, with the first connected call still yielding no spoken engagement. She has not disclosed any reason for non-payment and has repeatedly stayed silent or disconnected quickly. Randheer should open briefly, directly, and non-threateningly, then move to one specific reason question only if she speaks."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever given, so there is no broken commitment to reference. Use a fresh full-EMI push and keep the first ask simple; do not anchor on any prior amount or date. Since there is no commitment history, save consequence nudges for after you see whether she engages."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Raisha ji, main Fusion Finance se bol raha hoon. Aapki EMI ke liye baat karni hai, kripya ek minute dijiye.\nRaisha: ...\nRandheer: Aap abhi sun paa rahi hain? Agar haan, to bas itna bata dijiye ki payment is cycle mein kyun nahi ho paayi.\nRaisha: ...\nRandheer: Theek hai, phir aap jitna manage kar sakti hain utna amount aur ek date bata dijiye, taaki main uske hisaab se note kar loon."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 6.4,
+          "usage": {
+            "text_input_tokens": 6930,
+            "audio_input_tokens": 0,
+            "output_tokens": 407,
+            "total_input_tokens": 6930
+          },
+          "cost_usd": 0.002547
+        }
+      }
+    },
+    {
+      "account_id": 191306,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Nanu ji: This customer exhibits an avoidant and unreachable pattern, with 8 prior unreached attempts and one connected call where audibility issues prevented meaningful conversation. Randheer should open by acknowledging the previous technical issue and confirming audibility. Then, state the purpose directly but non-threateningly. If Nanu ji engages, ask one specific reason question for non-payment, then immediately push for any small PTP they can manage."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste Nanu ji, main Randheer Fusion Finance se bol raha hoon. Pichli baar network ki wajah se aapki awaaz theek se nahi aa rahi thi. Kya ab aap mujhe theek se sun pa rahe hain?\"\nNanu ji: \"Haan, ab theek hai.\"\nRandheer: \"Dhanyawaad. Nanu ji, humne aapko pichle kuch dinon mein aath baar call karne ki koshish ki hai, aur aapki EMI abhi tak pending hai. Kya aap bata sakte hain ki payment mein deri kyun ho rahi hai?\"\nNanu ji: \"Kya baat hai?\"\nRandheer: \"Nanu ji, aapki EMI ka bhugtaan abhi tak nahi hua hai. Kya aap mujhe bata sakte hain ki is baar payment mein kya dikkat aa rahi hai?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 20.7,
+          "usage": {
+            "text_input_tokens": 7735,
+            "audio_input_tokens": 0,
+            "output_tokens": 496,
+            "total_input_tokens": 7735
+          },
+          "cost_usd": 0.00356
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Nanu ji: unreachable and avoidant, with one connected call that never became a real conversation. The only connect had poor network and faint audio, so do not assume refusal or hardship; treat this as a low-engagement, low-information account. Open very briefly, mention the repeated attempts factually, and immediately test whether he can hear you clearly before moving to the EMI ask."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, so there is no broken promise to anchor on. Keep the first ask simple: seek a small, specific payment date within the next 15 days only if he engages, and do not over-negotiate before you get basic responsiveness. Since there is no prior commitment, use a fresh collection push and save consequence language for only if he starts avoiding again."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Nanu ji, main Fusion Finance se bol raha hoon. Pichhle kuch dinon mein kai baar call kiya gaya tha aur kal bhi connection clear nahi tha. Kya aap mujhe ab theek se sun paa rahe hain?\nNanu ji: Haan, ab sun raha hoon.\nRandheer: Theek hai. Aapki EMI pending hai, to aap bata dijiye is cycle mein kitna arrange kar paayenge aur kis tareekh tak?\nNanu ji: Main poori EMI abhi nahi de paunga, thoda time chahiye.\nRandheer: Samajh gaya. Phir aap kis tareekh tak poora payment kar denge, aur agar aaj poora nahi ho sakta to kitna partial arrange kar sakte hain?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 6934,
+            "audio_input_tokens": 0,
+            "output_tokens": 578,
+            "total_input_tokens": 6934
+          },
+          "cost_usd": 0.002889
+        }
+      }
+    },
+    {
+      "account_id": 211895,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sangeetha Jayakumar: This customer is experiencing active and severe financial hardship due to a recent family death and income loss. Her husband disclosed on July twenty-eight that her father passed away, her mother is struggling, and Sangeetha had to stop her studies to work as a mason. Randheer should prioritize establishing direct contact with Sangeetha, confirming the hardship details with deep empathy, and only then gently exploring a small repayment without pressure."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: On July twenty-eight, Sangeetha's husband disclosed that her father passed away, her mother is struggling, and Sangeetha had to stop her studies to work as a mason. Randheer should acknowledge this hardship with deep empathy. For example, you can say: 'Sangeetha ji, aapke pati ne kal aapke parivaar ki mushkilon ke baare mein bataya tha, aapke pitaji ke nidhan aur aapki padhai chhodne ki baat sunkar bahut dukh hua. Hum aapki is mushkil ghadi mein aapke saath hain. Kya aap is baare mein thoda aur bata sakti hain?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY: No PTP has been committed or locked by the customer. On July twenty-eight, the agent suggested a payment of ek hazaar paanch sau rupaye, which the husband said he would discuss with Sangeetha. Given the active hardship, Randheer should not solicit a PTP on this call. The focus is on empathy and confirming the situation."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE: Randheer: 'Namaste Sangeetha ji, main Randheer, Fusion Finance se. Aapke pati ne kal aapke parivaar ki mushkilon ke baare mein bataya tha, aapke pitaji ke nidhan aur aapki padhai chhodne ki baat sunkar bahut dukh hua. Hum aapki is mushkil ghadi mein aapke saath hain. Kya aap is baare mein thoda aur bata sakti hain?' Sangeetha: 'Haan ji, bahut mushkil samay hai. Pitaji ab nahi rahe aur maa bhi theek nahi rehti. Mujhe kaam karna pad raha hai.' Randheer: 'Hum samajh sakte hain Sangeetha ji, yeh bahut kathin samay hai. Hum aapki madad karna chahte hain. Kya aapko yaad hai ki kal aapke pati ne ek choti si rashi, ek hazaar paanch sau rupaye, ke baare mein baat ki thi, jisse aapka loan account active reh sake?' Sangeetha: 'Haan, unhone bataya tha.' Randheer: 'Theek hai Sangeetha ji. Jab aapko thoda behtar lage, tab hum is par aage baat kar sakte hain."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 33.7,
+          "usage": {
+            "text_input_tokens": 8122,
+            "audio_input_tokens": 0,
+            "output_tokens": 807,
+            "total_input_tokens": 8122
+          },
+          "cost_usd": 0.004454
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sangeetha Jayakumar: HARDSHIP_ACTIVE, with ongoing family bereavement, income loss, and family responsibility. Her husband already disclosed that her father passed away, her mother is struggling, and she stopped studies to work as a mason, so the opening must stay soft and respectful. Start by acknowledging the situation, confirm directly with Sangeetha if she is available, and do not rush into repayment until she has spoken."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nOn July 28, the family disclosed a death in the family, mother\u2019s struggle, and income loss because Sangeetha stopped studies to work as a mason. Reference it briefly as context, not as a reason to skip payment: \"Aapki family ki situation samajh aa gayi hai, bas main Sangeetha ji se khud confirm karna chahta hoon.\" Then redirect gently: \"Jab aap theek se baat kar paayein, hum chhota sa repayment plan dekh lete hain.\""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was locked on the last connected call; the husband only said he would discuss the suggested fifteen hundred rupees with Sangeetha. Use a gentle fresh-collection approach and do not act as if any commitment is overdue. Keep the amount anchor at fifteen hundred rupees only as a soft reference after empathy, and save any consequence nudge for much later if she becomes avoidant."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste Sangeetha ji, main Randheer bol raha hoon. Aapki family ki jo situation July 28 ko batayi gayi thi, uske liye mujhe afsos hai.\"\nSangeetha: \"Haan, abhi ghar mein kaafi mushkil hai.\"\nRandheer: \"Samajh sakta hoon. Main bas itna confirm karna chahta hoon ki aap se seedha baat ho jaaye, aur phir hum dekh lete hain ki repayment ko kaise manageable rakha ja sakta hai.\"\nSangeetha: \"Theek hai, bataiye.\"\nRandheer: \"Pichhli baat mein fifteen hundred rupees ka suggestion aaya tha; agar aap comfortable hon, to hum usi ko dhyaan mein rakhkar aage ka step decide kar lete hain.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 6.1,
+          "usage": {
+            "text_input_tokens": 7254,
+            "audio_input_tokens": 0,
+            "output_tokens": 729,
+            "total_input_tokens": 7254
+          },
+          "cost_usd": 0.003272
+        }
+      }
+    },
+    {
+      "account_id": 166347,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Bulu Ghoda: This customer exhibits an AVOIDANT pattern, characterized by minimal and unclear responses during the last connected call on athais July. Randheer should open with a direct but non-threatening statement of purpose, keeping the conversation brief. If Bulu Ghoda engages even slightly, Randheer should ask one specific reason question, then push for any small PTP he can manage."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 14.4,
+          "usage": {
+            "text_input_tokens": 7104,
+            "audio_input_tokens": 0,
+            "output_tokens": 298,
+            "total_input_tokens": 7104
+          },
+          "cost_usd": 0.002876
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Bulu Ghoda: avoidant and minimally engaged. He has already had one connected call with only unclear, evasive responses and several prior quick hang-ups or third-party connects. Open directly, keep it brief, and if he engages even a little, move fast to one clear reason question and then a small, specific payment commitment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, so there is no broken commitment to reference. Use a fresh full-EMI push first; if he resists, keep the ask small and concrete rather than drifting into a long explanation. No consequence nudge is needed at the opening unless he starts avoiding again."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Bulu ji, main Fusion Finance se bol raha hoon. Aapka EMI payment abhi pending hai, isliye seedha baat kar raha hoon.\nBulu: Haan.\nRandheer: Pichhli baar aapne clear jawab nahi diya tha. Is baar bas itna bata dijiye ki payment kyun delay hui?\nBulu: Thoda issue tha.\nRandheer: Theek hai, to aap aaj ya 29 July tak kitna arrange kar sakte hain?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.1,
+          "usage": {
+            "text_input_tokens": 6364,
+            "audio_input_tokens": 0,
+            "output_tokens": 491,
+            "total_input_tokens": 6364
+          },
+          "cost_usd": 0.002573
+        }
+      }
+    },
+    {
+      "account_id": 215491,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Munni Devi: This customer exhibits a dispute and avoidant pattern. She consistently disputes the outstanding amount, claiming unverified prior payments to third parties, and has a history of low engagement and abrupt call disconnections. Randheer should open directly but non-threateningly, keeping the initial interaction brief. If she engages, ask one specific reason question before attempting to secure any small PTP."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: Munni Devi has previously claimed to have paid 'Basha' on terah July and 'Wasim sir' for terah hazaar rupaye on solah July. If she raises these claims again, acknowledge them by saying, 'Munni Devi ji, humne aapke pichle calls mein kiye gaye payments ke daavon ko dekha hai, lekin hamare records mein yeh rashi abhi bhi pending dikha rahi hai. Kripya batayein ki aap is EMI ka bhugtaan kab tak kar payengi?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY: No prior PTP commitments have been made by Munni Devi. Randheer should aim to secure a first commitment, anchoring to the full EMI amount initially. Given her history of unverified payment claims, be prepared to address these directly but without getting sidetracked."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE: Randheer: \"Namaste Munni Devi ji, main Randheer Fusion Finance se bol raha hoon. Aapki EMI ke baare mein baat karni thi.\" Munni Devi: \"Maine toh pehle hi payment kar di hai, Wasim sir ko terah hazaar rupaye diye the solah July ko.\" Randheer: \"Munni Devi ji, humne aapke pichle calls mein kiye gaye payments ke daavon ko dekha hai, lekin hamare records mein yeh rashi abhi bhi pending dikha rahi hai. Kya aap is EMI ka bhugtaan kab tak kar sakti hain?\" Munni Devi: \"Mujhe abhi baat nahi karni.\" Randheer: \"Munni Devi ji, main samajh sakta hoon ki aap busy hain, lekin yeh call aapki pending EMI ke liye bahut zaroori hai. Kya aap abhi thoda samay de sakti hain?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 23.8,
+          "usage": {
+            "text_input_tokens": 10182,
+            "audio_input_tokens": 0,
+            "output_tokens": 676,
+            "total_input_tokens": 10182
+          },
+          "cost_usd": 0.004745
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Munni Devi: dispute + avoidant pattern with repeated unverified payment claims. She has twice claimed payment to third parties ('Basha' on July 13 and 'Wasim sir' for \u20b913,000 on July 16) and has also abruptly disconnected on July 18 and July 28. Open briefly and directly, do not debate the third-party claims, and if she engages even a little, move fast to one specific reason question and then a small, realistic payment commitment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nOn July 13 she said she had paid 'Basha', and on July 16 she repeated that she had already paid \u20b913,000 to 'Wasim sir'. Treat this as a disputed-payment claim, not a valid closure reason. Redirect hint: 'Munni Devi, main aapki baat note kar raha hoon, lekin payment system mein reflect nahi hui hai; abhi bas itna batayiye ki is mahine aap kitna arrange kar paayengi?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever locked in this history, so there is no broken PTP to recover. Use a fresh, small-commitment anchor only if she engages; do not start with a long repayment negotiation. Because she is avoidant and has hung up twice after identity confirmation, keep the first ask short and move quickly to a concrete amount/date only if she stays on the line.\nLast miss reason (from call on July 16, 2026 09:07 AM): she claimed she had already paid \u20b913,000 to 'Wasim sir' and refused to accept the outstanding demand."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Munni Devi ji, main sirf aapke EMI ke baare mein baat kar raha hoon.\nMunni Devi: Maine pehle hi Basha ko diya tha.\nRandheer: Main samajh gaya, lekin system mein payment reflect nahi hui. Aap is mahine kitna arrange kar sakti hain?\nMunni Devi: Main poora nahi de paungi.\nRandheer: Theek hai, phir jo amount aap pakka de sakti hain, woh aur uski date bata dijiye."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 5.2,
+          "usage": {
+            "text_input_tokens": 8958,
+            "audio_input_tokens": 0,
+            "output_tokens": 599,
+            "total_input_tokens": 8958
+          },
+          "cost_usd": 0.003438
+        }
+      }
+    },
+    {
+      "account_id": 139272,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Name]: This customer shows a pattern of being UNREACHABLE, with several recent calls going unanswered or ending abruptly without engagement. Randheer should prioritize establishing initial contact and encouraging the customer to speak, acknowledging the past difficulty in connecting."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste, main Randheer Fusion Finance se bol raha hoon. Kya aap mujhe sun pa rahe hain?\"\nCustomer: \"Ji, sun raha hoon.\"\nRandheer: \"Achha hua aapse baat ho paayi. Pichli kuch koshishon mein aapse sampark nahi ho pa raha tha. Kya aap abhi baat karne ke liye upalabdh hain?\"\nCustomer: \"Ji, bataiye.\"\nRandheer: \"Dhanyavaad. Main aapko aapki EMI ke baare mein jaankari dene ke liye call kar raha hoon.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 18.8,
+          "usage": {
+            "text_input_tokens": 8079,
+            "audio_input_tokens": 0,
+            "output_tokens": 400,
+            "total_input_tokens": 8079
+          },
+          "cost_usd": 0.003424
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Name]: Unreachable / no meaningful engagement so far. Pichhle teen connected attempts mein customer ne ya to response nahi diya ya sirf 'Hello' bola aur call jaldi end ho gayi. Opening ko bahut simple rakho, pehle identity aur audio check karo, aur payment push tabhi karo jab customer clearly engage kare."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nKoi PTP diya nahi gaya hai aur koi broken PTP record nahi hai. Is call mein fresh collection approach rakho; pehle engagement build karo, phir full EMI push karo. Consequence nudge sirf tab use karo jab customer avoid kare, aur abhi date/amount anchor mat banao."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste, main Fusion Finance se Randheer bol raha hoon. Kya meri awaaz clear aa rahi hai?\nCustomer: Haan.\nRandheer: Dhanyavaad. Main aapke EMI ke baare mein baat kar raha hoon. Pichhle teen calls mein aapse proper baat nahi ho paayi thi, isliye aaj main seedha aur short rakhunga.\nCustomer: Theek hai.\nRandheer: Aap is mahine ki EMI kab tak arrange kar sakte hain?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.2,
+          "usage": {
+            "text_input_tokens": 7273,
+            "audio_input_tokens": 0,
+            "output_tokens": 479,
+            "total_input_tokens": 7273
+          },
+          "cost_usd": 0.002776
+        }
+      }
+    },
+    {
+      "account_id": 215323,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Putul: This customer exhibits an AVOIDANT pattern, having consistently avoided engagement across four connected calls. On July twenty-eighth, she actively refused to engage by claiming she couldn't hear and putting the agent on hold. Randheer should open with a direct but non-threatening statement of purpose, keep the interaction brief, and if any engagement occurs, ask one specific reason question before pushing for any small PTP she can manage."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": "KNOWN REASON CONTEXT: No reason for non-payment has been disclosed across any of the four connected calls. If Putul attempts to deflect or end the call without discussing the pending EMIs, gently prompt her by saying, 'Putul ji, kya aap bata sakti hain ki aapko payment karne mein kya dikkat aa rahi hai?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY: No prior PTP commitments have been made by Putul. Randheer should aim to secure any small PTP amount she can manage, anchoring to the full EMI amount first if possible, but prioritizing engagement and a commitment over the full amount."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste Putul ji, main Randheer Fusion Finance se bol raha hoon. Aapki EMI pending hai, aur hum is par baat karne ke liye call kar rahe hain.\"\nPutul: \"Mujhe kuch sunai nahi de raha hai.\"\nRandheer: \"Putul ji, meri awaaz abhi theek aa rahi hai? Hum aapki pending EMI ke baare mein baat karna chahte hain. Kya aap bata sakti hain ki aapko payment karne mein kya dikkat aa rahi hai?\"\nPutul: \"Abhi main baat nahi kar sakti.\"\nRandheer: \"Theek hai Putul ji, par kya aap humein ek chhota sa payment bhi aaj ya kal tak kar sakti hain? Isse aapka account active rahega.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 25.5,
+          "usage": {
+            "text_input_tokens": 10199,
+            "audio_input_tokens": 0,
+            "output_tokens": 605,
+            "total_input_tokens": 10199
+          },
+          "cost_usd": 0.004572
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Putul: avoidant and increasingly uncooperative across four connected calls. She has not disclosed any reason for non-payment, and the last connected call on July 28 ended with her saying she could not hear and putting the call on hold. Open briefly and directly, keep the purpose clear, and if she engages even a little, move fast to one specific reason question and a small, realistic payment commitment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever given, so there is no broken commitment to reference and no amount anchor from history. Use a fresh full-EMI push first; if she resists, keep the consequence nudge light and do not over-explain. Last miss reason (from call on July 28, 2026 05:10 PM): no reason given; customer claimed she could not hear and put the call on hold."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Putul ji, main pending EMI ke baare mein baat kar raha hoon.\nPutul: ...\nRandheer: Aap July 28 wale call mein bhi engage nahi kar paayi thi. Is baar payment mein kya dikkat aa rahi hai?\nPutul: Mujhe abhi clear nahi hai.\nRandheer: Theek hai, phir jo bhi aap manage kar sakti hain uska ek chhota sa commitment de dijiye, taaki main usi hisaab se note kar loon."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.9,
+          "usage": {
+            "text_input_tokens": 8965,
+            "audio_input_tokens": 0,
+            "output_tokens": 514,
+            "total_input_tokens": 8965
+          },
+          "cost_usd": 0.003269
+        }
+      }
+    },
+    {
+      "account_id": 149122,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 customer: This customer has a DISPUTE pattern, denying the existence of any loan. They were dismissive and uncooperative in the last connected call after multiple unreachable attempts. Randheer should directly address the loan dispute and verify the customer's identity and loan details."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: The customer denied having any loan on athais July. Randheer should acknowledge this by saying, 'Aapne pichli baar kaha tha ki aapka koi loan nahi hai. Hum isi vishay par baat karne ke liye call kar rahe hain. Kya main aapka naam aur janam tithi verify kar sakta hoon?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE: Randheer: \"Namaste, kya main aapse baat kar raha hoon?\" Customer: \"Haan, bol raha hoon. Lekin mera koi loan nahi hai, jaisa maine pehle bhi bataya tha.\" Randheer: \"Ji, mujhe pata hai ki aapne pichli baar athais July ko kaha tha ki aapka koi loan nahi hai. Hum isi vishay par baat karne ke liye call kar rahe hain. Kya main aapki janam tithi verify kar sakta hoon, taaki hum is galatfehmi ko door kar sakein?\" Customer: \"Kyun? Jab loan hai hi nahi toh kya verify karna?\" Randheer: \"Yeh jaankari hamare liye zaroori hai taaki hum aapke account ki sahi jaanch kar sakein aur aapko poori jaankari de sakein. Kripya sahyog karein.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 20.6,
+          "usage": {
+            "text_input_tokens": 6931,
+            "audio_input_tokens": 0,
+            "output_tokens": 539,
+            "total_input_tokens": 6931
+          },
+          "cost_usd": 0.003427
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 [Name]: dispute / loan-denial pattern with a firm, dismissive stance. The customer explicitly said \"hamara koi loan hi nahi hai\" on the first connected call after six unreached attempts. Randheer should open by acknowledging the denial calmly, avoid pushing EMI language too early, and first anchor the conversation on loan verification / dispute clarification."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nThe only disclosed reason so far is a hard denial of the loan on the call dated Tuesday, July 28, 2026 05:10 PM: \"hamara koi loan hi nahi hai\" / Not Availed Loan. Treat this as a dispute, not as a payment objection; acknowledge briefly and redirect to verification: \"Samajh gaya, aap loan deny kar rahe hain. Main details verify karke hi aage badhta hoon.\""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was given in the connected history, and there is no broken PTP to recover. Keep the first connected conversation focused on dispute clarification rather than amount/date anchoring, and do not force a payment date unless the customer first accepts the loan exists. Use a calm, factual consequence nudge only after the dispute is addressed, not at the opening."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste, main Fusion Finance se bol raha hoon. Aapne pichhle call par kaha tha ki aapka koi loan nahi hai.\nCustomer: Haan, hamara koi loan hi nahi hai.\nRandheer: Samajh gaya. Main bas details verify karna chahta hoon taaki galat account par call na ho.\nCustomer: Theek hai.\nRandheer: Agar aap chahein to main loan reference aur basic details check karke aage badhata hoon."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.9,
+          "usage": {
+            "text_input_tokens": 6197,
+            "audio_input_tokens": 0,
+            "output_tokens": 506,
+            "total_input_tokens": 6197
+          },
+          "cost_usd": 0.002561
+        }
+      }
+    },
+    {
+      "account_id": 185562,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Pinder Kaur: This customer consistently disputes the existence of her loan, claiming it was already cleared, and exhibits low engagement with evasiveness. Randheer should open by acknowledging her claim about the loan being cleared, then state that Fusion Finance records show an outstanding balance of cheh hazaar nau sau athais rupaye. The primary goal is to clarify this discrepancy by asking for specific details or proof of payment, while also ensuring clear communication given the technical issues on the athais July call."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: Pinder Kaur has consistently denied the existence of her loan since chhe July, 2026, stating it was already cleared. Randheer should acknowledge this claim directly, then gently pivot to the system's record of an outstanding balance of cheh hazaar nau sau athais rupaye. Redirect script hint: 'Pinder ji, aapne chhe July ko bataya tha ki aapka loan clear ho chuka hai. Hum us baat ko samajhte hain, lekin hamare records mein abhi bhi cheh hazaar nau sau athais rupaye ka outstanding balance dikh raha hai. Kya aap is discrepancy ko suljhane mein hamari madad kar sakti hain?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nAGENT: Namaste Pinder ji, main Randheer Fusion Finance se bol raha hoon. Pichli baar athais July ko network ki wajah se hamari baat poori nahi ho paayi thi. Kya ab aap meri awaaz theek se sun pa rahi hain?\nPINDER KAUR: Haan ji, ab theek hai.\nAGENT: Dhanyawaad. Pinder ji, aapne chhe July ko bataya tha ki aapka loan clear ho chuka hai. Hum us baat ko samajhte hain, lekin hamare records mein abhi bhi cheh hazaar nau sau athais rupaye ka outstanding balance dikh raha hai. Kya aap is discrepancy ko suljhane mein hamari madad kar sakti hain?\nPINDER KAUR: Kehda loan ji? Saara loan taan koi hai hi nahi.\nAGENT: Pinder ji, hum samajh sakte hain ki aapko lagta hai ki koi loan nahi hai, lekin hamare system mein yeh loan dikh raha hai. Kya aapke paas koi proof hai ki yeh loan clear ho chuka hai, jaise koi payment receipt ya bank statement?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 20.9,
+          "usage": {
+            "text_input_tokens": 10063,
+            "audio_input_tokens": 0,
+            "output_tokens": 707,
+            "total_input_tokens": 10063
+          },
+          "cost_usd": 0.004786
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Pinder Kaur: dispute-first, avoidant, and consistently denies the loan\u2019s existence. She has repeated the same denial since July 06 and has not given any payment commitment, while the last two connects were cut short by network/technical issues. Open by acknowledging her dispute, keep the conversation tightly focused on reconciling records, and do not drift into payment pressure unless she first accepts the outstanding balance."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nOn July 06, 2026, Pinder Kaur said, \"Kehda loan ji? Saara loan taan koi hai hi nahi\" and \"Sir, loan hai koi nahi, account closing karwauni.\" Use this only as context for why she disputes the account; do not debate at length. Redirect quickly in Hindi: \"Main aapki baat note kar raha hoon, lekin hamare records mein outstanding balance dikh raha hai; kripya payment proof ya transaction date share kijiye taaki discrepancy clear ho sake.\""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever given or honored in the available history, so there is no date or amount anchor to recover. Keep this call in reminder/clarification mode only if she reopens the dispute; do not push a payment date before the liability is reconciled. Last miss reason (from call on July 28, 2026): no reason was given; the call ended due to technical issues/poor network quality."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Pinder ji, main Fusion Finance se bol raha hoon. Aapne July 06 ko kaha tha ki loan clear ho chuka hai, lekin hamare records mein abhi bhi outstanding balance dikh raha hai.\nPinder: Maine to bola tha loan hai hi nahi.\nRandheer: Main aapki baat samajh raha hoon. Kripya payment ka proof ya transaction date share kijiye, taaki hum record reconcile kar saken.\nPinder: Mere paas abhi details nahi hain.\nRandheer: Theek hai Pinder ji, phir aap jis date aur mode se payment ki thi woh bata dijiye; uske basis par hum discrepancy check kar lenge."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.9,
+          "usage": {
+            "text_input_tokens": 8897,
+            "audio_input_tokens": 0,
+            "output_tokens": 597,
+            "total_input_tokens": 8897
+          },
+          "cost_usd": 0.003418
+        }
+      }
+    },
+    {
+      "account_id": 73504,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sukhpal Kaur: This customer is experiencing active financial hardship due to her husband's recent operation, which has led to her shop closing and frequent hospital visits. She was cooperative in disclosing this on the last call, but no commitment was secured due to an abrupt disconnection. Randheer should approach the call with deep empathy, allowing her to share more about her situation before gently exploring any possibility of a small, initial payment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: On athais July, Sukhpal Kaur ne bataya tha ki unke pati ka operation hua hai, jiske karan unki dukaan band hai aur unhe baar-baar aspataal jaana pad raha hai. Is baar unki mushkil ko samajhte hue, Randheer ko kehna chahiye, 'Sukhpal ji, humein pata hai ki aapke pati ki tabiyat theek nahi hai aur aap mushkil samay se guzar rahi hain. Hum aapki pareshani samajhte hain.'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste Sukhpal ji, main Randheer bol raha hoon Fusion Finance se. Pichli baar aapne apne pati ki tabiyat ke baare mein bataya tha, humein sunkar bahut afsos hua. Ab unki tabiyat kaisi hai?\"\nSukhpal: \"Ji, abhi bhi theek nahi hai. Roz aspataal jaana padta hai aur dukaan bhi band hai.\"\nRandheer: \"Hum aapki pareshani samajh sakte hain, Sukhpal ji. Aise mushkil samay mein hum aapke saath hain. Hum is samay aapko payment ke liye zyada dabav nahi denge. Hum chahte hain ki aap pehle apne pati ka khayal rakhen.\"\nSukhpal: \"Dhanyawad, Randheer ji. Abhi to bas yahi sab chal raha hai.\"\nRandheer: \"Theek hai Sukhpal ji. Hum aapko baad mein dobara contact karenge jab aapki sthiti thodi behtar ho. Apna aur apne pati ka khayal rakhiye.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 24.5,
+          "usage": {
+            "text_input_tokens": 10487,
+            "audio_input_tokens": 0,
+            "output_tokens": 650,
+            "total_input_tokens": 10487
+          },
+          "cost_usd": 0.004771
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sukhpal Kaur: hardship-active, cooperative sharer. She opened up only after several low-engagement calls, and the medical emergency is ongoing with her shop closed. Start with empathy, acknowledge the hospital burden briefly, and let her speak before any payment ask."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nOn the call dated Tuesday, July 28, 2026 05:10 PM, she said her husband had an operation, her shop is closed, and she must visit the hospital multiple times a day. Reference it briefly as current context, not as an excuse: \"Aapne bataya tha husband ki operation ki wajah se kaafi dikkat hai, main samajh sakta hoon. Abhi bas itna dekhein ki is mahine ka koi chhota workable plan ban sakta hai kya?\""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever secured in the available history, so treat this as a fresh hardship follow-up rather than a broken-promise recovery. Anchor on a soft restart first; do not force an amount on the opening push. If she volunteers a date or partial amount, lock it down gently and keep the method simple."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Sukhpal ji, aapne pichhli baar bataya tha ki husband ki operation aur hospital visits ki wajah se kaafi pressure hai. Main samajh sakta hoon.\"\nSukhpal Kaur: \"Haan, shop bhi band hai aur roz hospital jaana pad raha hai.\"\nRandheer: \"Theek hai ji, pehle aapki situation samajh lete hain. Kya is cycle mein koi chhota workable arrangement ho sakta hai, ya aapko thoda aur waqt chahiye?\"\nSukhpal Kaur: \"Thoda waqt chahiye, abhi mushkil hai.\"\nRandheer: \"Samajh gaya ji. Jab aap thoda stable feel karein, tab hum ek simple date aur amount par baat kar lenge.\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 9227,
+            "audio_input_tokens": 0,
+            "output_tokens": 560,
+            "total_input_tokens": 9227
+          },
+          "cost_usd": 0.003427
+        }
+      }
+    },
+    {
+      "account_id": 215099,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Gudari: This customer is avoidant and consistently difficult to reach, often resulting in third-party connections or voicemails. No payment promises or reasons for non-payment have ever been disclosed. Randheer should aim to establish direct contact and gently but firmly guide the conversation towards understanding the payment situation and securing a commitment."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY: No payment promises have ever been made by Gudari. Randheer should aim to secure a first-time commitment for the full EMI amount. Since there is no history of broken promises, the consequence nudge should be used only if the customer explicitly avoids committing to a date."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:Randheer: \"Namaste Gudari ji, main Randheer Fusion Finance se bol raha hoon. Hum aapki EMI ke baare mein baat karne ke liye call kar rahe hain. Kya aap abhi baat karne ke liye uplabdh hain?\"Gudari: \"Haan, boliye.\"Randheer: \"Gudari ji, humne aapko pichle kuch dino mein kai baar sampark karne ki koshish ki hai, lekin aapse baat nahi ho paayi. Aapki EMI abhi tak pending hai. Kya aap bata sakte hain ki aap kab tak payment kar payenge?\"Gudari: \"Mujhe thoda samay chahiye.\"Randheer: \"Hum samajh sakte hain, Gudari ji. Lekin aapki EMI due hai. Kya aap agle teen din mein, yaani ikatees July tak, payment kar sakte hain?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 22.7,
+          "usage": {
+            "text_input_tokens": 10886,
+            "audio_input_tokens": 0,
+            "output_tokens": 532,
+            "total_input_tokens": 10886
+          },
+          "cost_usd": 0.004596
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Gudari: unreachable and avoidant, with no commitment history and no disclosed reason for non-payment. The pattern is repeated non-connects plus low-engagement connects, so do not spend the opening on long rapport or explanation. Start crisp, identify the borrower fast, and move to a direct EMI ask only if the customer actually comes on the line."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, so there is no broken promise to anchor on. Use a fresh full-EMI ask first; if the customer stays passive or avoids, keep the consequence nudge light and do not over-negotiate. There is no prior amount anchor from history, so avoid inventing a partial figure."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Gudari ji, main Fusion Finance se bol raha hoon. Aapka EMI pending hai, kya aap abhi baat kar sakte hain?\nCustomer: Haan, boliye.\nRandheer: Aapne abhi tak koi payment commitment nahi diya hai. Kya aap is EMI ko aaj hi clear kar sakte hain ya kis date tak kar payenge?\nCustomer: Mujhe dekhna padega.\nRandheer: Theek hai, lekin bina date ke case aage nahi badhega. Aap exact date bata dijiye, taaki main note kar sakun."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.4,
+          "usage": {
+            "text_input_tokens": 9533,
+            "audio_input_tokens": 0,
+            "output_tokens": 423,
+            "total_input_tokens": 9533
+          },
+          "cost_usd": 0.003229
+        }
+      }
+    },
+    {
+      "account_id": 185603,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Manjit Kaur: This customer is currently unreachable and has been avoidant across nine prior call attempts. The most recent interaction on July twenty-eighth, two thousand twenty-six, was with a third party who indicated Manjit Kaur is often out and provided her son's contact. Randheer should open with a direct, non-threatening statement of purpose, and if any engagement is achieved, ask one specific reason question before attempting to secure any small PTP."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 16.2,
+          "usage": {
+            "text_input_tokens": 7913,
+            "audio_input_tokens": 0,
+            "output_tokens": 312,
+            "total_input_tokens": 7913
+          },
+          "cost_usd": 0.003154
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Manjit Kaur: unreachable / avoidant, with effectively no borrower engagement across the recent history. The only new lead is that a third party said Manjit Kaur mostly stays outside and has her son's number. Randheer should open briefly, directly, and non-threateningly, and if the borrower is reached, immediately use the contact lead to try to establish a real connection without sounding accusatory."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, so there is no broken or standing commitment to reference. Use a fresh full-EMI push; do not anchor on any prior amount or date. Because there is no commitment history, save consequence nudges for after you confirm the borrower is actually engaged."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Manjit Kaur ji, main Fusion Finance se bol raha hoon. Aapka EMI payment ke liye short follow-up hai.\nManjit Kaur: Haan, boliye.\nRandheer: Pichhle kai calls mein aap connect nahi ho paayi thi, aur kal ek third party ne bataya tha ki aap zyada tar bahar hoti hain. Kya aap abhi payment ke baare mein baat kar sakti hain?\nManjit Kaur: Haan, bataiye.\nRandheer: Aap is cycle mein full EMI kab tak arrange kar paayengi?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.6,
+          "usage": {
+            "text_input_tokens": 7064,
+            "audio_input_tokens": 0,
+            "output_tokens": 504,
+            "total_input_tokens": 7064
+          },
+          "cost_usd": 0.002774
+        }
+      }
+    },
+    {
+      "account_id": 186579,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Ram Prakash: This customer is in active dispute, denying the existence of any loan with Fusion Finance. On July 9, they explicitly stated they had no loan and asked 'Mera loan aaya kithe je?'. Randheer must first confirm the borrower's identity, then immediately address the loan dispute, focusing on providing clarity and resolving the core issue of loan denial."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: On July 9, 2026, the customer explicitly denied having any loan with Fusion Finance, asking 'Mera loan aaya kithe je?'. Randheer should acknowledge this denial directly, stating 'Hum jaante hain ki aapne pehle kaha tha ki aapka koi loan nahi hai, aur aapne poocha tha ki aapka loan kahan se aaya hai. Hum isi vishay par baat karne ke liye call kar rahe hain.' Then, pivot to verifying details to resolve the dispute."
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Namaste Ram Prakash ji, main Randheer Fusion Finance se bol raha hoon. Hum aapke loan account ke baare mein baat karne ke liye call kar rahe hain.\"\nRam Prakash: \"Mera koi loan nahi hai. Aap baar baar kyu call kar rahe hain? Mera loan aaya kithe je?\"\nRandheer: \"Ram Prakash ji, hum jaante hain ki aapne pehle bhi kaha hai ki aapka koi loan nahi hai. Hum isi vishay par spashtata dene aur aapki is shanka ko door karne ke liye call kar rahe hain. Kya aap meri baat sun sakte hain?\"\nRam Prakash: \"Kya spashtata denge?\"\nRandheer: \"Hum aapke account ki jaankari verify karna chahte hain taaki hum aapko poori jaankari de sakein ki yeh loan kaise aur kab shuru hua. Kya aap apna naam aur janam tithi confirm kar sakte hain?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 20.9,
+          "usage": {
+            "text_input_tokens": 7858,
+            "audio_input_tokens": 0,
+            "output_tokens": 614,
+            "total_input_tokens": 7858
+          },
+          "cost_usd": 0.003892
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Rajwant Kaur: dispute / loan-denial pattern with evasive third-party contact and no commitment history. The borrower denied any loan on July 9, and the July 28 contact was a third party who denied being the borrower. Open by confirming identity carefully, then move straight to the loan-dispute handling without sounding repetitive or argumentative."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nThe only reason context is a dispute / denial of loan: on July 9 the borrower said he had not availed any loan and asked 'Mera loan aaya kithe je?'. Reference it briefly as prior denial, then redirect in Hindi: 'Aapne pehle bhi loan deny kiya tha, lekin main account verification ke liye baat kar raha hoon; kya aap borrower Rajwant Kaur hain?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP has ever been given, so there is no broken promise history and no amount/date anchor to recover. Keep the first collection push clean and factual; do not use consequence nudge as the opening move. If the borrower again denies the loan, stay on identity confirmation and dispute handling rather than forcing a commitment."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Rajwant ji, main Fusion Finance se bol raha hoon. Kya main Rajwant Kaur se baat kar raha hoon?\nCustomer: Haan, boliye.\nRandheer: July 9 ko aapne loan deny kiya tha. Main bas account verification aur loan details clear karna chahta hoon; kya aapne Fusion Finance se koi loan liya hai?\nCustomer: Mujhe koi loan yaad nahi hai.\nRandheer: Theek hai, phir main details verify karke aage badhta hoon. Kya aap apna registered mobile aur DOB confirm kar sakte hain?"
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 4.4,
+          "usage": {
+            "text_input_tokens": 7003,
+            "audio_input_tokens": 0,
+            "output_tokens": 518,
+            "total_input_tokens": 7003
+          },
+          "cost_usd": 0.002787
+        }
+      }
+    },
+    {
+      "account_id": 159918,
+      "arms": {
+        "G_gemini": {
+          "model": "gemini-2.5-flash",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sara Singh: This customer consistently claims her loan is already paid, leading to a dispute. She has been uncooperative in providing proof or engaging with payment solutions. Randheer should open by referencing the agreed-upon head office escalation from untees July, confirming if she has received any updates or heard from them, before gently probing for details or proof of her payment claim."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v2",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT: Sara Singh has consistently claimed the loan is already paid, stating this on chaar July, sola July, untees July, and untees July. Randheer should acknowledge her claim by saying, 'Sara ji, humein pata hai ki aapne pehle bhi bataya hai ki aapne payment kar di hai,' then immediately pivot to 'kya aap humein bata sakti hain ki aapne kisko aur kaise payment ki thi, ya uska koi proof hai aapke paas?'"
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: \"Sara ji, pichli baar aapne kaha tha ki aapka number head office mein forward kar diya jaaye. Kya aapko wahan se koi update mili hai?\"\nSara Singh: \"Nahi, mujhe toh koi call nahi aayi. Aur main toh pehle hi payment kar chuki hoon.\"\nRandheer: \"Sara ji, humein pata hai ki aapne pehle bhi bataya hai ki aapne payment kar di hai. Lekin hamare records mein abhi tak koi payment nahi dikh rahi hai. Kya aap humein bata sakti hain ki aapne kisko aur kaise payment ki thi, ya uska koi proof hai aapke paas?\"\nSara Singh: \"Maine toh group head ko di thi, unhone bank mein jama kar di hogi.\"\nRandheer: \"Theek hai Sara ji. Kya aap us group head ka naam ya koi payment reference number de sakti hain, jisse hum isko verify kar sakein?\""
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 22.6,
+          "usage": {
+            "text_input_tokens": 11036,
+            "audio_input_tokens": 0,
+            "output_tokens": 614,
+            "total_input_tokens": 11036
+          },
+          "cost_usd": 0.004846
+        },
+        "O_gpt54mini": {
+          "model": "gpt-5.4-mini",
+          "ok": true,
+          "prompt_blocks": {
+            "system_role": {
+              "version": "fusion_emi_v1",
+              "addendum": "THIS CUSTOMER \u2014 Sara Singh: dispute-confusion / payment-claimed pattern with repeated denial of liability. She has consistently said the loan was already paid by her husband, co-applicant, or a group head, and she becomes evasive or ends the call when asked for proof. Randheer should open firmly by referencing the head office escalation and immediately ask whether she has received any update or can share who received the payment and how it was made."
+            },
+            "identity_verification": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "language_rules": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "tone_principles": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "emi_disclosure": {
+              "version": "fusion_emi_v2",
+              "addendum": ""
+            },
+            "reason_handling": {
+              "version": "fusion_emi_v2",
+              "addendum": "KNOWN REASON CONTEXT:\nThe reason is not hardship; the customer\u2019s stated reason is that the loan was already paid to a group head / collector, and she repeated this on July 4, July 16, July 19, and July 29. Use it only as context: \"Aap keh rahi hain payment ho chuki hai, theek hai \u2014 ab bas yeh samajhna hai ki payment kisne, kab aur kis mode se li thi.\" Then redirect to proof or head-office update without debating at length."
+            },
+            "ptp_collection": {
+              "version": "fusion_emi_v1",
+              "addendum": "PRIOR PTP HISTORY:\nNo PTP was ever given in the connected history, so there is no broken PTP path and no amount/date anchor to recover. Keep this call in dispute-resolution mode, not repayment-commitment mode; do not push a fresh PTP unless she first accepts that the payment record needs clarification. If she again says payment was already made, ask for the payer name, date, mode, and any receipt details before moving further."
+            },
+            "payment_guidance": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            },
+            "few_shot_examples": {
+              "version": "fusion_emi_v1",
+              "addendum": "CUSTOMER-SPECIFIC EXAMPLE:\nRandheer: Namaste Sara ji, aapne 29 July ko head office se contact ke liye number forward karne ko haan bola tha. Kya unka koi update aaya?\nSara: Nahi, mujhe koi update nahi mila. Payment to pehle hi ho chuki hai.\nRandheer: Theek hai Sara ji, agar payment ho chuki hai to bas payer ka naam, date aur mode bata dijiye, taaki record match ho sake.\nSara: Mujhe yaad nahi, par payment ho gayi thi.\nRandheer: Samajh gaya. Phir aap head office se jo bhi confirmation mile, woh share kar dijiye; tab tak main discrepancy ko verify kar leta hoon."
+            },
+            "closing_phase": {
+              "version": "fusion_emi_v1",
+              "addendum": ""
+            }
+          },
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 9729,
+            "audio_input_tokens": 0,
+            "output_tokens": 591,
+            "total_input_tokens": 9729
+          },
+          "cost_usd": 0.003614
+        }
+      }
+    }
+  ],
+  "summary": {
+    "G_gemini": {
+      "model": "gemini-2.5-flash",
+      "runs": 20,
+      "failures": 0,
+      "total_input_tokens": 175792,
+      "total_output_tokens": 10606,
+      "total_cost_usd": 0.0793,
+      "avg_cost_per_call_usd": 0.003962,
+      "avg_latency_s": 20.9
+    },
+    "O_gpt54mini": {
+      "model": "gpt-5.4-mini",
+      "runs": 20,
+      "failures": 0,
+      "total_input_tokens": 156059,
+      "total_output_tokens": 10537,
+      "total_cost_usd": 0.0601,
+      "avg_cost_per_call_usd": 0.003004,
+      "avg_latency_s": 4.8
+    },
+    "_version_agreement": {
+      "accounts_compared": 20,
+      "all_blocks_identical": 20,
+      "per_block": {
+        "closing_phase": "20/20",
+        "emi_disclosure": "20/20",
+        "few_shot_examples": "20/20",
+        "identity_verification": "20/20",
+        "language_rules": "20/20",
+        "payment_guidance": "20/20",
+        "ptp_collection": "20/20",
+        "reason_handling": "20/20",
+        "system_role": "20/20",
+        "tone_principles": "20/20"
+      }
+    }
+  },
+  "pricing_usd_per_1m": {
+    "gemini-2.5-flash": {
+      "text_in": 0.3,
+      "out": 2.5
+    },
+    "gpt-5.4-mini": {
+      "text_in": 0.25,
+      "out": 2.0
+    }
+  }
+}
