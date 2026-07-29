@@ -209,9 +209,14 @@ def save(results):
 
 
 async def main():
+    global MODEL, RESULTS_PATH
     parser = argparse.ArgumentParser()
     parser.add_argument("--pilot", action="store_true", help="run first 2 accounts only")
+    parser.add_argument("--model", default=MODEL, help="Gemini model for Stage 1")
+    parser.add_argument("--out", default=RESULTS_PATH, help="results JSON path")
     args = parser.parse_args()
+    MODEL = args.model
+    RESULTS_PATH = args.out
 
     with open(INPUT_PATH) as f:
         entries = json.load(f)["results"]
