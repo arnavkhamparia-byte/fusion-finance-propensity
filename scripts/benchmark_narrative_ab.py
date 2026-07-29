@@ -62,7 +62,7 @@ APPROX_PRICING = {
     "gpt-5.4-mini":     {"text_in": 0.25, "audio_in": 0.0,  "out": 2.00},
 }
 
-SELECT_CALLS_SQL = """
+SELECT_CALLS_SQL_TEMPLATE = """
 SELECT DISTINCT ON (t.account_id)
     t.account_id,
     ad.loan_number,
@@ -79,7 +79,7 @@ WHERE t.provider = 'Tata'
   AND t.disposition IS NOT NULL
   AND t.call_recording_url IS NOT NULL
   AND t.call_duration BETWEEN 30 AND 300
-  AND t.processed_at >= now() - interval '3 days'
+  {extra_filter}
 ORDER BY t.account_id, t.processed_at DESC
 """
 
@@ -93,13 +93,19 @@ def cost_usd(model: str, usage: dict) -> float:
     )
 
 
-async def select_accounts(limit: int) -> list:
+async def select_accounts(limit: int, reuse_ids: list = None) -> list:
     conn = await asyncpg.connect(
         host=os.environ["DB_HOST"], port=int(os.environ.get("DB_PORT", 5432)),
         database="fusion_finance_mfi", user=os.environ["DB_USER"], password=os.environ["DB_PASS"],
     )
     try:
-        rows = await conn.fetch(SELECT_CALLS_SQL)
+        if reuse_ids:
+            sql = SELECT_CALLS_SQL_TEMPLATE.format(extra_filter="AND t.account_id = ANY($1)")
+            rows = await conn.fetch(sql, reuse_ids)
+        else:
+            sql = SELECT_CALLS_SQL_TEMPLATE.format(
+                extra_filter="AND t.processed_at >= now() - interval '3 days'")
+            rows = await conn.fetch(sql)
     finally:
         await conn.close()
     # Newest calls first across accounts, then trim.
@@ -208,10 +214,24 @@ async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=20)
     parser.add_argument("--pilot", action="store_true", help="2 accounts only")
+    parser.add_argument("--reuse", type=str, default=None,
+                        help="Path to a previous results JSON — re-run on the same account_ids.")
+    parser.add_argument("--out", type=str, default=None, help="Results output path override.")
     args = parser.parse_args()
     limit = 2 if args.pilot else args.limit
 
-    accounts = await select_accounts(limit)
+    global RESULTS_PATH
+    if args.out:
+        RESULTS_PATH = args.out
+
+    reuse_ids = None
+    if args.reuse:
+        prev = json.load(open(args.reuse))
+        reuse_ids = [r["account_id"] for r in prev["results"] if r.get("arms")]
+        limit = len(reuse_ids)
+        print(f"Reusing {limit} account ids from {args.reuse}", flush=True)
+
+    accounts = await select_accounts(limit, reuse_ids=reuse_ids)
     print(f"Selected {len(accounts)} accounts", flush=True)
 
     results = []

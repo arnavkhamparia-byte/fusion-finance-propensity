@@ -72,6 +72,10 @@ _TEMPORAL_WORD_RE = re.compile(
     re.IGNORECASE,
 )
 
+# STEP 6 tone contract — lint only, never mutated.
+_TONE_RE = re.compile(r"\bTone:?\s*([A-Za-z]+)", re.IGNORECASE)
+_VALID_TONES = {"default", "firm", "confrontational", "urgent"}
+
 
 def _filter_commitments(raw_commitments, account_id) -> list:
     """Keep only well-formed commitment entries (dict, valid type, parseable due_date)."""
@@ -351,6 +355,10 @@ async def update_account_narrative(
             account_status_temporal_matches = _TEMPORAL_WORD_RE.findall(account_status)
             if account_status_temporal_matches:
                 logger.warning(f"Narrative Agent: relative-time wording in account_status for Account {account_id}: {account_status_temporal_matches}")
+
+            tone_match = _TONE_RE.search(narrative)
+            if tone_match and tone_match.group(1).lower() not in _VALID_TONES:
+                logger.warning(f"Narrative Agent: non-enum tone {tone_match.group(1)!r} in narrative for Account {account_id}")
         except json.JSONDecodeError as je:
             logger.error(f"Narrative Agent: JSON Decode Error: {je}")
             logger.error(f"Narrative Agent: Raw AI response that failed: \n{resp_text}")

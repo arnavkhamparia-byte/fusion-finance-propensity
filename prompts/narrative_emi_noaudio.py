@@ -68,4 +68,17 @@ _STATIC = _replace(
     count=3,
 )
 
+# 4. Enforce the tone enum strictly — benchmark run 1 showed text-only models
+# inventing tones outside the contract ("direct", "empathetic").
+_STATIC = _replace(
+    _STATIC,
+    "Priority: confrontational > firm > urgent > default. Apply highest that fits.",
+    """Priority: confrontational > firm > urgent > default. Apply highest that fits.
+STRICT: the tone MUST be exactly one of these four words — default, firm,
+confrontational, urgent. Never any other word (not "direct", "empathetic",
+"polite", "assertive"). In the narrative, write it exactly as
+'Tone: <one of the four>.'""",
+    count=1,
+)
+
 NARRATIVE_PROMPT_STATIC_NOAUDIO = _STATIC

@@ -1,0 +1,1610 @@
+{
+  "results": [
+    {
+      "account_id": 123667,
+      "loan_number": "8375554413",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Call Hang Up",
+      "call_duration_s": 76,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the first meaningful EMI collection call for this account. Prior to this, there have been 10 consecutive unreached attempts. The most recent call on July 28, 2026, resulted in a 'Call Hang Up' after more than 20 seconds, but the customer's voice was unintelligible, preventing any meaningful conversation or identification. The customer did not speak. Sentiment was neutral, and engagement was low due to technical issues. No reasons for non-payment have been disclosed, and no commitments have been made. The pattern is UNREACHABLE. This account has not yet had a meaningful interaction. No broken PTPs are on record. No hardship or contradictions have been disclosed. The primary risk is continued unreachability or technical issues hindering communication. The customer's cooperation level is uncooperative due to the lack of successful interaction. Tone: Default. STARTING POSITION: Maine aapko pehle bhi 10 baar call kiya tha, lekin baat nahi ho paayi. No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: There have been 10 consecutive unreached attempts, including the last call on July 28, 2026, which had an unintelligible voice. USE WHEN: The customer seems evasive about prior contact or claims they haven't been called, or if similar voice issues arise. FACT: The last call on July 28, 2026, was cut short due to an unintelligible voice. USE WHEN: The customer mentions a previous call or seems confused about the current call's purpose.",
+          "account_status": "UNREACHABLE \u2014 10 unreached attempts. Default tone. First meaningful EMI collection call. Acknowledge missed attempts, then treat as fresh first call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 19.9,
+          "usage": {
+            "text_input_tokens": 9177,
+            "audio_input_tokens": 1500,
+            "output_tokens": 416,
+            "total_input_tokens": 10677
+          },
+          "cost_usd": 0.005293
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the second EMI collection call, following 9 consecutive unreached attempts. The first connected call on July 28, 2026, was hampered by an unintelligible voice, preventing any meaningful conversation or identification. The customer has not yet engaged meaningfully. Pattern: UNREACHABLE, with the next call being the first true attempt at meaningful engagement. No PTPs have been made or broken. No reasons for non-payment have been disclosed. No hardship or contradictions are on record. The customer's cooperation level remains uncooperative due to the lack of successful interaction. The primary risk is continued unreachability or recurring technical issues hindering communication.Tone: Firm.PRE-OPENING ACKNOWLEDGEMENT: 9 unreached attempts precede the last connected call. Open with: 'Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.'STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call for meaningful engagement. After identity confirmation and acknowledging previous attempts, state pending EMIs and total. Then ask for a restart date.FACT: There were 9 consecutive unreached attempts before the last call.USE WHEN: The customer seems evasive about prior contact or claims they haven't been called.FACT: The last call on July 28, 2026, was cut short due to an unintelligible voice.USE WHEN: The customer mentions a previous call or seems confused about the current call's purpose, or if there are similar voice issues.",
+          "account_status": "UNREACHABLE, FIRST_TIMER for meaningful engagement. 9 unreached attempts before last connect. Firm tone. Second EMI collection call. Acknowledge missed attempts, then state EMIs and ask for a restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 32.4,
+          "usage": {
+            "text_input_tokens": 9071,
+            "audio_input_tokens": 0,
+            "output_tokens": 387,
+            "total_input_tokens": 9071
+          },
+          "cost_usd": 0.003689
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the first connected call for this account. The customer\u2019s voice was unintelligible in the last call on July 28, 2026, leading to a disconnection after more than 20 seconds. There have been 9 prior unreached attempts. No PTP or commitment was made previously. The customer has not engaged meaningfully. Pattern: UNREACHABLE. The last disposition was 'Call Hang Up' with low engagement and neutral sentiment. No commitment strength was established.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before this connect. Neutral sentiment. Tone: Default. First EMI collection call. Treat as fresh call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.7,
+          "usage": {
+            "text_input_tokens": 8218,
+            "audio_input_tokens": 599,
+            "output_tokens": 158,
+            "total_input_tokens": 8817
+          },
+          "cost_usd": 0.0113
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call for this account, but it followed 9 consecutive unreached attempts. The latest call on July 28, 2026 ended as Call Hang Up after more than 20 seconds with unintelligible voice, so there was no meaningful conversation, no identity confirmation, and no commitment. Pattern: UNREACHABLE. Connected call count: 1. Last disposition: Call Hang Up. Commitment level: none. Engagement level: very low.\n\nKey risk is continued reachability/voice-quality failure rather than refusal. No hardship, reason for missed EMI, contradiction, or PTP has been disclosed yet. The main leverage point is that the customer has still not had a clean conversation after many attempts, so the next call should quickly establish identity and move to repayment restart without over-explaining.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. After identity confirmation, state the pending EMI status and ask for a restart date directly. FACT: There were 9 consecutive unreached attempts before the July 28 connect. USE WHEN: The customer says they were not contacted or seems unaware of prior attempts. FACT: The July 28 call was cut short by unintelligible voice. USE WHEN: Voice quality is again poor or the customer seems confused about why you are calling. FACT: No reason for non-payment has been disclosed. USE WHEN: The customer asks why repayment is being discussed; keep the focus on getting a date.",
+          "account_status": "UNREACHABLE \u2014 1 connected call, 9 unreached attempts before it. No PTP, no hardship, no contradictions. Default tone. First connected EMI collection call; open fresh but move fast to a restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.5,
+          "usage": {
+            "text_input_tokens": 8419,
+            "audio_input_tokens": 0,
+            "output_tokens": 373,
+            "total_input_tokens": 8419
+          },
+          "cost_usd": 0.002851
+        }
+      }
+    },
+    {
+      "account_id": 182185,
+      "loan_number": "8090905978",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 52,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The borrower, Kulvinder Kaur, remains unreachable directly, despite 3 connected calls where a third party has spoken. The third party consistently states she is in Canada for 3-4 months, which is the reason for non-payment (RELOCATION). The most recent call (2026-07-28) was a Third Party Connect, where the third party again confirmed her presence in Canada and offered to connect Randheer with Kulvinder by the evening. This is the 4th EMI collection call. The borrower herself has been avoidant, not engaging directly.\n\nThe third party is cooperative and has facilitated a callback for later today. The primary risk is that the borrower will still not engage directly, or will not be available for the arranged callback. No contradictions have been observed from the third party. No financial hardship has been disclosed, only a logistical relocation.\n\nTone: Urgent.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 5 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer requested this callback on 2026-07-28 for 2026-07-28 (arranged by a third party). Open: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for PTP date directly.\nFACT: A third party stated on 2026-07-28 that Kulvinder is in Canada for 3-4 months and offered to connect her.\nUSE WHEN: The borrower is hesitant to speak or gives vague answers about her whereabouts or ability to pay.\nFACT: Kulvinder has not spoken on any previous call, including a silent connection on 2026-07-19.\nUSE WHEN: The borrower deflects or tries to end the call quickly \u2014 gently emphasize the need for direct communication to resolve the loan.",
+          "account_status": "UNREACHABLE/AVOIDANT borrower. 3 connected calls, 5 unreached attempts. Third party cooperative, states RELOCATION (Canada 3-4 months). Urgent tone. Fourth EMI call. Acknowledge missed attempts, reference callback.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 34.1,
+          "usage": {
+            "text_input_tokens": 10923,
+            "audio_input_tokens": 1325,
+            "output_tokens": 489,
+            "total_input_tokens": 12248
+          },
+          "cost_usd": 0.005824
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Kulvinder Kaur remains unreachable directly, with a pattern of UNREACHABLE for the borrower, though a COOPERATIVE third party has engaged. This is the fourth EMI collection call. The third party consistently states Kulvinder is in Canada for four months, citing this as the reason for non-payment (RELOCATION). On the most recent call (2026-07-28), a third party offered to connect Randheer with Kulvinder by the evening, setting up an immediate callback. The borrower herself has not yet spoken directly on any call, including a silent connection on 2026-07-19. There are no broken PTPs on record. Sentiment has remained neutral due to lack of direct engagement from the borrower.",
+          "account_status": "UNREACHABLE (borrower), COOPERATIVE (third party). 3 connected calls. 5 unreached attempts before this connect. Urgent tone. Fourth EMI collection call. Acknowledge missed attempts, then reference callback request.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 19.1,
+          "usage": {
+            "text_input_tokens": 10817,
+            "audio_input_tokens": 0,
+            "output_tokens": 231,
+            "total_input_tokens": 10817
+          },
+          "cost_usd": 0.003823
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Kulvinder Kaur has not yet engaged directly on any call. This is the fourth connected call. The third party has consistently stated that Kulvinder is in Canada for four months, which remains unconfirmed by the borrower herself. On the most recent call (2026-07-28), the third party offered to connect the agent with Kulvinder by the evening, setting up a callback. The sentiment has remained neutral due to lack of direct engagement from the borrower. The third party has been cooperative. The primary pattern is UNREACHABLE for the borrower, with a RELOCATION reason provided by a cooperative third party. The key risk is that the borrower may continue to avoid direct engagement. The third party's offer to connect her is a positive signal, suggesting a potential for direct interaction this time.",
+          "account_status": "UNREACHABLE \u2014 4 connected calls. No broken PTP. 5 unreached attempts before this connect. Tone: Encouraging. Fourth EMI collection call. Open with callback acknowledgment.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 4.8,
+          "usage": {
+            "text_input_tokens": 9708,
+            "audio_input_tokens": 525,
+            "output_tokens": 231,
+            "total_input_tokens": 10233
+          },
+          "cost_usd": 0.011629
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Kulvinder Kaur has still not spoken directly on any call. Pattern: UNREACHABLE with cooperative third-party support and no borrower engagement. This is the third connected call by connected-call count, but the borrower herself remains unverified. The latest meaningful interaction on 2026-07-28 was a third-party connect; no PTP, no refusal, and commitment strength was none. Sentiment stayed neutral.\n\nKey risk: the account can keep cycling through third parties without ever reaching the borrower. The durable reason on record is relocation: a third party has repeatedly said Kulvinder is in Canada for four months, but this remains unconfirmed by her. No broken PTP exists yet. Contradiction risk is low because the borrower has not personally given any explanation. Five unreached attempts occurred before the 2026-07-28 third-party connect.\n\nTone: urgent. STARTING POSITION: Customer requested this callback on 2026-07-28 for 2026-07-28. Open with: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for a direct PTP date and amount after identity confirmation. FACT: A third party said on 2026-07-28 that Kulvinder is in Canada for four months and offered to connect her. USE WHEN: the borrower is hesitant or gives vague answers about her whereabouts or ability to pay. FACT: Kulvinder has never spoken directly, including the silent 2026-07-19 call. USE WHEN: she deflects or tries to end the call quickly \u2014 gently insist on direct confirmation to resolve the loan. FACT: Five unreached attempts preceded the 2026-07-28 connect. USE WHEN: she says she was unavailable; acknowledge the repeated attempts and move straight to a date.",
+          "account_status": "UNREACHABLE \u2014 3 connected calls, borrower never directly engaged. 5 unreached attempts before the latest connect. No PTP or broken commitment. Urgent tone. Third EMI collection call by connected-call count; open with callback continuity and push for direct date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.4,
+          "usage": {
+            "text_input_tokens": 9909,
+            "audio_input_tokens": 0,
+            "output_tokens": 449,
+            "total_input_tokens": 9909
+          },
+          "cost_usd": 0.003375
+        }
+      }
+    },
+    {
+      "account_id": 213915,
+      "loan_number": "4499365666",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Call Hang Up",
+      "call_duration_s": 113,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call. The customer has a pattern of UNREACHABLE behavior, with 9 consecutive \"No Answer\" calls preceding the brief connection on July 28, 2026. The last call on July 28, 2026, was cut short due to poor network quality, resulting in a 'Call Hang Up' after more than 20 seconds. No reason for non-payment has been disclosed, and engagement was low due to technical issues. No payment commitments have been made. Sentiment was neutral.\n\nThe immediate risk is continued unreachability or disengagement if call quality issues persist. The customer has not disclosed any reasons for non-payment or hardship. There are no contradictions. The primary challenge is to establish clear communication and then secure a commitment.\n\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: After identity confirmation and acknowledging the unreached attempts, address the technical issue from the last call. Open with: \"Pichli baar network ki wajah se baat poori nahi ho paayi thi. Abhi aapko meri awaaz theek se aa rahi hai?\" Once confirmed, state the purpose of the call directly: \"Aapki EMI payment pending hai. Hum is par baat karne ke liye call kar rahe hain. Kya aap aaj payment kar sakte hain ya koi date de sakte hain?\"\nFACT: 9 consecutive missed calls before the brief connection on July 28, 2026.\nUSE WHEN: Customer seems hesitant to engage or claims they haven't been called.\nFACT: The last call on July 28, 2026, was cut short due to poor network quality.\nUSE WHEN: Customer mentions call quality or seems frustrated, to acknowledge the prior technical issue.\nFACT: No hardship or reason for non-payment has been disclosed across any calls.\nUSE WHEN: Customer claims inability to pay without providing a reason.",
+          "account_status": "UNREACHABLE pattern. 1 connected call. 9 unreached attempts. Firm tone. Second EMI collection call. Acknowledge missed attempts and technical issue, then push for PTP.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 20.3,
+          "usage": {
+            "text_input_tokens": 9319,
+            "audio_input_tokens": 2450,
+            "output_tokens": 503,
+            "total_input_tokens": 11769
+          },
+          "cost_usd": 0.006503
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the second EMI collection call. The customer has a strong UNREACHABLE pattern, with 9 consecutive missed calls between July 16 and July 25, 2026, before the last brief connection. The last call on July 28, 2026, was a 'Call Hang Up' after more than 20 seconds due to poor network quality and garbled speech, resulting in low engagement and no commitment. The sentiment was neutral, and no PTP was made. The agent offered to call back due to the poor call quality.  The overall pattern is UNREACHABLE, with an underlying AVOIDANT behavior due to the lack of disclosed reasons. There are no contradictions or disclosed hardships. The immediate risk is continued unreachability or disengagement if call quality issues persist. Tone: Urgent. PRE-OPENING ACKNOWLEDGEMENT: 9 unreached attempts (July 16-25, 2026) precede the last brief connect. Open with: 'Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: Customer requested this callback implicitly due to poor network on July 28, 2026. Open: 'Aapne hi request ki thi \u2014 main isliye call kar raha hoon.' Then ask for PTP date directly. FACT: There were 9 consecutive missed calls between July 16 and July 25, 2026, before the brief connection. USE WHEN: Customer seems hesitant to engage or claims they haven't been called. FACT: The last call on July 28, 2026, was cut short due to poor network quality. USE WHEN: Customer mentions call quality or seems frustrated, to acknowledge the prior technical issue and offer a better connection.",
+          "account_status": "UNREACHABLE/AVOIDANT. 9 unreached attempts before last connect. Urgent tone. Second EMI collection call. Acknowledge missed attempts and prior call quality, then push for PTP.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 17.2,
+          "usage": {
+            "text_input_tokens": 9213,
+            "audio_input_tokens": 0,
+            "output_tokens": 457,
+            "total_input_tokens": 9213
+          },
+          "cost_usd": 0.003906
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call. The customer has not made any payment commitments so far. The last call on July 28, 2026, was cut off due to poor call quality, and no reason for non-payment was disclosed. The pattern is still UNREACHABLE, with an underlying AVOIDANT behavior. Sentiment on the last call was neutral, and engagement was low due to technical issues. There are no broken PTPs, as no commitments were made. The customer has not disclosed any hardship or reasons for missed payments. The immediate risk is continued unreachability or disengagement if call quality issues persist.\n\nThe key risk before the next call is that the customer may continue to avoid engagement. There are no broken commitments, but the customer\u2019s lack of response in previous calls is a concern. There are no contradictions or disclosed hardships. The biggest risk is that the customer may not respond again due to ongoing technical issues or avoidance behavior.\n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 9 unreached attempts preceded this connect. Open with: 'Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the starting position. STARTING POSITION: Customer has been avoidant across 9 calls \u2014 no reason disclosed, no engagement. Open with a direct but non-threatening statement of purpose: 'Aapke pending EMI ke baare mein baat karni hai. Kya aap bata sakte hain ki aapka plan kya hai?' FACT: There were 9 consecutive missed calls before the brief connection on July 28, 2026. USE WHEN: Customer seems hesitant to engage or claims they haven't been called. FACT: The last call on July 28, 2026, was cut short due to poor network quality. USE WHEN: Customer mentions call quality or seems frustrated, to acknowledge the prior technical issue.",
+          "account_status": "AVOIDANT \u2014 no commitments made. 9 unreached attempts before this connect. Firm tone. Second EMI collection call. Acknowledge missed attempts, then push for engagement.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 17.9,
+          "usage": {
+            "text_input_tokens": 8350,
+            "audio_input_tokens": 979,
+            "output_tokens": 462,
+            "total_input_tokens": 9329
+          },
+          "cost_usd": 0.015909
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call for this account. Pattern: UNREACHABLE with underlying AVOIDANT behavior. The last meaningful interaction on July 28, 2026 ended as Call Hang Up after more than 20 seconds with poor network quality and garbled speech; commitment strength was none and engagement was low. There is no PTP on record. Connected call count is 1.\n\nKey risk is continued non-contact or another low-quality exchange, since there were 9 consecutive unreached attempts before this connect. No hardship, dispute, or payment reason has been disclosed. Sentiment is neutral and flat across the available history. No contradictions yet, because the customer has not given any substantive explanation.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: There were 9 consecutive missed calls before the brief connection on July 28, 2026. USE WHEN: Customer seems hesitant to engage or claims they haven't been called. FACT: The last call on July 28, 2026, was cut short due to poor network quality. USE WHEN: Customer mentions call quality or seems frustrated, to acknowledge the prior technical issue.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before the first connect. 1 connected call total. No PTP, no hardship, neutral sentiment. Default tone. First EMI collection call by connected-call count.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.3,
+          "usage": {
+            "text_input_tokens": 8551,
+            "audio_input_tokens": 0,
+            "output_tokens": 322,
+            "total_input_tokens": 8551
+          },
+          "cost_usd": 0.002782
+        }
+      }
+    },
+    {
+      "account_id": 131300,
+      "loan_number": "5593583181",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 47,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Narayan Devi remains unreachable directly. This is the first time a human answered the call, though it was a third party who stated they are not Narayan Devi and do not know her. The third party politely suggested calling back tomorrow, July 29, 2026, around 12 PM to speak with Narayan Devi. The sentiment of this interaction was neutral, and the engagement level was medium. There are no broken PTPs on record. The pattern remains UNREACHABLE, as the borrower herself has not yet been connected. \n\nThe key signal for this account is the specific callback date and time provided by the third party. The primary risk is that Narayan Devi may still not be reachable, or the information provided by the third party might be inaccurate. No contradictions have been observed, and no financial hardship has been disclosed by the borrower. \n\nTone: Urgent.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer requested this callback on July 28, 2026 for July 29, 2026 around 12 PM (via a third party). Open: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for PTP date directly.\nFACT: A third party suggested calling back on July 29, 2026 around 12 PM to speak with Narayan Devi.\nUSE WHEN: The call connects with Narayan Devi \u2014 open by referencing this specific callback request to establish context and rapport.\nFACT: Narayan Devi has not been reached directly in any prior attempts.\nUSE WHEN: If the call connects with Narayan Devi and she seems hesitant or confused about the call \u2014 explain the purpose of the call clearly and gently, as this is the first direct interaction.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before this third-party connect. Urgent tone. First EMI collection call (if connected to borrower). Acknowledge missed attempts, then reference callback request.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 16.8,
+          "usage": {
+            "text_input_tokens": 9402,
+            "audio_input_tokens": 1175,
+            "output_tokens": 464,
+            "total_input_tokens": 10577
+          },
+          "cost_usd": 0.005156
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "The borrower, Narayan Devi, has not yet been directly reached for a meaningful conversation. This is the first EMI collection call where Randheer might speak to Narayan Devi directly. The most recent call (July 28, 2026) was a 'Third Party Connect' where a third party answered and suggested calling back on July 29, 2026 around 12 PM to speak with Narayan Devi. Prior to this, there have been 9 consecutive unreached attempts. The reason for non-payment remains unknown as the borrower has not been engaged. The pattern is UNREACHABLE.\n\nThe risk this call is that Narayan Devi may still not be reachable, or the third party's information might be inaccurate. No contradictions have been detected, and no hardship has been disclosed by the borrower. The specific callback time provided by the third party is the key signal for the next attempt.\n\nTone: Urgent.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 10 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer requested this callback on July 28, 2026 for July 29, 2026 around 12 PM. Open: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for PTP date directly.\nFACT: A third party suggested calling back on July 29, 2026 around 12 PM to speak with Narayan Devi.\nUSE WHEN: The call connects with Narayan Devi \u2014 open by referencing this specific callback request to establish context and rapport.\nFACT: Narayan Devi has not been reached directly in any prior attempts.\nUSE WHEN: If the call connects with Narayan Devi and she seems hesitant or confused about the call \u2014 explain the purpose of the call clearly and gently, as this is the first direct interaction.",
+          "account_status": "UNREACHABLE pattern. 0 connected calls with borrower. 10 unreached attempts before this potential connect. Urgent tone. First EMI collection call with borrower. Acknowledge missed attempts, then reference callback request.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 39.1,
+          "usage": {
+            "text_input_tokens": 9296,
+            "audio_input_tokens": 0,
+            "output_tokens": 467,
+            "total_input_tokens": 9296
+          },
+          "cost_usd": 0.003956
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Narayan Devi has not been reached directly in prior calls. This is the first connected call where a third party answered, stating they are not Narayan Devi and do not know her. The third party suggested calling back tomorrow around 12 PM to speak with Narayan Devi. This is the first meaningful interaction with the borrower. Pattern: UNREACHABLE. No broken PTPs, as no commitments have been made. Last disposition: Third Party Connect. Engagement level: medium. No commitment made. Sentiment: neutral.\n\nKey signals: The third party\u2019s suggestion to call back tomorrow is a key signal. The risk is that Narayan Devi may still not be reachable, or the third party\u2019s information might be inaccurate. No contradictions detected. No hardship disclosed. Biggest risk: borrower may not be available at the suggested time.\n\nTone: Encouraging. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer requested this callback on July 29, 2026 for July 29, 2026 around 12 PM (via a third party). Open by referencing the request \u2014 this was expected, not cold. Move into reason exploration once rapport is established, then bridge to a small PTP. FACT: A third party suggested calling back on July 29, 2026 around 12 PM to speak with Narayan Devi. USE WHEN: The call connects with Narayan Devi \u2014 open by referencing this specific callback request to establish context and rapport. FACT: Narayan Devi has not been reached directly in any prior attempts. USE WHEN: If the call connects with Narayan Devi and she seems hesitant or confused about the call \u2014 explain the purpose of the call clearly and gently, as this is the first direct interaction.",
+          "account_status": "UNREACHABLE \u2014 no prior commitments. 9 unreached attempts before this connect. Encouraging tone. First EMI collection call. Acknowledge missed attempts, then reference callback request.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.9,
+          "usage": {
+            "text_input_tokens": 8442,
+            "audio_input_tokens": 463,
+            "output_tokens": 445,
+            "total_input_tokens": 8905
+          },
+          "cost_usd": 0.010763
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Narayan Devi has still not been reached directly; the only human interaction on record was a polite third-party connect on July 28, 2026. Pattern remains UNREACHABLE. This is the first connected call by connected-call count, but there are 9 consecutive minimal-interaction attempts before it. Last disposition: Third Party Connect. Commitment level: none. Engagement level: medium only through the third party, not the borrower.\n\nKey risk is continued non-contact, not refusal. No PTP exists, so there is no broken commitment to enforce. The third party suggested a callback on July 29, 2026 around 12 PM, which is the strongest route to finally reach Narayan Devi. No hardship, dispute, or contradiction has been disclosed because the borrower has not spoken directly.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: A third party suggested calling back on July 29, 2026 around 12 PM to speak with Narayan Devi. USE WHEN: The call connects with Narayan Devi \u2014 open by referencing this specific callback request to establish context and rapport. FACT: Narayan Devi has not been reached directly in any prior attempts. USE WHEN: If she seems hesitant or confused, explain the purpose of the call clearly and gently, then move quickly to a specific payment date.",
+          "account_status": "UNREACHABLE \u2014 1 connected call, 9 unreached attempts before it. No PTP or broken commitment. Default tone. First direct borrower call if reached; use July 29, 2026 around 12 PM callback context.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.6,
+          "usage": {
+            "text_input_tokens": 8643,
+            "audio_input_tokens": 0,
+            "output_tokens": 364,
+            "total_input_tokens": 8643
+          },
+          "cost_usd": 0.002889
+        }
+      }
+    },
+    {
+      "account_id": 186736,
+      "loan_number": "6878792159",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 35,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Sandeep Kaur has consistently been difficult to engage. The last meaningful interaction with her was on July 18, where she explicitly refused to discuss the loan, stating \"Don't talk to Sandeep Kaur\" and vaguely implying a dispute about loan ownership. Her sentiment with the borrower has worsened from neutral to negative. Since then, there have been four consecutive unreached attempts in the history (July 22, July 23, July 23, July 28). The most recent interaction (the audio provided) was another Third Party Connect where the person answering claimed not to be Sandeep Kaur. This is the third EMI collection call attempt to connect meaningfully with Sandeep Kaur, following two prior connected calls. The pattern is UNREACHABLE, with underlying AVOIDANT behavior and an implied DISPUTE. No PTP has ever been locked. No settlement discussions have occurred. Her evasiveness and dismissive attitude are very pronounced. The recent third-party connects and wrong number claim add to the difficulty in reaching the actual borrower. The sentiment trend with the borrower is worsening, then flat due to unreached attempts. No contradictions from the borrower have been detected, and no hardship has been disclosed. The primary risk is continued avoidance or further third-party interference, preventing direct contact with the borrower. This call aims to clarify the dispute and push for engagement.",
+          "account_status": "UNREACHABLE/AVOIDANT with implied DISPUTE. 2",
+          "language": "",
+          "commitments": [],
+          "latency_s": 46.8,
+          "usage": {
+            "text_input_tokens": 11691,
+            "audio_input_tokens": 750,
+            "output_tokens": 310,
+            "total_input_tokens": 12441
+          },
+          "cost_usd": 0.005032
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": false,
+          "narrative": null,
+          "account_status": null,
+          "language": null,
+          "commitments": [],
+          "latency_s": 240.1,
+          "usage": {},
+          "cost_usd": null
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Sandeep Kaur has been consistently difficult to engage. This is the third EMI collection call. On July 18, she explicitly refused to discuss the loan, stating 'Don't talk to Sandeep Kaur' and 'Don't talk.' She also vaguely implied the loan might not be hers or someone else is responsible, indicating a dispute. Since then, there have been multiple minimal interactions. The most recent call (July 28) was a 'Third Party Connect' where the person who answered claimed it was a wrong number. The call before that (July 23) was also a 'Third Party Connect' where Sargit answered. Her sentiment has worsened from neutral to negative, with an explicit refusal to engage and a vague dispute regarding loan ownership. No PTP has ever been locked. No settlement discussions have occurred. There is no evidence of hardship disclosed. This is the third connected call attempt. No broken PTP exists, as no commitments were made previously.",
+          "account_status": "Avoidant \u2014 3 unreached attempts before this connect. Negative sentiment. Third EMI collection call. Tone: Confrontational. Open with acknowledgment of prior attempts.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 10364,
+            "audio_input_tokens": 294,
+            "output_tokens": 258,
+            "total_input_tokens": 10658
+          },
+          "cost_usd": 0.009778
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Sandeep Kaur is now best classified as UNREACHABLE with a secondary DISPUTE/REFUSAL risk. This is the third connected EMI collection call with her; the last meaningful borrower interaction was on July 18, when she confirmed identity but immediately refused to discuss the loan and implied it may not be hers. The most recent call on July 28 was a Third Party Connect with a wrong-number claim, so there was no borrower engagement on this call. Commitment level on the current call: none. Engagement level: none.\n\nKey risks: the account has had repeated minimal-contact attempts around the borrower, including two Third Party Connects on July 23 and July 28, plus a July 23 call hang-up under 20 seconds and a July 22 Busy attempt. No PTP has ever been locked, so there is no broken PTP to chase. The main contradiction/leverage point remains her July 18 behavior: she confirmed identity, then denied the discussion and hinted the loan may not be hers. Hardship has not been disclosed.\n\nTone: urgent. STARTING POSITION: No prior meaningful interaction on this latest contact path; treat the next borrower connect as a re-attempt, not a fresh discovery. After identity confirmation, state the pending EMI amount of Rs 22,604 and ask directly for a specific payment date. KEY INTELLIGENCE: FACT: On July 18 she refused to discuss the loan and said 'Don't talk to Sandeep Kaur' / 'Don't talk.' USE WHEN: she again avoids ownership or says it is not her loan. FACT: July 23 and July 28 were third-party/wrong-number contacts. USE WHEN: you need to justify why you are asking for direct borrower confirmation before discussing payment. FACT: No PTP has ever been secured. USE WHEN: she tries to end the call without a date; push once for a concrete date, then close if she still refuses.",
+          "account_status": "UNREACHABLE with dispute/refusal risk. 3 connected calls total; no PTP ever secured. 2 unreached attempts before the latest borrower path. Urgent tone. Fourth EMI collection call path; verify borrower, then ask for a specific payment date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.8,
+          "usage": {
+            "text_input_tokens": 10565,
+            "audio_input_tokens": 0,
+            "output_tokens": 471,
+            "total_input_tokens": 10565
+          },
+          "cost_usd": 0.003583
+        }
+      }
+    },
+    {
+      "account_id": 156125,
+      "loan_number": "6491819236",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Dispute",
+      "call_duration_s": 103,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Rekha Anil Pawar disputed the loan on July 28, 2026, asking \"Who is this?\" and \"Which loan have you started?\". This indicates a DISPUTE pattern. There were 9 unreached attempts before this first connected call, making her UNREACHABLE. This is the second EMI collection call. The last call ended with a \"Dispute\" disposition, low engagement, and no commitment. No broken PTPs on record. This is the first analysis for this account. \nThe primary risk is the customer's explicit dispute regarding the loan's validity, which needs direct clarification. Communication was difficult due to poor network quality on July 28, 2026, which could hinder this call. No contradictions or hardship have been disclosed.\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: After identity confirmation and acknowledging the unreached attempts, address the dispute directly: \"Pichli baar aapne loan ke baare mein poocha tha. Main aapko Fusion Finance se call kar raha hoon aapke loan account ke baare mein. Kya aapko iske baare mein jaankari chahiye?\"\nFACT: Customer disputed the loan on July 28, 2026, asking \"Which loan have you started?\".\nUSE WHEN: They repeat the dispute or claim they don't know about the loan.\nFACT: Communication was difficult due to poor network quality on July 28, 2026.\nUSE WHEN: There are new network issues or if the customer seems frustrated by past communication.",
+          "account_status": "DISPUTE (Not Availed Loan) and UNREACHABLE (9 attempts). 1 connected call. Firm tone. Second EMI collection call. Acknowledge missed attempts, then address the loan dispute.",
+          "language": "Marathi",
+          "commitments": [],
+          "latency_s": 15.5,
+          "usage": {
+            "text_input_tokens": 9339,
+            "audio_input_tokens": 2075,
+            "output_tokens": 433,
+            "total_input_tokens": 11414
+          },
+          "cost_usd": 0.005959
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Rekha Anil Pawar's account shows a primary pattern of DISPUTE, with a secondary pattern of UNREACHABLE attempts. This is the second EMI collection call. The first connected call on July 28, 2026, ended with a 'Dispute' disposition, where Rekha explicitly questioned the loan's validity, asking 'Who is this?' and 'Which loan have you started?'. Engagement was low, and no commitment was made. Prior to this, there were 9 consecutive unreached attempts. The customer was also noted as 'Evasive' in the last call. Communication was difficult due to poor network quality. This is the first analysis for this account. The primary risk is the customer's explicit dispute regarding the loan's validity. This needs to be addressed directly and clarified. The previous call also suffered from poor network quality, which hindered communication. No contradictions have been detected yet, as this is the first meaningful interaction. No hardship has been disclosed. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. KEY INTELLIGENCE: FACT: Customer disputed the loan on July 28, 2026, asking 'Which loan have you started?'. USE WHEN: They repeat the dispute or claim they don't know about the loan. FACT: Communication was difficult due to poor network quality on July 28, 2026. USE WHEN: There are new network issues or if the customer seems frustrated by past communication.",
+          "account_status": "DISPUTE (loan validity questioned), UNREACHABLE (9 prior attempts). Firm tone. Second EMI collection call. Acknowledge 9 missed calls, then address dispute and pending EMIs.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 25.5,
+          "usage": {
+            "text_input_tokens": 9233,
+            "audio_input_tokens": 0,
+            "output_tokens": 423,
+            "total_input_tokens": 9233
+          },
+          "cost_usd": 0.003827
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Rekha Anil Pawar disputed the loan on July 28, 2026, asking 'Who is this?' and 'Which loan have you started?'. This is the first connected call. The customer\u2019s engagement level was low, and sentiment was neutral. There is no broken PTP, as no commitment was made. Pattern: DISPUTE. The customer was evasive, and communication was difficult due to poor network quality. The primary risk is the customer\u2019s confusion about the loan\u2019s validity. There were 9 unreached attempts prior to this call, indicating a pattern of unreachability.\n\nThe key risk is that the customer may continue to dispute the loan or remain evasive. There is no hardship disclosed. The biggest risk is that the customer may not engage further or may continue to dispute the loan\u2019s validity. There are no contradictions noted so far.\n\nTone: Direct. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer disputed the loan on July 28, 2026. Open by acknowledging: 'Pichli baar aapne bataya tha ki aapko loan ke baare mein confusion hai \u2014 ab kya situation hai?' FACT: Customer disputed the loan on July 28, 2026, asking 'Which loan have you started?'. USE WHEN: Customer repeats the dispute or claims they don\u2019t know about the loan. FACT: Communication was difficult due to poor network quality on July 28, 2026. USE WHEN: Customer mentions network issues again or seems frustrated by past communication.",
+          "account_status": "DISPUTE \u2014 no PTP. 9 unreached attempts before this connect. Direct tone. First EMI collection call. Acknowledge dispute and network issues.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.2,
+          "usage": {
+            "text_input_tokens": 8370,
+            "audio_input_tokens": 821,
+            "output_tokens": 403,
+            "total_input_tokens": 9191
+          },
+          "cost_usd": 0.014199
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call for Rekha Anil Pawar. Pattern: DISPUTE / UNREACHABLE. There were 9 consecutive unreached attempts before this connect, and the latest call on July 28, 2026 ended in a dispute with poor network quality. Customer engagement was low, commitment strength was none, and no PTP or callback was secured.\n\nKey risk: the customer questioned the loan itself (\u201cWho is this?\u201d, \u201cWhich loan have you started?\u201d), so the next call must first stabilize identity/loan recognition before pushing payment. No hardship has been disclosed. No commitments exist yet, so there is no broken PTP to track. The main contradiction is not financial but conversational: repeated confusion/dispute despite multiple prior attempts to reach her.\n\nTone: Direct. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: Customer disputed the loan on July 28, 2026, asking which loan was being discussed. USE WHEN: She repeats the dispute or says she does not recognize the loan. FACT: Communication was difficult due to poor network quality on July 28, 2026. USE WHEN: She sounds frustrated or the line quality again becomes an issue. FACT: Nine consecutive unreached attempts preceded this connect. USE WHEN: She acts surprised by the call or claims no prior contact.",
+          "account_status": "DISPUTE / UNREACHABLE \u2014 1 connected call, 9 unreached attempts before connect. No PTP, no hardship, no broken commitment. Direct tone. Second EMI collection call by attempt count; open with missed-attempt acknowledgment and identity confirmation.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.0,
+          "usage": {
+            "text_input_tokens": 8571,
+            "audio_input_tokens": 0,
+            "output_tokens": 402,
+            "total_input_tokens": 8571
+          },
+          "cost_usd": 0.002947
+        }
+      }
+    },
+    {
+      "account_id": 98196,
+      "loan_number": "6997794912",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Call Hang Up",
+      "call_duration_s": 31,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call for Raisha ji. The first connected call on July 28, 2026, was silent, with Raisha ji not speaking despite Randheer's attempts to confirm audibility. This reinforces a consistent pattern of avoidance and unreachability, as 9 prior attempts were minimal interactions (Busy, No Answer, Call Hang Up Less Than 20 Secs). No reason for non-payment has been disclosed across any interaction.\nThe primary risk is continued avoidance and difficulty in establishing any dialogue. The customer's silence in the last connected call indicates a strong reluctance to engage. There are no broken PTPs, no contradictions, and no hardship has been disclosed.\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: 9 unreached attempts (July 23, 21, 20, 15, 12, 10, 04, 03, June 23) precede this connect. Open with: 'Raisha ji, maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below.\nSTARTING POSITION: Last call on July 28, 2026, was connected but the customer did not speak. Open by acknowledging the previous call and directly stating the purpose: 'Pichli baar baat hui thi lekin aapki awaaz nahi aa rahi thi. Main Fusion Finance se Randheer bol raha hoon, aapke EMI ke baare mein baat karni hai.' If she engages, immediately ask for a reason for non-payment or a PTP date.\nFACT: Raisha ji has not spoken in any of the 10 attempts to connect (9 unreached, 1 silent connected).\nUSE WHEN: The customer remains silent or tries to hang up.\nFACT: No reason for non-payment has ever been shared.\nUSE WHEN: The customer finally speaks but is vague or deflects.",
+          "account_status": "AVOIDANT/UNREACHABLE \u2014 1st connected call was silent. 9 unreached attempts before this connect. Firm tone. Second EMI collection call. Acknowledge missed attempts and silent call, then state purpose directly.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 19.9,
+          "usage": {
+            "text_input_tokens": 9176,
+            "audio_input_tokens": 675,
+            "output_tokens": 497,
+            "total_input_tokens": 9851
+          },
+          "cost_usd": 0.00467
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Raisha ji has a consistent pattern of unreachability and non-engagement. Prior to the current call, there were 9 consecutive minimal-interaction attempts. The most recent call on July 28, 2026, was technically connected (Call Hang Up, More Than 20 Secs) but the customer remained silent despite Randheer's attempts to engage. This is the first connected call where the system registered a duration, but the customer's non-response means there has been no actual dialogue. No PTPs have been made or broken. The pattern is AVOIDANT/UNREACHABLE. The next call will be the second EMI collection call.  The primary risk is continued silence and avoidance, making it difficult to understand any underlying reasons for non-payment. There are no contradictions as no information has been shared by the customer. No hardship has been disclosed. The customer's consistent non-engagement is the biggest hurdle.  Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 9 unreached attempts precede this connect. Open with: 'Raisha ji, maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: No prior meaningful interaction from the customer. Treat as a fresh first call where the customer needs to be engaged. After the acknowledgement, state pending EMIs and total after identity confirmation. Then ask for a restart date. FACT: Raisha ji has not spoken in any of the previous 10 attempts to connect, including the most recent call. USE WHEN: The customer remains silent or tries to hang up \u2014 state this fact to highlight the need for engagement. FACT: No reason for non-payment has ever been shared across any interaction. USE WHEN: The customer finally speaks but is vague or deflects \u2014 gently probe for a specific reason.",
+          "account_status": "AVOIDANT/UNREACHABLE pattern. 9 unreached attempts before this connect. First connected call (silent). Firm tone. Second EMI collection call. Acknowledge missed attempts, then state EMIs and ask for a date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 19.0,
+          "usage": {
+            "text_input_tokens": 9070,
+            "audio_input_tokens": 0,
+            "output_tokens": 462,
+            "total_input_tokens": 9070
+          },
+          "cost_usd": 0.003876
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Raisha ji has not engaged in any meaningful conversation across the previous attempts. This is the second connected call. The last call on July 28, 2026, ended without any engagement \u2014 the customer did not speak despite repeated attempts to confirm audibility. There is no broken PTP, as no commitment was made. The engagement level remains low, and the sentiment is neutral. Pattern: UNREACHABLE.\n\nThe key risk is that Raisha ji continues to avoid engagement. There are no disclosed reasons for non-payment. The biggest risk is continued avoidance and lack of communication. There are no contradictions, as no information has been shared in prior calls.\n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer has been avoidant across 10 calls \u2014 no reason disclosed, no engagement. Open with a direct but non-threatening statement of purpose: 'Raisha ji, aap se baat karne ki koshish kar raha hoon. Kripya ek reason batayein ki EMI kyun miss hui hai?' FACT: Raisha ji has not spoken in any of the previous 10 attempts to connect. USE WHEN: The customer remains silent or tries to hang up \u2014 state this fact to highlight the need for engagement. FACT: No reason for non-payment has ever been shared. USE WHEN: The customer finally speaks but is vague or deflects \u2014 gently probe for a specific reason.",
+          "account_status": "UNREACHABLE \u2014 no broken PTP. 1 unreached attempt before this connect. Firm tone. Second EMI collection call. Acknowledge missed attempt, then push for engagement.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.9,
+          "usage": {
+            "text_input_tokens": 8222,
+            "audio_input_tokens": 261,
+            "output_tokens": 385,
+            "total_input_tokens": 8483
+          },
+          "cost_usd": 0.008467
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Raisha ji ke saath ab tak koi meaningful conversation nahi bani. This is the first connected EMI collection call by connected-call count, but the account shows a strong unreachability pattern: nine consecutive minimal-interaction attempts before this connect, and this latest call also ended with no customer speech. Last disposition: Call Hang Up (More Than 20 Sec); commitment level: none; engagement level: very low. Pattern: UNREACHABLE.\n\nKey risk is continued avoidance \u2014 there is still no disclosed reason for missed EMIs, no PTP, and no callback preference. No contradictions exist because the customer has not shared any substantive information. Hardship status remains undisclosed/none. The main leverage is the long streak of failed contact attempts and the fact that even the first connect produced no engagement.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: Raisha ji has not spoken in any of the previous 10 attempts to connect. USE WHEN: The customer remains silent or tries to hang up \u2014 state this fact to highlight the need for engagement. FACT: No reason for non-payment has ever been shared. USE WHEN: The customer finally speaks but is vague or deflects \u2014 gently probe for a specific reason.",
+          "account_status": "UNREACHABLE \u2014 1 connected call, 9 unreached attempts before it. No PTP, no reason disclosed. Default tone. First meaningful EMI collection call; open fresh after identity confirmation.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.8,
+          "usage": {
+            "text_input_tokens": 8423,
+            "audio_input_tokens": 0,
+            "output_tokens": 336,
+            "total_input_tokens": 8423
+          },
+          "cost_usd": 0.002778
+        }
+      }
+    },
+    {
+      "account_id": 191306,
+      "loan_number": "1505819647",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Call Hang Up",
+      "call_duration_s": 54,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This was the first connected call for this account, following 8 prior unreached attempts. The customer has a pattern of unreachability and avoidance. During the call on July 28, 2026, Randheer faced severe audibility issues, and the customer did not speak meaningfully, only producing faint sounds. The call ended with Randheer promising to call back. No PTP was made, and engagement was low. This is the second EMI collection call. \n\nThe primary risk for the next call is continued unreachability or lack of meaningful engagement due to technical issues or customer avoidance. The poor network quality on the last call is a significant challenge. No hardship or contradictions have been disclosed.\n\nTone: Urgent.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 8 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Last call ended with no commitment \u2014 agent conveyed EMI status, customer gave no signal. This call: lead with EMI numbers again, then ask directly for a date. Do not re-explain too much \u2014 get to the question faster.\nFACT: On the last call (July 28, 2026), there were severe audibility issues, and the customer did not speak meaningfully.\nUSE WHEN: The customer is unresponsive or difficult to hear \u2014 acknowledge the technical issue and ask if they can hear you clearly before proceeding.\nFACT: There have been 8 prior unreached attempts before the last connected call.\nUSE WHEN: The customer seems hesitant to engage \u2014 mention the repeated attempts as a factual observation, not an accusation, to convey the seriousness of the situation.",
+          "account_status": "FIRST_TIMER (connected), UNREACHABLE (8 prior attempts). Urgent tone. Second EMI collection call. Acknowledge missed attempts, then lead with EMI numbers.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 38.2,
+          "usage": {
+            "text_input_tokens": 9137,
+            "audio_input_tokens": 1175,
+            "output_tokens": 413,
+            "total_input_tokens": 10312
+          },
+          "cost_usd": 0.004949
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "The customer, Nanu ji, has a strong pattern of unreachability, with 8 consecutive unreached attempts (July 09 to July 25, 2026) preceding the first connected call on July 28, 2026. This first connected call was severely hampered by poor network quality and audibility issues. The customer did not speak meaningfully, and the agent had to terminate the call, promising a callback. No PTP was made, and engagement was low. This is the second EMI collection call. Pattern: UNREACHABLE and AVOIDANT. The primary risk is continued unreachability or a repeat of the technical difficulties, preventing any meaningful conversation or commitment. No reasons for non-payment or hardship have been disclosed due to the lack of engagement. There are no contradictions to flag. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 8 unreached attempts (July 09 to July 25, 2026) precede the last connected call. Open with: 'Maine aapko pehle bhi 8 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: Last call on July 28, 2026, ended politely (agent terminated due to audibility issues) with no commitment. Open with brief continuity: 'Pichli baar network ki wajah se theek se baat nahi ho paayi thi \u2014 aaj finalize karte hain.' Then state EMI numbers and ask for a specific date. FACT: The customer did not speak meaningfully on the last connected call and the call was terminated due to audibility issues. USE WHEN: The customer is unresponsive or difficult to hear again \u2014 acknowledge the technical issue and ask if they can hear you clearly before proceeding. FACT: There have been 8 prior unreached attempts before the last connected call. USE WHEN: The customer seems hesitant to engage or tries to end the call quickly \u2014 mention the repeated attempts as a factual observation, not an accusation, to convey the seriousness of the situation and the need to talk.",
+          "account_status": "UNREACHABLE/AVOIDANT pattern. 8 unreached attempts before first connected call (July 28, 2026) which had audibility issues and no meaningful engagement. Firm tone. Second EMI collection call. Acknowledge missed attempts and technical issues.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 38.5,
+          "usage": {
+            "text_input_tokens": 9031,
+            "audio_input_tokens": 0,
+            "output_tokens": 512,
+            "total_input_tokens": 9031
+          },
+          "cost_usd": 0.003989
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call. The previous call on July 28, 2026, faced severe audibility issues, and the customer did not speak meaningfully. There was no PTP made, and the engagement level was low. The pattern remains one of unreachability and avoidance. There have been 8 prior unreached attempts between July 09 and July 25, 2026. No reason for non-payment has been disclosed. The last disposition was 'Call Hang Up' with 'More Than 20 Sec' sub-disposition, indicating the call ended abruptly after faint sounds from the customer. No commitment was made, and the sentiment was neutral. The engagement level remains low, and no commitment strength was established.",
+          "account_status": "Unreachable pattern \u2014 8 unreached attempts before this connect. Neutral sentiment. Tone: Direct. Second EMI collection call. Acknowledge prior attempts, address audibility issues.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.7,
+          "usage": {
+            "text_input_tokens": 8220,
+            "audio_input_tokens": 467,
+            "output_tokens": 212,
+            "total_input_tokens": 8687
+          },
+          "cost_usd": 0.010111
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call for this account. Pattern: UNREACHABLE with no meaningful customer engagement so far. The latest call on July 28, 2026 ended with poor audibility and no meaningful speech; commitment strength was none, sentiment neutral, and no PTP or callback was secured. Connected call count is 1. There are no broken PTPs on record.\n\nKey risk is continued non-engagement: there were 8 consecutive minimal-interaction attempts before the first connect, all between July 9 and July 25, 2026. No reason for non-payment has been disclosed, and there are no contradictions or hardship signals yet. The main issue is access and clarity, not refusal.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: The customer did not speak meaningfully on the last connected call due to audibility issues. USE WHEN: The customer is unresponsive or difficult to hear \u2014 first confirm they can hear you clearly, then continue. FACT: There have been 8 prior unreached attempts before the last connected call. USE WHEN: The customer seems hesitant to engage \u2014 mention the repeated attempts as a factual observation, not an accusation, to convey seriousness. FACT: No reason for missed EMIs has been disclosed across any call. USE WHEN: They ask why you are calling \u2014 keep it brief and move straight to the payment question.",
+          "account_status": "UNREACHABLE \u2014 1 connected call, 8 unreached attempts before it. No PTP, no hardship, no contradictions. Default tone. First EMI collection call by connected-call count; open with clarity check and ask for a restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.7,
+          "usage": {
+            "text_input_tokens": 8421,
+            "audio_input_tokens": 0,
+            "output_tokens": 380,
+            "total_input_tokens": 8421
+          },
+          "cost_usd": 0.002865
+        }
+      }
+    },
+    {
+      "account_id": 211895,
+      "loan_number": "8940081236",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 278,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the third EMI collection call for Sangeetha Jayakumar. The pattern is HARDSHIP, with significant family challenges disclosed. On July 28, her husband answered and detailed severe hardship: Sangeetha's father passed away, her mother is struggling, and Sangeetha herself had to stop her studies to work as a mason. No PTP was locked, but the agent suggested a \u20b91500 payment to restart the loan, which the husband said he would discuss with Sangeetha. Sangeetha has not yet been directly connected with. \n\nThe hardship appears active and severe, involving a recent death in the family, family responsibilities, and income loss. A key contradiction exists: on July 08, Sangeetha's son claimed ignorance of the loan, while her husband on July 28 clearly acknowledged it and discussed payment. The primary risk is pushing too hard for a PTP given the ongoing crisis. The goal remains to establish direct contact with Sangeetha and confirm the information shared by her husband. \n\nTone: Default. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 6 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer disclosed Death in Family, Family Responsibilities, and Income Loss on July 28 \u2014 appears ongoing. Open by acknowledging: \"Pichli baar aapne bataya tha [brief hardship mention] \u2014 ab kya situation hai?\" If hardship resolved \u2192 push for PTP immediately. If still active \u2192 Financial Hardship close. FACT: Husband disclosed Sangeetha's father passed away, mother is struggling, and Sangeetha stopped studies to work as a mason. USE WHEN: Establishing rapport and confirming the family's situation. FACT: On July 08, Sangeetha's son claimed ignorance of the loan, but on July 28, her husband acknowledged it and discussed payment. USE WHEN: If there's any deflection or confusion about the loan's existence or responsibility.",
+          "account_status": "HARDSHIP (Death in Family, Income Loss). 2 connected calls. 6 unreached attempts before last connect. Default tone. Third EMI collection call. Acknowledge missed attempts, then open with empathy for hardship.",
+          "language": "Tamil",
+          "commitments": [],
+          "latency_s": 15.7,
+          "usage": {
+            "text_input_tokens": 9518,
+            "audio_input_tokens": 6100,
+            "output_tokens": 522,
+            "total_input_tokens": 15618
+          },
+          "cost_usd": 0.01026
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Sangeetha Jayakumar's account shows a pattern of HARDSHIP, with secondary AVOIDANT/UNREACHABLE behavior. This is the third EMI collection call. On July 28, her husband answered and disclosed significant, active hardship: Sangeetha's father passed away, her mother is struggling, and Sangeetha herself had to stop her studies to work as a mason. The agent suggested a \u20b91500 PTP, which the husband said he would discuss with Sangeetha. No PTP was locked. The call ended neutrally, with no commitment from the borrower.\n\nThe primary risk is pushing too hard for a PTP given the recent death and ongoing struggles. The borrower, Sangeetha, has not yet been directly connected with. A contradiction exists: her son claimed ignorance of the loan on July 8, while her husband disclosed detailed hardship on July 28, implying knowledge. The hardship appears to be ongoing and severe.\n\nTone: Default.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 6 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer disclosed Death in Family on July 28. Open by acknowledging: \"Pichli baar aapke pati ne bataya tha ki aapke parivaar mein mushkil chal rahi hai \u2014 ab kya situation hai?\" If hardship resolved \u2192 push for PTP immediately. If still active \u2192 Financial Hardship close.\nFACT: Husband disclosed Sangeetha's father passed away, mother struggling, and Sangeetha stopped studies to work as a mason on July 28.\nUSE WHEN: Establishing rapport and confirming the family's situation with Sangeetha.\nFACT: Husband said he would talk to Sangeetha about the \u20b91500 PTP suggestion on July 28.\nUSE WHEN: Gently re-introducing the idea of a small repayment after acknowledging their hardship.\nFACT: Son claimed ignorance of the loan on July 8.\nUSE WHEN: If Sangeetha claims ignorance or denies the loan.",
+          "account_status": "HARDSHIP (Death in Family disclosed July 28). AVOIDANT (6 unreached attempts). Third EMI collection call. Default tone. Goal: Connect with Sangeetha, confirm hardship, gently re-introduce PTP.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 40.8,
+          "usage": {
+            "text_input_tokens": 9412,
+            "audio_input_tokens": 0,
+            "output_tokens": 506,
+            "total_input_tokens": 9412
+          },
+          "cost_usd": 0.004089
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the third EMI collection call. Sangeetha Jayakumar\u2019s husband disclosed significant hardship on July 28, 2026, including the death of Sangeetha\u2019s father, her mother\u2019s struggles, and Sangeetha stopping her studies to work as a mason. The agent suggested a \u20b91500 PTP, but no commitment was made. The last disposition was 'Third Party Connect' with medium engagement. No PTP was locked. Pattern: HARDSHIP. The customer has not been directly connected yet, and the hardship appears ongoing. The last call ended neutrally, with the husband stating he would discuss the suggested \u20b91500 PTP with Sangeetha.",
+          "account_status": "HARDSHIP \u2014 ongoing. 2 unreached attempts before this connect. Neutral sentiment. Third EMI collection call. Tone: Empathetic. Open with acknowledgment of hardship and family situation.",
+          "language": "Tamil",
+          "commitments": [],
+          "latency_s": 5.9,
+          "usage": {
+            "text_input_tokens": 8533,
+            "audio_input_tokens": 2433,
+            "output_tokens": 207,
+            "total_input_tokens": 10966
+          },
+          "cost_usd": 0.029947
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Sangeetha Jayakumar is now on the second connected call by connected-call count, but the account has a heavy unreachable pattern: six consecutive minimal-interaction attempts preceded this connect. The latest call on July 28 was a Third Party Connect with her husband; he disclosed severe, active hardship \u2014 Sangeetha\u2019s father passed away, her mother is struggling, and Sangeetha stopped studies to work as a mason. No PTP was locked. Engagement was medium and sentiment neutral. Pattern: HARDSHIP, with UNREACHABLE as the recent contact pattern.\n\nKey risk: pushing too hard and losing the only live channel. No broken PTP exists yet. The earlier July 8 third-party contact from her son added no commitment and no contradiction; it mainly confirms the borrower has not been directly reached. Hardship appears ongoing and severe. Use the husband\u2019s disclosure carefully to confirm the situation and then seek a small, realistic restart amount only after rapport is established.\n\nTone: default. STARTING POSITION: Customer disclosed Death in Family, Family Responsibilities, and Income Loss on July 28 \u2014 appears ongoing. Open with empathy for the hardship. Do not push hard for a PTP immediately \u2014 let them talk first. Once they feel heard, a soft small-restart ask is appropriate (no specific amount on the first push). FACT: Husband disclosed Sangeetha's father passed away, her mother is struggling, and Sangeetha stopped her studies to work as a mason. USE WHEN: Establishing rapport and confirming the family's situation. FACT: Husband said he would talk to Sangeetha about the \u20b91500 PTP suggestion. USE WHEN: Gently re-introducing the idea of a small repayment after acknowledging their hardship.",
+          "account_status": "HARDSHIP + UNREACHABLE pattern. 2 connected calls; 6 unreached attempts before this connect. No broken PTP. Default tone. Second connected EMI collection call; open with empathy, then softly seek restart.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.5,
+          "usage": {
+            "text_input_tokens": 8734,
+            "audio_input_tokens": 0,
+            "output_tokens": 419,
+            "total_input_tokens": 8734
+          },
+          "cost_usd": 0.003021
+        }
+      }
+    },
+    {
+      "account_id": 166347,
+      "loan_number": "1078920111",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Information Conveyed",
+      "call_duration_s": 58,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call for Bulu Ghoda, who has shown an AVOIDANT pattern. The first meaningful interaction on July 28, 2026, resulted in an 'Information Conveyed' disposition with low engagement and neutral sentiment. While the borrower was confirmed, responses were minimal and unclear, and no commitment was secured. There are no PTPs on record. Four prior attempts to reach him were unsuccessful. \n\nThe primary risk for this call is continued minimal engagement or an abrupt hang-up, as the customer has been consistently evasive. No broken commitments, contradictions, or financial hardship have been disclosed. The customer's uncooperative nature remains a key challenge.\n\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 4 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Last call ended with no commitment \u2014 agent conveyed EMI status, customer gave no signal. This call: lead with EMI numbers again, then ask directly for a date. Do not re-explain too much \u2014 get to the question faster.\nFACT: This is the first time we've had a direct, albeit minimal, conversation after 4 prior unreached attempts.\nUSE WHEN: He seems hesitant or tries to end the call quickly \u2014 emphasize the importance of this direct conversation.\nFACT: On July 28, 2026, his responses were minimal and unclear.\nUSE WHEN: He gives vague answers again \u2014 gently push for clarity on why he hasn't paid and for a specific date.",
+          "account_status": "AVOIDANT pattern. 1 connected call, 4 unreached attempts. Firm tone. Second EMI collection call. Acknowledge missed attempts, then lead with EMI numbers and ask for a date.",
+          "language": "Odia",
+          "commitments": [],
+          "latency_s": 14.4,
+          "usage": {
+            "text_input_tokens": 8515,
+            "audio_input_tokens": 1325,
+            "output_tokens": 407,
+            "total_input_tokens": 9840
+          },
+          "cost_usd": 0.004897
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Bulu Ghoda has a pattern of being AVOIDANT, with 4 prior unreached attempts before the first meaningful connection on July 28, 2026. This is the second EMI collection call. On the last call, he confirmed his identity but gave minimal and unclear responses, resulting in an 'Information Conveyed' disposition with low engagement and no commitment. No PTPs have been made or broken. Sentiment has been consistently neutral. \n\nThe primary risk is continued minimal engagement or an abrupt hang-up. He has not disclosed any hardship or dispute. The customer remains evasive, and no reasons for non-payment have been provided. \n\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 4 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Last call ended with no commitment \u2014 agent conveyed EMI status, customer gave no signal. This call: lead with EMI numbers again, then ask directly for a date. Do not re-explain too much \u2014 get to the question faster.\nFACT: This is the first time we've connected directly with him after several attempts.\nUSE WHEN: He seems hesitant or tries to end the call quickly \u2014 emphasize the importance of this direct conversation.\nFACT: On July 28, 2026, he gave minimal and unclear responses.\nUSE WHEN: He gives vague answers again \u2014 gently push for clarity on why he hasn't paid.",
+          "account_status": "AVOIDANT pattern with 4 unreached attempts before first connect. Firm tone. Second EMI collection call. Acknowledge missed attempts, then lead with EMI numbers and ask for a date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 13.4,
+          "usage": {
+            "text_input_tokens": 8409,
+            "audio_input_tokens": 0,
+            "output_tokens": 375,
+            "total_input_tokens": 8409
+          },
+          "cost_usd": 0.00346
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Bulu Ghoda has been evasive and uncooperative. This is the second connected EMI collection call. The previous call on 28th July ended with minimal engagement and an 'Information Conveyed' disposition. No PTP was made. The pattern remains AVOIDANT. Sentiment has been neutral. No broken PTPs exist yet. The customer has not disclosed any hardship or dispute. Engagement level remains low. The risk is continued minimal engagement or abrupt hang-ups.\n\nKey signals: The customer has not disclosed reasons for missed payments. No contradictions detected. No hardship disclosed. Biggest risk: the customer may continue to evade or give vague responses.\n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer has been avoidant across 1 connected call \u2014 no reason disclosed, minimal engagement. Open with a direct but non-threatening statement of purpose. Keep it brief; if they engage even slightly \u2192 ask one specific reason question, then push for any small PTP they can manage. FACT: This is the first time we've connected directly with him after several attempts. USE WHEN: He seems hesitant or tries to end the call quickly \u2014 emphasize the importance of this direct conversation. FACT: On 28th July, he gave minimal and unclear responses. USE WHEN: He gives vague answers again \u2014 gently push for clarity on why he hasn't paid.",
+          "account_status": "AVOIDANT \u2014 no PTPs, 1 connected call, 4 unreached attempts before this connect. Firm tone. Second EMI collection call. Acknowledge prior attempt, push for engagement.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 6.0,
+          "usage": {
+            "text_input_tokens": 7659,
+            "audio_input_tokens": 522,
+            "output_tokens": 374,
+            "total_input_tokens": 8181
+          },
+          "cost_usd": 0.010713
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Bulu Ghoda has now had 2 connected EMI collection calls, but the overall pattern is UNREACHABLE/AVOIDANT because they are stacked on top of 4 prior unreached attempts. The latest connected call on 28 July ended as Information Conveyed with low engagement, neutral sentiment, and no commitment. No PTP has ever been made. The earlier connected attempt on 28 July also produced only minimal, unclear responses. No reason for non-payment has been disclosed.\n\nKey risk is continued evasiveness: the customer has not given a payment date, amount, hardship reason, or dispute. There are no broken PTPs yet, but there is also no commitment to anchor on. The recent history shows repeated quick hang-ups and a third-party connect before the first direct engagement, so the main leverage is persistence and forcing a specific reason or date. Hardship: none disclosed. Contradictions: none so far.\n\nTone: firm. STARTING POSITION: Customer has been avoidant across 2 connected calls and 4 prior unreached attempts \u2014 no reason disclosed, minimal engagement. Open briefly and directly after identity confirmation; do not re-explain the loan at length. Ask one specific reason question, then push immediately for a small PTP with an exact date. FACT: On 28 July, he gave minimal and unclear responses. USE WHEN: He stays vague again \u2014 press for the exact reason the EMI is unpaid. FACT: Four earlier attempts were unreached before direct contact was made. USE WHEN: He tries to end the call quickly \u2014 remind him this is the first real conversation and needs closure.",
+          "account_status": "AVOIDANT/UNREACHABLE \u2014 2 connected calls, 4 unreached attempts before connect. No PTPs, no hardship, no dispute. Firm tone. Third EMI collection call. Keep it brief and force a specific reason plus date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 7.8,
+          "usage": {
+            "text_input_tokens": 7860,
+            "audio_input_tokens": 0,
+            "output_tokens": 401,
+            "total_input_tokens": 7860
+          },
+          "cost_usd": 0.002767
+        }
+      }
+    },
+    {
+      "account_id": 84790,
+      "loan_number": "5592010112",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Agree To Senior Manager Call",
+      "call_duration_s": 35,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the fifth EMI collection call. The customer, Surata Suravat, has a pattern of ENGAGED_NO_COMMIT. She has engaged in conversations but has not committed to a specific payment date. On July 28, 2026, she agreed to a senior manager callback for 05:25 PM today. This follows a previous agreement for a senior manager call on July 8, 2026, which did not lead to resolution, and was interspersed with two unreached attempts (July 21, July 20) and a hang-up (July 19). Sentiment on the current call was positive. No broken PTPs are on record.\n\nThe primary risk is that the senior manager callback, like the previous one, may not lead to a payment commitment. The customer appears cooperative when agreeing to escalation but has not yet resolved the underlying payment issue. No financial hardship or contradictions in statements have been disclosed.\n\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 2 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer agreed to a senior manager callback on July 28, 2026 for 05:25 PM. Open: \"Aapne hi senior manager se baat karne ki request ki thi \u2014 kya unse baat ho paayi?\" If yes, ask about the outcome and push for PTP. If no, ask why not and reschedule or push for PTP directly.\nFACT: Customer agreed to a senior manager call on July 8, 2026, for \"further loan details,\" but this did not lead to resolution.\nUSE WHEN: Customer deflects or tries to reschedule the senior manager call again without a clear reason.\nFACT: There were 2 unreached attempts (July 21, July 20) and a hang-up (July 19) between the previous senior manager agreement and the current one.\nUSE WHEN: Customer expresses frustration about being called repeatedly or tries to avoid the senior manager call.",
+          "account_status": "ENGAGED_NO_COMMIT. 2 unreached attempts before last connect. Customer agreed to senior manager callback on July 28, 2026 for 05:25 PM. Firm tone. Fifth EMI collection call. Follow up on senior manager call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 29.9,
+          "usage": {
+            "text_input_tokens": 7496,
+            "audio_input_tokens": 875,
+            "output_tokens": 533,
+            "total_input_tokens": 8371
+          },
+          "cost_usd": 0.004456
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "The customer exhibits a pattern of being cooperative when connected, as seen in the current call where they agreed to a senior manager callback with positive sentiment and strong commitment. However, there's also a strong pattern of unreachability, with two consecutive minimal-interaction attempts immediately preceding this connection. This is the fifth EMI collection call. No broken PTPs are on record. The last call ended with an 'Agree To Senior Manager Call' disposition, strong commitment, and positive sentiment. Engagement was high on the current call.  The key signal is the customer's willingness to engage with a senior manager, having agreed to such a call twice (July 08, 2026 and July 28, 2026). The primary risk is that despite scheduling this senior manager callback for today, the customer might still avoid making a payment commitment, or become unreachable again. There are no disclosed hardships or contradictions.  Tone: Urgent. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 2 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer requested this callback on July 28, 2026 for July 28, 2026, 05:25 PM. Open: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for PTP date directly. KEY INTELLIGENCE: FACT: There were 2 unreached attempts (July 21, 2026 and July 20, 2026) immediately before this connection. USE WHEN: Customer tries to delay or avoid the senior manager call, or claims they were not aware of prior attempts. FACT: Customer agreed to a senior manager call on July 08, 2026, but no payment commitment resulted from it. USE WHEN: Customer tries to deflect or avoid commitment during the senior manager call, implying the senior manager call itself is the resolution.",
+          "account_status": "COOPERATIVE (when connected), UNREACHABLE (overall). 2 unreached attempts before last connect. Urgent tone. Fifth EMI collection call. Following up on scheduled senior manager callback.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 23.9,
+          "usage": {
+            "text_input_tokens": 7390,
+            "audio_input_tokens": 0,
+            "output_tokens": 473,
+            "total_input_tokens": 7390
+          },
+          "cost_usd": 0.003399
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Surata Suravat Ji has been cooperative in recent interactions, with a strong engagement level. This is the second connected call. The last call on July 28, 2026, ended with the customer agreeing to a senior manager callback at 5:25 PM. No broken PTP exists yet, as no specific payment date was set. The sentiment was positive, and the customer was cooperative. Pattern: COOPERATIVE.\n\nKey signals: The customer agreed to a callback, showing willingness to engage. The risk is that the customer may not follow through on the callback. No contradictions or hardship disclosed. Biggest risk: the callback may not happen as planned.\n\nTone: Urgent. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer agreed to a senior manager callback on July 28, 2026, at 5:25 PM. Open with: \"Aapne hi request ki thi \u2014 main isliye call kar raha hoon.\" Then ask for a PTP date directly. FACT: Callback agreed for July 28, 2026, at 5:25 PM. USE WHEN: Customer deflects \u2014 remind them of the agreed callback. FACT: Customer was cooperative and polite in prior calls. USE WHEN: Customer hesitates \u2014 reinforce their willingness to engage.",
+          "account_status": "COOPERATIVE \u2014 no broken PTP. 1 unreached attempt before this connect. Urgent tone. Second EMI collection call. Acknowledge missed attempt, then confirm callback.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.9,
+          "usage": {
+            "text_input_tokens": 6767,
+            "audio_input_tokens": 348,
+            "output_tokens": 356,
+            "total_input_tokens": 7115
+          },
+          "cost_usd": 0.008395
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first EMI collection analysis for this account. Connected call count: 4 meaningful calls (8 Jul, 17 Jul, 19 Jul, 28 Jul); the 18 Jul Busy and 21 Jul No Answer are unreached attempts. Pattern: ENGAGED_NO_COMMIT with intermittent cooperation, but no EMI PTP yet. Last disposition on this call was Agree To Senior Manager Call, with strong commitment strength and high engagement. No broken EMI PTP exists because no EMI payment commitment has been recorded.\n\nKey risk: the customer is cooperative on scheduling but has not yet converted that into an EMI payment commitment. There is a contradiction in contact behavior: positive engagement on 8 Jul and 28 Jul, but passive/no-answer/hang-up behavior in between. Hardship has not been disclosed. Biggest risk next call is staying on callback logistics instead of securing a specific EMI date and amount.\n\nTone: firm. STARTING POSITION: Last call ended with a senior manager callback slot confirmed for 28 July at 05:25 PM. Open by acknowledging that continuity, then move straight to EMI collection: ask for a specific payment date and amount, not another callback. KEY INTELLIGENCE: FACT: Customer has twice agreed to senior manager callbacks (8 Jul and 28 Jul) but no EMI commitment yet. USE WHEN: He tries to redirect to another callback instead of payment. FACT: Two unreached attempts occurred on 18 Jul (Busy) and 21 Jul (No Answer). USE WHEN: He acts surprised or unavailable; remind him you kept trying. FACT: No hardship or dispute has been disclosed. USE WHEN: He claims inability to pay; ask what changed and pin a date.",
+          "account_status": "ENGAGED_NO_COMMIT \u2014 4 connected calls, 2 unreached attempts before this connect. No EMI PTP on record. Firm tone. Fifth EMI collection call. Shift from callback to specific payment date and amount.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 22.7,
+          "usage": {
+            "text_input_tokens": 6968,
+            "audio_input_tokens": 0,
+            "output_tokens": 440,
+            "total_input_tokens": 6968
+          },
+          "cost_usd": 0.002622
+        }
+      }
+    },
+    {
+      "account_id": 215491,
+      "loan_number": "1403764330",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Call Hang Up",
+      "call_duration_s": 46,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Munni Devi continues to exhibit a DISPUTE, AVOIDANT, and HOSTILE pattern. This will be the sixth EMI collection call. The last call on July 28th was a brief 'Call Hang Up' after identity confirmation, with no loan discussion, following three unreached attempts. Her engagement remains low, and sentiment has been mixed.\n\nShe consistently disputes the outstanding amount, claiming unverified payments to 'Basha' on July 13th and 'Wasim sir' for \u20b913,000 on July 16th. These claims are contradictory. The risk is continued avoidance, abrupt disconnections, and repeated unverified payment claims. Her refusal to pay and dismissive attitude on July 16th, combined with recent unreached attempts, indicates increasing resistance.\n\nTone: Firm.\nSTARTING POSITION: PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi. Then, continue with TYPE B: Customer refused in prior call on July 16, 2026. Open with: \"Pichli baar baat hui thi \u2014 main samajhta hoon abhi mushkil hai. Koi ek date de sakte hain?\" If they refuse again \u2192 consequence nudge once \u2192 graceful close.\nFACT: Munni Devi claimed to have paid 'Basha' on July 13th and 'Wasim sir' for \u20b913,000 on July 16th.\nUSE WHEN: She disputes the outstanding amount again or claims prior payment.\nFACT: She has abruptly disconnected calls on July 18th and July 28th after confirming identity.\nUSE WHEN: She tries to end the call prematurely \u2014 gently remind her of the purpose of the call.\nFACT: There were 3 unreached attempts (July 21, 22, 23) before the last connected call.\nUSE WHEN: She expresses frustration about repeated calls or tries to avoid conversation.",
+          "account_status": "DISPUTE, AVOIDANT, HOSTILE pattern. 3 unreached attempts before last connect. Firm tone. Sixth EMI collection call. Acknowledge missed calls, then address prior refusal and unverified payment claims.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 33.6,
+          "usage": {
+            "text_input_tokens": 11570,
+            "audio_input_tokens": 1100,
+            "output_tokens": 498,
+            "total_input_tokens": 12670
+          },
+          "cost_usd": 0.005816
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Munni Devi continues to exhibit a DISPUTE and AVOIDANT pattern. This is the fifth EMI collection call. The current call on July 28th was another abrupt 'Call Hang Up' after she confirmed her identity, preventing any loan discussion. Her engagement remains consistently low. She has previously disputed the outstanding amount, claiming unverified payments to 'Basha' on July 13th and 'Wasim sir' for \u20b913,000 on July 16th. There were also three unreached attempts between July 21st and July 23rd. Her sentiment has been mixed, but engagement is consistently low. This follows a previous call on July 18th which also ended in an abrupt hang-up. \n\nThe primary risk is her continued avoidance and abrupt disconnections, coupled with unverified and contradictory payment claims. No hardship has been disclosed. The pattern of confirming identity then hanging up suggests a deliberate attempt to avoid meaningful conversation. \n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 3 unreached attempts (July 21st, 22nd, 23rd) precede this connect. Open with: 'Munni Devi ji, maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: Last call ended with no commitment \u2014 agent conveyed EMI status, customer gave no signal. This call: lead with EMI numbers again, then ask directly for a date. Do not re-explain too much \u2014 get to the question faster. FACT: Munni Devi claimed to have paid 'Basha' on July 13th and 'Wasim sir' for \u20b913,000 on July 16th. USE WHEN: She disputes the outstanding amount again or claims prior payment. FACT: She has abruptly disconnected calls on July 18th and July 28th after confirming identity. USE WHEN: She tries to end the call prematurely \u2014 gently remind her of the purpose of the call.",
+          "account_status": "DISPUTE, AVOIDANT pattern. 4 connected calls (next is 5th). 3 unreached attempts before this connect. Firm tone. Acknowledge missed attempts, then lead with EMI numbers and ask for a date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 24.7,
+          "usage": {
+            "text_input_tokens": 11464,
+            "audio_input_tokens": 0,
+            "output_tokens": 505,
+            "total_input_tokens": 11464
+          },
+          "cost_usd": 0.004702
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Munni Devi continues to exhibit a DISPUTE and AVOIDANT pattern. This is the sixth connected EMI collection call. The most recent call on July 28th ended abruptly after identity confirmation, with no loan-related discussion. There is no broken PTP on record. The last disposition was 'Call Hang Up' with low engagement. The customer\u2019s commitment strength remains none, and engagement level is low. The sentiment has been neutral in the last call, following a negative sentiment on July 16th. The customer\u2019s pattern remains evasive, with repeated claims of prior payments to third parties, which are unverified. The risk is that she will continue to avoid direct engagement and may abruptly disconnect again. Contradictions persist: she claimed to have paid 'Basha' on July 13th and 'Wasim sir' for \u20b913,000 on July 16th, but these claims remain unverified. The biggest risk is that she will continue to avoid direct engagement and may abruptly disconnect again.",
+          "account_status": "DISPUTE/AVOIDANT \u2014 no broken PTP. 4 unreached attempts before this connect. Neutral sentiment trend. Direct tone. Sixth EMI collection call. Acknowledge missed attempts, then push for engagement.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.2,
+          "usage": {
+            "text_input_tokens": 10231,
+            "audio_input_tokens": 437,
+            "output_tokens": 276,
+            "total_input_tokens": 10668
+          },
+          "cost_usd": 0.011171
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Munni Devi continues to show a DISPUTE + AVOIDANT pattern. This is the fifth connected EMI collection call. The current call on July 28 ended in a brief Call Hang Up after identity confirmation, with no loan discussion, no commitment, and very low engagement. Prior connected calls on July 13 and July 16 were payment-claimed/dispute calls; she said she had already paid Basha on July 13 and \u20b913,000 to Wasim sir on July 16. No verified payment follows either claim.\n\nKey risk: she keeps repeating unverified third-party payment claims instead of engaging on the overdue EMI. Contradictions remain unresolved: she claimed full payment to Basha on July 13, then a separate \u20b913,000 payment to Wasim sir on July 16. Hardship has not been disclosed; this is not a hardship case. The biggest risk next call is another abrupt disconnect or another payment-claimed deflection.\n\nTone: confrontational. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer disputed payment history on July 13 and July 16 but gave no verified settlement. Open briefly after identity confirmation and do not restart from scratch; ask directly why the account is still unpaid if those payments were made. KEY INTELLIGENCE: FACT: She claimed payment to Basha on July 13 and to Wasim sir for \u20b913,000 on July 16. USE WHEN: She repeats the same claim or asks to contact a third party again. FACT: She disconnected abruptly on July 18 and July 28 after minimal interaction. USE WHEN: She tries to end the call early. FACT: No hardship or repayment date has ever been confirmed. USE WHEN: She shifts to excuses without giving a date.",
+          "account_status": "DISPUTE + AVOIDANT \u2014 5 connected calls, 3 unreached attempts before this connect. No verified payment after claims on July 13 and July 16. Confrontational tone. Sixth EMI collection call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.1,
+          "usage": {
+            "text_input_tokens": 10432,
+            "audio_input_tokens": 0,
+            "output_tokens": 450,
+            "total_input_tokens": 10432
+          },
+          "cost_usd": 0.003508
+        }
+      }
+    },
+    {
+      "account_id": 139272,
+      "loan_number": "1888470261",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Failed",
+      "call_duration_s": 31,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The customer has a strong pattern of avoidance, with 5 unreached attempts (Busy, No Answer, Call Hang Up Less Than 20 Secs) immediately preceding this call. While this is the fourth EMI collection call where a connection was technically made, previous interactions on July 14, 2026, and July 4, 2026, involved only brief 'Hello' exchanges without any actual conversation or engagement. The customer's engagement level remains consistently low, and no specific commitment or sentiment has been observed. There are no broken PTPs on record. Pattern: AVOIDANT. The primary risk is that the customer will continue to avoid meaningful conversation, despite connecting. There are no disclosed hardships or contradictions in their statements, as they have not provided any substantive information. The goal is to break this pattern of non-engagement and elicit a response regarding the pending EMIs. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 5 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: Previous calls on July 14, 2026, and July 4, 2026, were brief connections with no actual conversation. USE WHEN: The customer attempts to end the call quickly or avoids discussing the EMI. FACT: There have been 5 unreached attempts (Busy, No Answer, Call Hang Up Less Than 20 Secs) immediately before this call. USE WHEN: The customer seems evasive or unresponsive, to emphasize the repeated attempts to connect.",
+          "account_status": "AVOIDANT \u2014 5 unreached attempts before this connect. 3 prior minimal-engagement connections. Firm tone. Fourth EMI collection call. Acknowledge missed attempts, then state EMIs and ask for restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 15.8,
+          "usage": {
+            "text_input_tokens": 9517,
+            "audio_input_tokens": 675,
+            "output_tokens": 430,
+            "total_input_tokens": 10192
+          },
+          "cost_usd": 0.004605
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "The customer has shown a strong pattern of being UNREACHABLE, with the most recent call on July 24, 2026, resulting in a 'Busy' disposition. Prior to this, there were four consecutive minimal interaction attempts. While there have been two calls lasting over 20 seconds (July 14 and July 4), engagement was extremely low, with the customer either unresponsive or only saying 'Hello'. This will be the third EMI collection call. No PTPs have been made or broken. No hardship has been disclosed. No contradictions were detected. Engagement has been consistently low. Sentiment has been flat/mixed. No PTPs have been made. No callbacks have been requested. No payment has been claimed. No dispute has been raised. No financial hardship has been disclosed. No refusal to pay has been made. No senior manager call has been requested. No information has been conveyed. No third party has been connected. No voicemail has been detected. No busy signal has been detected. No call failed has been detected. No wrong number has been detected. No invalid number has been detected. No disconnected has been detected. No switched off has been detected. No not reachable has been detected. No incoming call barred has been detected. No less than 20 secs hang up has been detected. No unclear disposition has been detected. No agree to pay has been detected. No promise to pay has been detected. No payment claimed has been detected. No agree to senior manager call has been detected. No call back requested has been detected. No information conveyed has been detected. No financial hardship has been detected. No dispute has been detected. No call hang up more than 20 sec has been detected. No unclear other has been detected. No refuse to pay has been made. No third party connect has been detected. No unclear voice mail has been detected. No call hang up less than 20 secs has been detected. No no-answer has been detected. No no answer has been detected. No busy has been detected. No failed has been detected. No not-connected has been detected. No wrong number has been detected. No \u2026[truncated]",
+          "account_status": "",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 42.8,
+          "usage": {
+            "text_input_tokens": 9411,
+            "audio_input_tokens": 0,
+            "output_tokens": 2580,
+            "total_input_tokens": 9411
+          },
+          "cost_usd": 0.009273
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The customer has not engaged in any meaningful conversation across the last three call attempts. On July 14th, the agent repeatedly said 'Hello' with no customer response, and on July 4th, the customer only said 'Hello' before the call ended without discussion. The call on July 3rd was a 'No Answer'. This indicates a strong pattern of being UNREACHABLE. This will be the first EMI collection call where actual engagement is expected. There are no broken PTPs on record, and no specific commitment or sentiment has been observed from the customer. No hardship has been disclosed. No contradictions were detected. This is the first EMI collection call. Engagement has been consistently low. The sentiment has been flat (neutral). No PTPs have been made. No callbacks have been requested. No payment has been claimed. No dispute has been raised. No financial hardship has been disclosed. No refusal to pay has been made. No senior manager call has been requested. No information has been conveyed. No third party has been connected. No voicemail has been detected. No busy signal has been detected. No call failed has been detected. No wrong number has been detected. No invalid number has been detected. No disconnected has been detected. No switched off has been detected. No not reachable has been detected. No incoming call barred has been detected. No less than 20 secs hang up has been detected. No unclear disposition has been detected. No agree to pay has been detected. No promise to pay has been detected. No payment claimed has been detected. No agree to senior manager call has been detected. No call back requested has been detected. No information conveyed has been detected. No financial hardship has been detected. No dispute has been detected. No call hang up more than 20 sec has been detected. No unclear other has been detected. No refuse to pay has been detected. No third party connect has been detected. No unclear voice mail has been detected. No call hang up less than 20 secs has been detected. No no-answer has been detected. No no answer has been \u2026[truncated]",
+          "account_status": "",
+          "language": "",
+          "commitments": [],
+          "latency_s": 155.9,
+          "usage": {
+            "text_input_tokens": 8596,
+            "audio_input_tokens": 262,
+            "output_tokens": 8000,
+            "total_input_tokens": 8858
+          },
+          "cost_usd": 0.026978
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call on record, but the account has a strong unreachable pattern: four consecutive minimal-interaction/no-contact attempts preceded this connect (July 3 No Answer, July 4 brief hang-up, July 14 no response, July 17 less-than-20-secs hang-up, July 17/18/19/24 no answer/busy). Pattern: UNREACHABLE. Last meaningful disposition was none; current call history shows no commitment, no refusal, and no customer sentiment beyond neutral/absent engagement.\n\nKey risk is that the customer may again avoid a real conversation, so the opening must acknowledge the repeated attempts before asking for a date. No PTPs exist, so there is no broken commitment to press. No hardship, dispute, callback preference, or contradiction has been disclosed. Sentiment trend is flat/neutral based on the limited engagement signals.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 4 baar call kiya tha, lekin baat nahi ho paayi. KEY INTELLIGENCE: FACT: July 14 and July 4 calls had only hello/no response and ended without discussion. USE WHEN: He again stays silent or tries to end quickly \u2014 remind him this is now a repeated contact attempt. FACT: July 17 call ended in less than 20 seconds; July 24 was busy. USE WHEN: He says he was unavailable \u2014 ask for a specific time/date to talk. FACT: No hardship or payment intent has ever been stated. USE WHEN: He asks for more time without a date \u2014 push directly for one specific payment date.",
+          "account_status": "UNREACHABLE \u2014 0 connected calls, 4 unreached attempts before this connect. No PTPs or hardship on record. Default tone. First EMI collection call by connected-call count; acknowledge missed attempts first.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.3,
+          "usage": {
+            "text_input_tokens": 8797,
+            "audio_input_tokens": 0,
+            "output_tokens": 436,
+            "total_input_tokens": 8797
+          },
+          "cost_usd": 0.003071
+        }
+      }
+    },
+    {
+      "account_id": 215323,
+      "loan_number": "9554154927",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Refuse To Pay",
+      "call_duration_s": 45,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Putul has consistently avoided engagement across four connected calls, establishing a clear AVOIDANT pattern. No reason for non-payment has ever been disclosed. On July 28, she actively stated she could not hear the agent and then put the call on hold, leading to a 'Refuse To Pay' disposition and negative sentiment. Prior to this, on July 22, she remained silent after the agent's introduction, and on July 21, she acknowledged the agent but did not engage further. The earliest connected call on July 13 was cut short due to network issues. This is the fifth EMI collection call. There were 3 unreached attempts before the last connected call. Her sentiment has worsened from neutral to negative. This pattern is now AVOIDANT with HOSTILE elements. No broken PTPs on record. No hardship has been disclosed. The primary risk this call is continued active avoidance or outright refusal to engage. The customer's tactic of claiming poor network/inability to hear and then putting the call on hold is a clear avoidance strategy. Tone: Confrontational. PRE-OPENING ACKNOWLEDGEMENT: 3 unreached attempts (July 24, July 23, July 23) precede this connect. Open with: 'Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: Customer refused in prior call on July 28. Do NOT re-pitch from scratch. Open with: 'Pichli baar baat hui thi \u2014 main samajhta hoon abhi mushkil hai. Koi ek date de sakte hain?' If they refuse again \u2192 consequence nudge once \u2192 graceful close. FACT: Putul actively ended the call on July 28 by claiming she couldn't hear and putting the agent on hold, leading to a 'Refuse To Pay' disposition. USE WHEN: She attempts to use silence or claims of poor network to end the call. FACT: No reason for non-payment has been disclosed across any of the five connected calls. USE WHEN: She deflects or tries to end the call without discussing the pending EMIs.",
+          "account_status": "AVOIDANT/HOSTILE pattern. 4 connected calls, 3 unreached attempts before last connect. Confrontational tone. Fifth EMI collection call. Acknowledge missed attempts, then address prior refusal.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 20.3,
+          "usage": {
+            "text_input_tokens": 11609,
+            "audio_input_tokens": 1150,
+            "output_tokens": 523,
+            "total_input_tokens": 12759
+          },
+          "cost_usd": 0.00594
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Putul has consistently avoided engagement across four connected calls, with no reason for non-payment ever disclosed. This pattern is AVOIDANT, now escalating to HOSTILE. On July 28, she actively stated she could not hear the agent and then put the call on hold, leading to a 'Refuse To Pay' disposition and negative sentiment. This is the fifth EMI collection call. Prior to this, on July 22, she remained silent after the agent's introduction, and on July 21, she acknowledged the agent but did not engage further. The earliest connected call on July 13 was cut short due to network issues. \n\nThe risk this call is continued active avoidance or outright refusal to engage, potentially using claims of poor network. No broken PTPs or disclosed hardships. No contradictions have been detected across calls.\n\nTone: Confrontational.\nPRE-OPENING ACKNOWLEDGEMENT: 3 unreached attempts (July 24, July 23, July 23) precede this connect. Open with: 'Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below.\nSTARTING POSITION: Customer refused in prior call on July 28. Open with: 'Pichli baar baat hui thi \u2014 main samajhta hoon abhi mushkil hai. Koi ek date de sakte hain?' If they refuse again \u2192 consequence nudge once \u2192 graceful close.\nFACT: Putul actively ended the call on July 28 by claiming she couldn't hear and putting the agent on hold, leading to a 'Refuse To Pay' disposition.\nUSE WHEN: She attempts to use silence or claims of poor network to end the call.\nFACT: No reason for non-payment has been disclosed across any of the four connected calls.\nUSE WHEN: She deflects or tries to end the call without discussing the pending EMIs.",
+          "account_status": "AVOIDANT/HOSTILE pattern. 3 unreached attempts before last connect. Confrontational tone. Fifth EMI collection call. Acknowledge missed attempts, then address prior refusal.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 19.6,
+          "usage": {
+            "text_input_tokens": 11503,
+            "audio_input_tokens": 0,
+            "output_tokens": 466,
+            "total_input_tokens": 11503
+          },
+          "cost_usd": 0.004616
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Putul has consistently avoided engagement across four connected calls. No reason for non-payment has ever been disclosed. On July 28, she actively stated she could not hear the agent and then put the call on hold, leading to a 'Refuse To Pay' disposition and negative sentiment. Prior to this, on July 22, she remained silent after the agent's introduction, and on July 21, she acknowledged the agent but did not engage further. The earliest connected call on July 13 was cut short due to network issues. This establishes a clear AVOIDANT pattern. This is the fourth explore call.\n\nThe risk this call is continued active avoidance or outright refusal to engage. There are no broken commitments, as no PTP has been made. The biggest risk is that Putul will continue to evade or end the call abruptly. There are no contradictions across calls, and no hardship has been disclosed. The primary risk is that she will continue to avoid engagement.\n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer has been avoidant across 4 connected calls, culminating in an active refusal on July 28. Open with a direct but non-threatening statement of purpose. Keep it brief; if she engages even slightly \u2192 ask one specific reason question, then push for any small PTP she can manage. FACT: Putul actively ended the call on July 28 by claiming she couldn't hear and putting the agent on hold, leading to a 'Refuse To Pay' disposition. USE WHEN: She attempts to use silence or claims of poor network to end the call. FACT: No reason for non-payment has been disclosed across any of the four connected calls. USE WHEN: She deflects or tries to end the call without discussing the pending EMIs.",
+          "account_status": "AVOIDANT \u2014 no PTP made. 3 unreached attempts before this connect. Firm tone. Fourth EMI collection call. Acknowledge missed attempts, then push for engagement.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.1,
+          "usage": {
+            "text_input_tokens": 10258,
+            "audio_input_tokens": 457,
+            "output_tokens": 455,
+            "total_input_tokens": 10715
+          },
+          "cost_usd": 0.011817
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Putul\u2019s account is now clearly AVOIDANT with an explicit refusal on July 28. This is the fourth connected EMI collection call. Last disposition was Refuse To Pay, with negative sentiment, low engagement, and no commitment. No PTP has ever been made, so there is no broken PTP yet.\n\nKey risk is continued evasion or another shutdown before any reason or date is obtained. No hardship, dispute, or payment intent has ever been disclosed. Sentiment has worsened from neutral on July 21\u201322 to negative on July 28. Contradiction check: none yet, but the pattern is consistent silence/avoidance followed by refusal.\n\nTone: Firm. STARTING POSITION: Customer refused in prior call on July 28. Do NOT re-pitch from scratch. Open with: \"Pichli baar baat hui thi \u2014 main samajhta hoon abhi mushkil hai. Koi ek date de sakte hain?\" If they refuse again \u2192 consequence nudge once \u2192 graceful close. FACT: Putul actively ended the July 28 call by saying she could not hear and putting the call on hold. USE WHEN: She tries to escape again through silence, network claims, or abrupt ending. FACT: No reason for non-payment has been disclosed across all four connected calls. USE WHEN: She gives a vague excuse or avoids the payment question again.",
+          "account_status": "AVOIDANT \u2014 4 connected calls, 0 PTPs, explicit refusal on July 28. 3 unreached attempts before this connect. Firm tone. Fifth EMI collection call. Open with prior refusal and ask for one date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.4,
+          "usage": {
+            "text_input_tokens": 10459,
+            "audio_input_tokens": 0,
+            "output_tokens": 353,
+            "total_input_tokens": 10459
+          },
+          "cost_usd": 0.003321
+        }
+      }
+    },
+    {
+      "account_id": 149122,
+      "loan_number": "4545523466",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Dispute",
+      "call_duration_s": 62,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the second EMI collection call. The first connected call on July 28, 2026, resulted in a 'Dispute' disposition, as the customer explicitly denied having any loan, stating 'hamara koi loan hi nahi hai'. This interaction followed six consecutive unreached attempts. The sentiment was negative, and the customer was dismissive. Pattern: DISPUTE, with a history of UNREACHABLE. The connected call count is 1. Sentiment trend is flat (negative).",
+          "account_status": "DISPUTE (loan denied on July 28, 2026). 6 unreached attempts. Firm tone. Second EMI collection call. Confirm loan denial for escalation.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 13.4,
+          "usage": {
+            "text_input_tokens": 8331,
+            "audio_input_tokens": 1425,
+            "output_tokens": 175,
+            "total_input_tokens": 9756
+          },
+          "cost_usd": 0.004362
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected call for this account, following six consecutive unreached attempts. On July 28, 2026, the customer explicitly denied having any loan, stating \"hamara koi loan hi nahi hai\". The sentiment was negative, and the customer was dismissive. The disposition was \"Dispute\" with a sub_disposition of \"Not Availed Loan\". Pattern: DISPUTE, with a history of UNREACHABLE. This is the second EMI collection call.  The sentiment trend is flat (negative).",
+          "account_status": "DISPUTE (loan denied). 6 unreached attempts before first connect. Firm tone. Second EMI collection call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 26.5,
+          "usage": {
+            "text_input_tokens": 8225,
+            "audio_input_tokens": 0,
+            "output_tokens": 161,
+            "total_input_tokens": 8225
+          },
+          "cost_usd": 0.00287
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The customer denied having any loan on July 28, 2026, stating 'hamara koi loan hi nahi hai.' This is the first connected call. The pattern is currently classified as DISPUTE. The last disposition was 'Dispute' with a sub-disposition of 'Not Availed Loan.' The engagement level was medium, and the sentiment was negative. No commitments were made, and the customer\u2019s stance was dismissive. There is no broken PTP as no PTP was made. \n\nKey signals: The customer\u2019s primary risk is continuing to deny the loan. There is no hardship disclosed. The biggest risk is that the customer may continue to dispute the loan\u2019s existence. There are no contradictions detected so far. \n\nTone: Confrontational. \nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 6 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer denied the loan on July 28, 2026. Open by acknowledging: 'Pichli baar aapne kaha tha ki aapka koi loan nahi hai \u2014 kya aap abhi bhi usi baat par hain?' Push for clarification. \nFACT: Customer denied loan on July 28, 2026. \nUSE WHEN: Customer repeats denial \u2014 ask for specific details about why they believe there is no loan. \nFACT: No hardship disclosed. \nUSE WHEN: Customer claims financial hardship \u2014 ask why they denied the loan if hardship is present.",
+          "account_status": "DISPUTE \u2014 no PTP, 6 unreached attempts before this connect. Confrontational tone. First EMI collection call. Open with denial acknowledgment.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.2,
+          "usage": {
+            "text_input_tokens": 7481,
+            "audio_input_tokens": 563,
+            "output_tokens": 378,
+            "total_input_tokens": 8044
+          },
+          "cost_usd": 0.011026
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the first connected EMI collection call for this account. The customer\u2019s position is a clear DISPUTE: on July 28, 2026 he denied having any loan and said \"hamara koi loan hi nahi hai.\" Sentiment was negative, engagement was medium, and commitment strength was none. There were six consecutive unreached attempts before this connect (July 4, 14, 22, 23, and two on July 24), so this account has been hard to reach.\n\nKey risk: the customer is not in a payment-discussion mode yet; he is denying the debt itself. No PTP exists, no hardship was disclosed, and there are no contradictions yet because this was the first meaningful conversation. The biggest leverage point is the long stretch of failed contact followed by a direct denial \u2014 do not waste time re-explaining from scratch, but be ready to restate the loan basis and ask for the specific objection.\n\nTone: firm. STARTING POSITION: Customer disputed the loan on July 28, 2026. Open by acknowledging the prior denial and asking for the exact issue: \"Aap loan ko dispute kar rahe the \u2014 kya problem hai, aur kaun si detail aapko mismatch lag rahi hai?\" Do not push for a PTP until the dispute is addressed. FACT: He denied any loan on July 28, 2026 and was dismissive. USE WHEN: He repeats the denial \u2014 ask for the specific reason or document mismatch. FACT: Six consecutive unreached attempts preceded this connect. USE WHEN: He claims this is the first time hearing from you \u2014 calmly note repeated contact attempts before the connect.",
+          "account_status": "DISPUTE \u2014 1 connected call, 6 unreached attempts before connect. No PTP, no hardship. Firm tone. Second EMI collection call by attempt count; address the dispute first.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.0,
+          "usage": {
+            "text_input_tokens": 7682,
+            "audio_input_tokens": 0,
+            "output_tokens": 401,
+            "total_input_tokens": 7682
+          },
+          "cost_usd": 0.002723
+        }
+      }
+    },
+    {
+      "account_id": 185562,
+      "loan_number": "7253268456",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Information Conveyed",
+      "call_duration_s": 77,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Pinder Kaur has consistently disputed her loan since July 06, 2026, claiming it was already cleared. This is the fifth EMI collection call. Her engagement has been low across recent calls, with the last three (July 23, July 24, and July 28) being cut short due to poor network quality and technical issues. On July 28, she confirmed her identity, and the agent informed her about the pending loan of \u20b96928, but the call ended prematurely. This continues a pattern of low engagement and no PTP. Pattern: DISPUTE, with elements of UNREACHABLE.\nThe core issue remains her denial of the debt, preventing any progress towards a PTP. There are no contradictions in her stated reason, but her low engagement and evasiveness persist. The technical issues on the last call mean the agent needs to re-establish a clear line of communication. There was one unreached attempt on July 25, and three earlier unreached attempts between the first and second connected calls, highlighting a persistent unreachability challenge.\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Pichli baar bhi technical issue ki wajah se baat poori nahi ho paayi thi. Aapne July 06, 2026 ko loan ke baare mein dispute kiya tha, keh rahi thi ki loan clear ho gaya hai. Hamare records ke mutabik \u20b96928 ka loan abhi bhi pending hai. Kya aapke paas is payment ka koi proof hai ya koi aur jaankari hai jo is discrepancy ko solve kar sake? FACT: Pinder Kaur explicitly stated 'Kehda loan ji? Saara loan taan koi hai hi nahi' and 'Sir, loan hai koi nahi, account closing karwauni' on July 06, 2026. USE WHEN: She reiterates her denial \u2014 ask for specific dates/proof of payment. FACT: Fusion Finance records show an outstanding loan balance of \u20b96928. USE WHEN: She is adamant about no loan \u2014 gently state the system's record and the need to reconcile. FACT: The last call (July 28) ended due to technical issues/poor network quality after she confirmed her identity. USE WHEN: She seems evasive or tries to end the call quickly \u2014 gently bring up the need for a proper conversation to resolve the issue, referencing the previous call's technical difficulties.",
+          "account_status": "DISPUTE and UNREACHABLE pattern. 1 unreached attempt before last connect. Firm tone. Fifth EMI collection call. Customer consistently disputes loan, claiming it's cleared. Goal: clarify dispute, get proof of payment.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 23.1,
+          "usage": {
+            "text_input_tokens": 11459,
+            "audio_input_tokens": 1825,
+            "output_tokens": 614,
+            "total_input_tokens": 13284
+          },
+          "cost_usd": 0.006798
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Pinder Kaur consistently disputes her loan, claiming it was already cleared on July 06, 2026. This is the fifth EMI collection call. The pattern is primarily DISPUTE, compounded by AVOIDANT behavior and technical issues. The last call on July 28, 2026, was 'Information Conveyed' with neutral sentiment and low engagement, ending prematurely due to poor network quality after she confirmed her identity and was informed about the pending loan of \u20b96928.\n\nThe main risk this call is that the dispute remains unresolved, preventing any progress towards a PTP. Her low engagement and evasiveness persist, often masked by technical difficulties. There are no contradictions in her claim of no outstanding loan. No hardship has been disclosed.\n\nTone: Firm.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer disputed the loan's existence on July 06, 2026, claiming it was already cleared. Open by acknowledging her claim. State our records show an outstanding balance and ask for specific details or proof of payment to resolve the discrepancy. The primary goal is to clarify the dispute, not to push for a PTP.\nFACT: Pinder Kaur explicitly stated 'Kehda loan ji? Saara loan taan koi hai hi nahi' and 'Sir, loan hai koi nahi, account closing karwauni' on July 06, 2026.\nUSE WHEN: She reiterates her denial \u2014 ask for specific dates/proof of payment.\nFACT: Fusion Finance records show an outstanding loan balance of \u20b96928.\nUSE WHEN: She is adamant about no loan \u2014 gently state the system's record and the need to reconcile.\nFACT: The last call (July 28, 2026) ended due to technical issues/poor network quality after she confirmed her identity and was informed about the loan.\nUSE WHEN: She seems evasive or tries to end the call quickly \u2014 gently bring up the need for a proper conversation to resolve the issue, referencing the previous call's technical difficulties.",
+          "account_status": "DISPUTE / AVOIDANT pattern. 1 unreached attempt before this connect. Firm tone. Fifth EMI collection call. Focus on resolving the loan dispute.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 16.2,
+          "usage": {
+            "text_input_tokens": 11353,
+            "audio_input_tokens": 0,
+            "output_tokens": 518,
+            "total_input_tokens": 11353
+          },
+          "cost_usd": 0.004701
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Pinder Kaur has consistently disputed the existence of her loan since July 06, 2026, claiming it was already cleared. This is the fourth connected explore call. Her engagement has been low across recent calls, with the last two (July 24 and July 28) being cut short due to poor network quality and technical issues. On July 28, she confirmed her identity, and the agent informed her about the pending loan of \u20b96928, but the call ended prematurely due to technical problems. There was one unreached attempt on July 25 between the last two connected calls. This continues a pattern of low engagement and no PTP. There were also three unreached attempts between the first and second connected calls. The core issue remains her denial of the debt, which prevents any progress towards a PTP. There are no contradictions in her stated reason, but her low engagement and evasiveness persist. The technical issues on the last call mean the agent needs to re-establish a clear line of communication. Tone: Firm. STARTING POSITION: Customer disputed the loan's existence on July 06, 2026, claiming it was already cleared. Open by acknowledging her claim. State our records show an outstanding balance and ask for specific details or proof of payment to resolve the discrepancy. The primary goal is to clarify the dispute, not to push for a PTP. FACT: Pinder Kaur explicitly stated 'Kehda loan ji? Saara loan taan koi hai hi nahi' and 'Sir, loan hai koi nahi, account closing karwauni' on July 06, 2026. USE WHEN: She reiterates her denial \u2014 ask for specific dates/proof of payment. FACT: Fusion Finance records show an outstanding loan balance of \u20b96928. USE WHEN: She is adamant about no loan \u2014 gently state the system's record and the need to reconcile. FACT: The last call (July 28) ended due to technical issues/poor network quality after she confirmed her identity. USE WHEN: She seems evasive or tries to end the call quickly \u2014 gently bring up the need for a proper conversation to resolve the issue, referencing the previous call's technical difficulties.",
+          "account_status": "Dispute pattern \u2014 4 connected calls. No PTP. 1 unreached attempt before this connect. Tone: Firm. Fourth EMI collection call. Acknowledge dispute, clarify loan status.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 5.3,
+          "usage": {
+            "text_input_tokens": 10176,
+            "audio_input_tokens": 721,
+            "output_tokens": 514,
+            "total_input_tokens": 10897
+          },
+          "cost_usd": 0.014549
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Pinder Kaur remains a DISPUTE case: since July 06, 2026 she has denied the loan exists and said it was already cleared. This is the fourth connected EMI collection call. The last connected call on July 28 was Information Conveyed with low engagement, neutral sentiment, and no commitment; it ended early because of technical/network issues after identity confirmation and the \u20b96928 balance was stated. No PTP has ever been made.\n\nKey risk is continued denial plus poor line quality, which keeps the account stuck without a payment date. There are no broken PTPs on record, but the dispute is unresolved. Contradiction check: none material so far; her position has been consistent that no loan is outstanding. Hardship: none disclosed.\n\nTone: Firm. STARTING POSITION: Customer disputed the loan's existence on July 06, 2026. Open by acknowledging her claim and immediately restating that our records show an outstanding balance of \u20b96928; ask for specific payment proof or details to reconcile the discrepancy. KEY INTELLIGENCE: FACT: She said 'Kehda loan ji? Saara loan taan koi hai hi nahi' and 'Sir, loan hai koi nahi, account closing karwauni' on July 06, 2026. USE WHEN: She repeats the denial \u2014 ask for proof or the exact payment date. FACT: The July 28 call ended due to technical issues after identity confirmation and balance disclosure. USE WHEN: She tries to end the call quickly \u2014 bring it back to resolving the discrepancy. FACT: There is no PTP history at all. USE WHEN: She asks why you are calling \u2014 keep the focus on clarifying the outstanding account, not on a payment promise.",
+          "account_status": "DISPUTE \u2014 4 connected calls, no PTP history. Last call: Information Conveyed, low engagement, neutral, technical issues. Firm tone. Fourth EMI collection call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.2,
+          "usage": {
+            "text_input_tokens": 10377,
+            "audio_input_tokens": 0,
+            "output_tokens": 412,
+            "total_input_tokens": 10377
+          },
+          "cost_usd": 0.003418
+        }
+      }
+    },
+    {
+      "account_id": 73504,
+      "loan_number": "2347166211",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Financial Hardship",
+      "call_duration_s": 74,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Sukhpal Kaur disclosed on July 28, 2026, that her husband had an operation, causing her shop to close and requiring multiple hospital visits daily. This is the first clear reason for non-payment, shifting her pattern from AVOIDANT to HARDSHIP_ACTIVE. The call disconnected abruptly before a PTP could be secured. This is the fifth EMI collection call. One unreached attempt occurred on July 23, 2026, before the last connected call.\n\nThe medical emergency appears ongoing, directly impacting her ability to earn and pay. While cooperative in sharing, the abrupt disconnection means no PTP was secured. Sentiment remains neutral. The biggest risk is that the hardship is severe and she may be overwhelmed, making a PTP difficult. No contradictions.\n\nTone: Default.\nPRE-OPENING ACKNOWLEDGEMENT: \"Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi.\"\nSTARTING POSITION: Customer disclosed Medical Issue on July 28, 2026. Open by acknowledging: \"Pichli baar aapne bataya tha ki aapke pati ka operation hua hai aur aapki dukaan band hai \u2014 ab kya situation hai?\" If hardship resolved \u2192 push for PTP immediately. If still active \u2192 Financial Hardship close.\nFACT: Sukhpal Kaur's husband had an operation, leading to her shop closing and frequent hospital visits.\nUSE WHEN: She expresses difficulty paying or seems overwhelmed, to acknowledge her current crisis.\nFACT: This is the first time a clear reason for non-payment has been shared, after previous calls with poor engagement.\nUSE WHEN: She seems hesitant to discuss finances, to acknowledge her openness and build trust.",
+          "account_status": "HARDSHIP_ACTIVE. 1 unreached attempt. Default tone. Fifth EMI collection call. Acknowledge missed attempt, then open with empathy for ongoing medical hardship.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 18.1,
+          "usage": {
+            "text_input_tokens": 11884,
+            "audio_input_tokens": 1675,
+            "output_tokens": 441,
+            "total_input_tokens": 13559
+          },
+          "cost_usd": 0.006343
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Sukhpal Kaur disclosed a significant hardship on July 28, 2026: her husband had an operation, leading to her shop closing and requiring multiple hospital visits daily. This is the first clear reason provided for non-payment, marking a shift from previous avoidance. The call ended abruptly before a PTP could be secured. This is the fifth connected call, and the pattern is HARDSHIP. Engagement was medium and cooperative, despite the abrupt disconnection.\n\nThe medical emergency appears ongoing, directly impacting her ability to earn and pay. The biggest risk is that she is overwhelmed, making a PTP difficult. There are no contradictions, but this new, specific reason follows a period of low engagement and prior avoidance.\n\nTone: Default.\nPRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi.\nSTARTING POSITION: Customer disclosed Medical Emergency on July 28, 2026 \u2014 appears ongoing. Open by acknowledging: \"Pichli baar aapne bataya tha aapke pati ka operation hua hai aur dukaan band hai \u2014 ab kya situation hai?\" If hardship resolved \u2192 push for PTP immediately. If still active \u2192 Financial Hardship close.\nFACT: Sukhpal Kaur's husband had an operation, leading to her shop closing and frequent hospital visits.\nUSE WHEN: She expresses difficulty paying or seems overwhelmed, to acknowledge her current crisis.\nFACT: This is the first time a clear reason for non-payment has been shared, after previous calls with poor engagement.\nUSE WHEN: She seems hesitant to discuss finances, to acknowledge her openness and build trust.",
+          "account_status": "HARDSHIP \u2014 5 connected calls. 1 unreached attempt before last connect. Default (Empathetic) tone. Sixth EMI collection call. Acknowledge hardship, then assess current situation.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 16.3,
+          "usage": {
+            "text_input_tokens": 11778,
+            "audio_input_tokens": 0,
+            "output_tokens": 410,
+            "total_input_tokens": 11778
+          },
+          "cost_usd": 0.004558
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Sukhpal Kaur disclosed a significant reason for non-payment on July 28, 2026: her husband had an operation, causing her shop to close and requiring multiple hospital visits daily. This is the sixth connected EMI collection call. The pattern has shifted from AVOIDANT to HARDSHIP_ACTIVE. The last disposition was 'Financial Hardship' with a medium engagement level. No commitment was made, and the call disconnected abruptly after the hardship was disclosed. Sentiment was neutral. There is no broken PTP yet, as no PTP was made.",
+          "account_status": "HARDSHIP_ACTIVE \u2014 no PTP made. 1 unreached attempt before this connect. Empathetic tone. Sixth EMI collection call. Acknowledge hardship, then ask for a small restart.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 8.4,
+          "usage": {
+            "text_input_tokens": 10507,
+            "audio_input_tokens": 667,
+            "output_tokens": 182,
+            "total_input_tokens": 11174
+          },
+          "cost_usd": 0.013411
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "Sukhpal Kaur\u2019s pattern is now HARDSHIP_ACTIVE, with the fifth connected EMI collection call ending on July 28, 2026 after she explained a medical emergency: her husband had an operation, her shop is closed, and she must visit the hospital multiple times a day. Sentiment was neutral, engagement medium, and no PTP or callback was secured. The latest meaningful disposition is Financial Hardship; commitment strength was none.\n\nKey risk: the hardship appears ongoing and is directly blocking income, so pushing too hard too early may shut the conversation down. No broken PTP is on record. The main contradiction is not factual conflict but a shift from earlier low-engagement/avoidant calls to a clear hardship explanation on July 28, 2026. Also note one unreached attempt immediately before this connect: the July 23, 2026 No Answer call.\n\nTone: Empathetic. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 1 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer disclosed Medical Emergency on July 28, 2026 \u2014 appears ongoing. Open by acknowledging the hardship first, then let her explain current status. Do not push for a hard PTP immediately; after empathy, ask for a small restart date only if she sounds able. FACT: Husband\u2019s operation closed the shop and created daily hospital visits. USE WHEN: She says she still cannot pay or sounds overwhelmed. FACT: This is the first clear reason for non-payment after prior low-engagement calls. USE WHEN: She hesitates or minimizes the issue; use it to build trust before asking for any date.",
+          "account_status": "HARDSHIP_ACTIVE \u2014 5 connected calls. 1 unreached attempt before this connect. No PTP yet. Empathetic tone. Fifth EMI collection call. Open with hardship acknowledgment, then ask gently for a restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 10.5,
+          "usage": {
+            "text_input_tokens": 10708,
+            "audio_input_tokens": 0,
+            "output_tokens": 414,
+            "total_input_tokens": 10708
+          },
+          "cost_usd": 0.003505
+        }
+      }
+    },
+    {
+      "account_id": 215099,
+      "loan_number": "8370634671",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 40,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The customer, Gudari, remains largely unreachable and avoidant. The current call on July 28 resulted in a \"Third Party Connect\" where a third party stated the borrower was unavailable. This is the latest in a pattern of 5 consecutive minimal-engagement attempts since the last direct interaction with the borrower on July 19. That July 19 call was an 'Unclear' disposition with low engagement, where the borrower did not confirm identity or engage meaningfully. No PTPs have ever been made. This is the third EMI collection call (by connected count). Pattern: UNREACHABLE. The previous narrative already noted this pattern of unreachability. This call confirms it. No reasons for non-payment have ever been disclosed across any interactions. There are no broken PTPs or contradictions to leverage. The customer has not engaged meaningfully for a long period. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 5 unreached attempts (July 20, July 20, July 21, July 23, July 25) precede this connect. Open with: 'Maine aapko pehle bhi 5 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: The last actual interaction with the borrower was on July 19, which was an 'Unclear' disposition with low engagement. After the pre-opening acknowledgement, state the pending EMI status and total, then ask directly for a payment date. \"Aapke EMI payment pending hain. Hum ek payment date finalize karna chahte hain. Kab tak aap payment kar payenge?\" KEY INTELLIGENCE: FACT: The customer has not engaged meaningfully since July 19, and there have been 5 unreached attempts since then. USE WHEN: They try to deflect or avoid giving a date, or claim they were not aware of the calls. FACT: No reasons for non-payment have ever been disclosed. USE WHEN: They claim hardship or inability to pay without prior mention.",
+          "account_status": "UNREACHABLE pattern. 2 connected calls. No broken PTPs. 5 unreached attempts before this connect. Firm tone. Third EMI collection call. Acknowledge missed attempts, then push for a PTP.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 29.2,
+          "usage": {
+            "text_input_tokens": 12292,
+            "audio_input_tokens": 875,
+            "output_tokens": 500,
+            "total_input_tokens": 13167
+          },
+          "cost_usd": 0.005813
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the third EMI collection call. The customer, Gudari, continues to be largely unreachable and avoidant. The current call on July 28 resulted in a 'Third Party Connect', following a pattern of minimal engagement. Prior attempts on July 25, July 23, July 21, July 20 (PM), and July 20 (AM) were all minimal interaction (voicemail, no answer, hang-up, third party). The last actual interaction with the borrower was on July 19, which was an 'Unclear' disposition with low engagement, where no commitment was made. No PTPs have ever been made, and no reasons for non-payment have been disclosed. Pattern: UNREACHABLE / AVOIDANT. The customer has been unreachable for 5 consecutive attempts since the last interaction on July 19. No broken PTPs or disclosed hardships. The primary risk is continued avoidance and the inability to connect directly with the borrower. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 5 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Last meaningful interaction was on July 19, which ended with no commitment \u2014 the agent conveyed EMI status, but the customer gave no signal. This call: lead with EMI numbers again, then ask directly for a date. Do not re-explain too much \u2014 get to the question faster. FACT: The customer has been unreachable for 5 consecutive attempts since the last interaction on July 19. USE WHEN: The customer attempts to deflect or end the call quickly without engagement. FACT: No reasons for non-payment or hardship have ever been disclosed across any interactions. USE WHEN: The customer claims inability to pay or asks for more time without providing a specific reason.",
+          "account_status": "UNREACHABLE / AVOIDANT pattern. 5 unreached attempts before this connect. Third EMI collection call. Firm tone. Acknowledge missed attempts, then lead with EMI numbers and push for a date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 22.9,
+          "usage": {
+            "text_input_tokens": 12186,
+            "audio_input_tokens": 0,
+            "output_tokens": 446,
+            "total_input_tokens": 12186
+          },
+          "cost_usd": 0.004771
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "Gudari remains largely unreachable and avoidant. This is the fourth EMI collection call. The most recent attempt on July 28 resulted in a 'Third Party Connect' where a third party stated the borrower was unavailable. This continues a pattern of minimal engagement. No PTPs have ever been made. The last meaningful interaction was on July 19, which was an 'Unclear' disposition with low engagement. No reasons for non-payment have been disclosed. Pattern: UNREACHABLE.\n\nThe key risk is that the customer remains unresponsive. There are no broken commitments, as no PTPs have been made. There are no contradictions in the customer\u2019s statements, as no direct statements from the borrower have been recorded. The biggest risk is that the customer continues to avoid engagement. No hardship has been disclosed.\n\nTone: Firm. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 3 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: No PTPs made. USE WHEN: Customer deflects \u2014 remind them of the lack of engagement so far. FACT: No hardship disclosed. USE WHEN: Customer claims hardship \u2014 ask why it was not mentioned before.",
+          "account_status": "UNREACHABLE \u2014 no PTPs, 3 unreached attempts before this connect. Firm tone. Fourth EMI collection call. Acknowledge missed attempts, treat as fresh call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.5,
+          "usage": {
+            "text_input_tokens": 10823,
+            "audio_input_tokens": 347,
+            "output_tokens": 350,
+            "total_input_tokens": 11170
+          },
+          "cost_usd": 0.010804
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "The account is UNREACHABLE / AVOIDANT. This is the fifth EMI collection call by connected-call count, with only two connected borrower interactions on July 5 and July 19; the rest are minimal-interaction attempts. The latest call on July 28 was a Third Party Connect, so no borrower engagement, no commitment, and no PTP. Last meaningful borrower interaction remains July 19 (Unclear, low engagement, no commitment). No PTPs have ever been made.\n\nKey risk is continued screening/avoidance: July 25 voicemail, July 28 third-party pickup, plus earlier no-answer and short hang-up attempts. No hardship, dispute, or payment reason has ever been disclosed, so there is no leverage from explanation\u2014only persistence and directness. No contradictions are available because the borrower has not meaningfully spoken enough to give conflicting reasons.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: July 25 went to voicemail and July 28 reached a third party who said the borrower was unavailable. USE WHEN: The customer is not directly reachable again\u2014acknowledge the repeated missed contacts and ask for a better time or direct access. FACT: The last borrower interaction on July 19 was passive and gave no commitment. USE WHEN: If the borrower answers but stays vague, move immediately to a specific payment date instead of re-explaining the account.",
+          "account_status": "UNREACHABLE / AVOIDANT \u2014 2 connected borrower calls, 3 minimal-interaction attempts before this connect. No PTPs ever made. Default tone. Fifth EMI collection call. Start fresh only after identity confirmation, then ask for a restart date.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 4.3,
+          "usage": {
+            "text_input_tokens": 11024,
+            "audio_input_tokens": 0,
+            "output_tokens": 383,
+            "total_input_tokens": 11024
+          },
+          "cost_usd": 0.003522
+        }
+      }
+    },
+    {
+      "account_id": 185603,
+      "loan_number": "3464265706",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 46,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This account is characterized by persistent unreachability. The current call on July 28, 2026, was a 'Third Party Connect' where the person answering stated they were not Manjit Kaur and did not know Varinder Singh. They mentioned Manjit Kaur mostly stays outside and provided information about her son's number. This is the first interaction in the last 10 calls that yielded new intelligence. The borrower remains unengaged, with no PTPs ever made or broken. This is the first meaningful EMI collection call. Nine consecutive attempts before this call were unreached.  The previous narrative mentioned a connected call on July 8th, but that call is now outside the 10-record window. Therefore, based on the current history, there are no connected calls. The borrower remains unengaged. The third party was polite. The primary risk is continued unreachability of the borrower. The information about Manjit Kaur's whereabouts and her son's number is new intelligence that could be used to establish contact. There are no contradictions or disclosed hardships. The borrower's engagement remains effectively zero. Tone: Direct. STARTING POSITION: Customer has been avoidant across 9 calls \u2014 no reason disclosed, no engagement. Open with a direct but non-threatening statement of purpose. Keep it brief; if they engage even slightly \u2192 ask one specific reason question, then push for any small PTP they can manage. FACT: A third party on July 28, 2026, mentioned Manjit Kaur mostly stays outside and has her son's number. USE WHEN: You are unable to connect with Manjit Kaur directly; this could be a lead for alternative contact. FACT: There have been 9 consecutive unreached attempts before this third-party connect. USE WHEN: The borrower (if reached) tries to deflect or claims they were unaware of calls.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before last third-party connect. Firm tone. First EMI collection call. Use new lead to establish contact.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 17.2,
+          "usage": {
+            "text_input_tokens": 9321,
+            "audio_input_tokens": 1075,
+            "output_tokens": 453,
+            "total_input_tokens": 10396
+          },
+          "cost_usd": 0.005004
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This account is characterized by persistent unreachability. This is the first EMI collection call where Randheer might speak to the borrower, Manjit Kaur. On July 28, 2026, a 'Third Party Connect' occurred. The third party stated they were not Manjit Kaur, did not know Varinder Singh, but mentioned Manjit Kaur mostly stays outside and provided her son's number. Sentiment was neutral. No PTP was made. The preceding 9 calls were all minimal interaction (No Answer, Failed, Busy, Call Hang Up Less Than 20 Secs). Pattern: UNREACHABLE. No PTPs have ever been made or broken. No reasons for non-payment have been disclosed by the borrower. Engagement with the borrower remains effectively zero. No contradictions or disclosed hardships. The previous narrative mentioned a connected call on July 8th, but that call is now outside the 10-record window. Therefore, based on the current history, there are no connected calls. The borrower remains unengaged. The third party was polite. The primary risk is continued unreachability of the borrower. The information about Manjit Kaur's whereabouts and her son's number is new intelligence that could be used to establish contact. There are no contradictions or disclosed hardships. The borrower's engagement remains effectively zero. Tone: Direct. STARTING POSITION: Customer has been avoidant across 9 calls \u2014 no reason disclosed, no engagement. Open with a direct but non-threatening statement of purpose. Keep it brief; if they engage even slightly \u2192 ask one specific reason question, then push for any small PTP they can manage. FACT: A third party on July 28, 2026, mentioned Manjit Kaur mostly stays outside and has her son's number. USE WHEN: You are unable to connect with Manjit Kaur directly; this could be a lead for alternative contact. FACT: There have been 9 consecutive unreached attempts before this third-party connect. USE WHEN: The borrower (if reached) tries to deflect or claims they were unaware of calls.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before third-party connect. Firm tone. First EMI collection call. Acknowledge missed attempts, then treat as fresh first call.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 29.6,
+          "usage": {
+            "text_input_tokens": 9215,
+            "audio_input_tokens": 0,
+            "output_tokens": 494,
+            "total_input_tokens": 9215
+          },
+          "cost_usd": 0.003999
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This is the first connected call in the recent history. The previous attempts were all minimal interactions: 'No Answer', 'Failed', 'Busy', and 'Call Hang Up' events. The last call on July 28, 2026, was a 'Third Party Connect' where the third party did not know the borrower. No PTPs have been made or broken. The engagement level remains medium, and the sentiment was neutral. Pattern: UNREACHABLE.\n\nThe key risk is that the borrower remains unengaged. The third party mentioned that Manjit Kaur mostly stays outside and provided her son\u2019s number. This could be a lead to establish contact. There are no disclosed hardships or contradictions. The biggest risk is continued unreachability.\n\nTone: Direct. PRE-OPENING ACKNOWLEDGEMENT: Maine aapko pehle bhi 9 baar call kiya tha, lekin baat nahi ho paayi. STARTING POSITION: Customer has been avoidant across 9 calls \u2014 no reason disclosed, no engagement. Open with a direct but non-threatening statement of purpose. Keep it brief; if they engage even slightly \u2192 ask one specific reason question, then push for any small PTP they can manage. FACT: A third party on July 28, 2026, mentioned Manjit Kaur mostly stays outside and has her son\u2019s number. USE WHEN: You are unable to connect with Manjit Kaur directly; this could be a lead for alternative contact. FACT: There have been 9 consecutive unreached attempts before this third-party connect. USE WHEN: The borrower (if reached) tries to deflect or claims they were unaware of calls.",
+          "account_status": "UNREACHABLE \u2014 9 unreached attempts before this connect. Direct tone. First EMI collection call. Acknowledge missed attempts, then open with direct purpose.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.8,
+          "usage": {
+            "text_input_tokens": 8357,
+            "audio_input_tokens": 429,
+            "output_tokens": 406,
+            "total_input_tokens": 8786
+          },
+          "cost_usd": 0.010279
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This account is best classified as UNREACHABLE. This is the first connected EMI collection call in the provided 10-record history, but the broader recent pattern is persistent non-contact: 9 consecutive minimal-interaction attempts before the third-party connect on July 28, 2026. The latest call was a Third Party Connect with neutral sentiment, medium engagement from the third party, and no borrower commitment. No PTP has ever been made, so there is no broken PTP on record.\n\nKey risk is continued inability to reach Manjit Kaur directly. No hardship, dispute, or repayment reason has been disclosed by the borrower. The only new intelligence is that Manjit Kaur mostly stays outside and the third party has her son's number; use that as a contact lead if direct reach fails again. No contradictions are available because the borrower has not meaningfully engaged.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: A third party on July 28, 2026 said Manjit Kaur mostly stays outside and they have her son's number. USE WHEN: You cannot reach Manjit Kaur directly and need an alternate contact path. FACT: There were 9 consecutive unreached attempts before this third-party connect. USE WHEN: The borrower claims they were unaware of repeated calls or asks why you are calling again.",
+          "account_status": "UNREACHABLE \u2014 1 connected call in this window, 9 unreached attempts before it. No PTPs on record. Default tone. Second EMI collection call by total attempt count; open as a fresh reach attempt and use the son's number lead if needed.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.8,
+          "usage": {
+            "text_input_tokens": 8558,
+            "audio_input_tokens": 0,
+            "output_tokens": 370,
+            "total_input_tokens": 8558
+          },
+          "cost_usd": 0.00288
+        }
+      }
+    },
+    {
+      "account_id": 186579,
+      "loan_number": "2973530178",
+      "call_date_ist": "2026-07-28",
+      "disposition": "Third Party Connect",
+      "call_duration_s": 91,
+      "arms": {
+        "A_gemini_audio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "This account shows a DISPUTE pattern, reinforced by the latest call. This is the second EMI collection call to a connected party, though only one has been with the alleged borrower. The most recent call on July 28 was a Third Party Connect where the person answering denied being the borrower (Rajwant Kaur or Ram Prakash) and explicitly denied having any loan with Fusion Finance. No PTP has ever been made. The first connected call on July 9 also involved the borrower denying the loan, asking 'Mera loan aaya kithe je?' (Where is my loan from?), suggesting confusion. There have been 6 unreached attempts between the two connected calls. The customer's sentiment was negative on July 9 and neutral from the third party on July 28. No hardship has been disclosed. The primary risk is continued denial of the loan, potentially due to genuine confusion or a wrong number. Tone: Firm. PRE-OPENING ACKNOWLEDGEMENT: 6 unreached attempts (July 17-23) precede this connect. Open with: 'Maine aapko pehle bhi 6 baar call kiya tha, lekin baat nahi ho paayi.' Then continue into the STARTING POSITION below. STARTING POSITION: After acknowledging the missed attempts, confirm identity. Then, address the repeated denial of the loan directly: 'Pichli baar bhi aapne loan hone se inkar kiya tha, aur aaj bhi yahi baat ho rahi hai. Humare records ke mutabik aapka loan hai. Kya aapko is bare mein koi galatfahmi hai?' FACT: Borrower denied loan on July 9, asking 'Mera loan aaya kithe je?'. USE WHEN: Customer denies loan again or expresses confusion. FACT: A third party on July 28 also denied the loan and knowing the borrower. USE WHEN: Customer claims they are not the borrower or that the number is wrong.",
+          "account_status": "DISPUTE pattern, reinforced by third party denial. 6 unreached attempts. Firm tone. Second EMI collection call to a connected party. Address loan denial directly.",
+          "language": "Punjabi",
+          "commitments": [],
+          "latency_s": 29.4,
+          "usage": {
+            "text_input_tokens": 9253,
+            "audio_input_tokens": 2275,
+            "output_tokens": 458,
+            "total_input_tokens": 11528
+          },
+          "cost_usd": 0.006196
+        },
+        "B_gemini_noaudio": {
+          "model": "gemini-2.5-flash",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This account shows a DISPUTE pattern, with the borrower explicitly denying the loan on July 9, 2026, and asking for its origin. This is the second EMI collection call. The most recent interaction on July 28, 2026, was a Third Party Connect where a third party also denied knowledge of the borrower or any loan. There have been 6 unreached attempts between the last direct interaction with the borrower and the current call. Sentiment has shifted from negative (borrower) to neutral (third party).",
+          "account_status": "DISPUTE (loan denied on July 9) & UNREACHABLE (6 attempts). Firm tone. Second EMI collection call. Acknowledge missed attempts, then address the loan dispute.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 46.6,
+          "usage": {
+            "text_input_tokens": 9147,
+            "audio_input_tokens": 0,
+            "output_tokens": 178,
+            "total_input_tokens": 9147
+          },
+          "cost_usd": 0.003189
+        },
+        "C_gptaudiomini_audio": {
+          "model": "gpt-audio-mini",
+          "use_audio": true,
+          "ok": true,
+          "narrative": "The customer continues to deny having any loan with Fusion Finance. This is the third connected call. The last disposition was 'Third Party Connect' on July 28, where the person answering denied being the borrower. There is no broken PTP, as no commitment was made. The engagement level remains medium, and the sentiment was neutral. Pattern: DISPUTE.\n\nKey signals: The customer\u2019s main stance is that they do not recognize the loan. There is no hardship disclosed. The biggest risk is that the customer may continue to deny the loan, leading to further dispute escalation. There are no contradictions in the customer\u2019s statements so far.\n\nTone: Confrontational. PRE-OPENING ACKNOWLEDGEMENT: 6 unreached attempts (July 17, 18, 19, 20, 21, 23) preceded this connect. Open with: 'Maine aapko pehle bhi 6 baar call kiya tha, lekin baat nahi ho paayi.' STARTING POSITION: Customer denied having any loan on July 9. Open by acknowledging: 'Pichli baar aapne bataya tha ki aapne loan nahi liya \u2014 ab kya situation hai?'. FACT: Customer denied having any loan on July 9. USE WHEN: Customer denies again \u2014 push by asking what changed since the last call. FACT: No hardship disclosed. USE WHEN: Customer claims financial difficulty \u2014 ask why it wasn\u2019t mentioned earlier.",
+          "account_status": "DISPUTE \u2014 no PTP, 6 unreached attempts before this connect. Confrontational tone. Third EMI collection call. Acknowledge prior attempts, push for resolution.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 5.0,
+          "usage": {
+            "text_input_tokens": 8282,
+            "audio_input_tokens": 909,
+            "output_tokens": 366,
+            "total_input_tokens": 9191
+          },
+          "cost_usd": 0.014938
+        },
+        "D_gpt54mini_noaudio": {
+          "model": "gpt-5.4-mini",
+          "use_audio": false,
+          "ok": true,
+          "narrative": "This is the second connected EMI collection call by connected-call count. Pattern remains DISPUTE: on July 9 the borrower denied having any loan and asked where the loan was; on July 28 the person answering again denied being the borrower and denied any loan. No PTP has ever been made. Last disposition was Third Party Connect, commitment strength none, engagement medium, sentiment neutral.\n\nKey risk is continued denial/identity mismatch, not payment negotiation. There are 6 unreached attempts between the July 9 dispute and the July 28 connect, so the account has been hard to reach. No hardship has been disclosed. Contradiction to watch: the borrower denied any loan on July 9, and the July 28 answerer also denied borrower identity and loan existence; this supports the dispute pattern rather than a payment discussion.\n\nTone: default. STARTING POSITION: No prior meaningful interaction. Treat as a fresh first call. State pending EMIs and total after identity confirmation. Then ask for restart date. FACT: On July 9 the borrower said he had no loan and asked where the loan was. USE WHEN: He again denies the account \u2014 keep the focus on verification and ask for the correct borrower/contact. FACT: July 28 was a third-party denial, not a borrower conversation. USE WHEN: The person answering is not the borrower \u2014 do not argue, just seek the right contact or a callback path.",
+          "account_status": "DISPUTE \u2014 2 connected calls, 6 unreached attempts before this connect. No PTP ever made. Default tone. Third EMI collection call by total attempts; verify borrower identity and loan ownership.",
+          "language": "Hindi",
+          "commitments": [],
+          "latency_s": 3.7,
+          "usage": {
+            "text_input_tokens": 8483,
+            "audio_input_tokens": 0,
+            "output_tokens": 351,
+            "total_input_tokens": 8483
+          },
+          "cost_usd": 0.002823
+        }
+      }
+    }
+  ],
+  "summary": {
+    "A_gemini_audio": {
+      "model": "gemini-2.5-flash",
+      "use_audio": true,
+      "runs": 20,
+      "failures": 0,
+      "total_text_input_tokens": 198929,
+      "total_audio_input_tokens": 31500,
+      "total_output_tokens": 9079,
+      "total_cost_usd": 0.1139,
+      "avg_cost_per_call_usd": 0.005694,
+      "avg_latency_s": 23.6,
+      "avg_narrative_words": 264
+    },
+    "B_gemini_noaudio": {
+      "model": "gemini-2.5-flash",
+      "use_audio": false,
+      "runs": 20,
+      "failures": 1,
+      "total_text_input_tokens": 185224,
+      "total_audio_input_tokens": 0,
+      "total_output_tokens": 10051,
+      "total_cost_usd": 0.0807,
+      "avg_cost_per_call_usd": 0.004247,
+      "avg_latency_s": 27.1,
+      "avg_narrative_words": 248
+    },
+    "C_gptaudiomini_audio": {
+      "model": "gpt-audio-mini",
+      "use_audio": true,
+      "runs": 20,
+      "failures": 0,
+      "total_text_input_tokens": 177564,
+      "total_audio_input_tokens": 12504,
+      "total_output_tokens": 14418,
+      "total_cost_usd": 0.2662,
+      "avg_cost_per_call_usd": 0.013309,
+      "avg_latency_s": 13.2,
+      "avg_narrative_words": 206
+    },
+    "D_gpt54mini_noaudio": {
+      "model": "gpt-5.4-mini",
+      "use_audio": false,
+      "runs": 20,
+      "failures": 0,
+      "total_text_input_tokens": 181584,
+      "total_audio_input_tokens": 0,
+      "total_output_tokens": 7927,
+      "total_cost_usd": 0.0613,
+      "avg_cost_per_call_usd": 0.003063,
+      "avg_latency_s": 5.6,
+      "avg_narrative_words": 244
+    }
+  },
+  "pricing_usd_per_1m": {
+    "gemini-2.5-flash": {
+      "text_in": 0.3,
+      "audio_in": 1.0,
+      "out": 2.5
+    },
+    "gpt-audio-mini": {
+      "text_in": 0.6,
+      "audio_in": 10.0,
+      "out": 2.4
+    },
+    "gpt-5.4-mini": {
+      "text_in": 0.25,
+      "audio_in": 0.0,
+      "out": 2.0
+    }
+  }
+}
