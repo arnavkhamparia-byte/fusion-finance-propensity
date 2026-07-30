@@ -6,6 +6,7 @@ to OpenAI chat.completions. Deterministic settings (temperature=0.0).
 
 import asyncio
 import base64
+import contextvars
 import logging
 import os
 
@@ -17,6 +18,19 @@ logger = logging.getLogger("LLMProvider")
 # sequentially (this is a plain module global, not task-local).
 LAST_USAGE: dict = {}
 
+# Task-local mirror of LAST_USAGE for concurrent harnesses: each asyncio task
+# sees only the usage of calls awaited inside that task. Use reset_usage() /
+# get_usage() instead of the module global when running accounts in parallel.
+_usage_ctx: contextvars.ContextVar = contextvars.ContextVar("llm_usage", default=None)
+
+
+def reset_usage():
+    _usage_ctx.set({})
+
+
+def get_usage() -> dict:
+    return dict(_usage_ctx.get() or {})
+
 
 def _set_usage(text_in, audio_in, out, total_in):
     global LAST_USAGE
@@ -26,6 +40,7 @@ def _set_usage(text_in, audio_in, out, total_in):
         "output_tokens": out or 0,
         "total_input_tokens": total_in or 0,
     }
+    _usage_ctx.set(dict(LAST_USAGE))
 
 
 async def generate(
