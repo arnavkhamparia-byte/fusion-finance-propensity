@@ -2,7 +2,7 @@
 
 **For**: the agent session working in `/home/vk/PycharmProjects/OTO Live/post_call_analytics_service`
 **From**: the benchmark session in `/home/vk/Desktop/Propensity Score/.claude/worktrees/migrate-narrative-promptbuilder` (branch `worktree-migrate-narrative-promptbuilder`, PR #2)
-**Scope**: Phase 1 code changes ONLY, for three flows: `fusion_mfi_emi` (sections A–D, benchmark-validated) and `fusion_mfi_explore` + `seed_fincap` (section E, user-directed extension by analogy). Do not implement shadow mode, cutover, dashboards, or CI — those are handled manually by the user. Do not deploy.
+**Scope**: Phase 1 code changes ONLY, for four flows: `fusion_mfi_emi` (sections A–D, benchmark-validated) and `fusion_mfi_explore` + `fusion_msme` + `seed_fincap` (section E, user-directed extension by analogy). Do not implement shadow mode, cutover, dashboards, or CI — those are handled manually by the user. Do not deploy.
 
 ## What this migration is (context in two paragraphs)
 
@@ -103,35 +103,35 @@ if history_list and history_list[0].get("language"):
 - **Model**: `BUILDER_MODEL` (azure:gpt-5.4-mini) via the provider layer.
 - No other logic changes.
 
-## E. Extending to `fusion_mfi_explore` and `seed_fincap` (user-directed, NOT benchmark-validated)
+## E. Extending to `fusion_mfi_explore`, `fusion_msme`, and `seed_fincap` (user-directed, NOT benchmark-validated)
 
-The user has directed that the same changes be applied to these two flows. Unlike EMI, they have NOT been benchmark-validated — there are no pre-derived worktree prompt files to copy. Apply the same *patterns* directly to each flow's production prompts, with the same asserted-`_replace` discipline (every edit anchored to an exact-match string from the current prompt, with an asserted match count, so a future prompt change breaks loudly instead of silently). Facts verified against the current service code:
+The user has directed that the same full pipeline (two-stage disposition with language → no-audio narrative on azure:gpt-5.4-mini → strict prompt builder on azure:gpt-5.4-mini) be applied to these three flows. Unlike EMI, they have NOT been benchmark-validated — there are no pre-derived worktree prompt files to copy. Apply the same *patterns* directly to each flow's production prompts, with the same asserted-`_replace` discipline (every edit anchored to an exact-match string from the current prompt, with an asserted match count, so a future prompt change breaks loudly instead of silently). Facts verified against the current service code:
 
 ### E1. Disposition/language — mostly free (shared code path)
 `disposition_agent.py` routes explore, emi, settlement, msme, and seed_fincap through the SAME two-stage path: shared `pipeline/signal_extractor.py` + shared prompt `prompts/fusion_mfi_signal_extraction_prompt.py`, then a per-flow classifier, persisting via the same `combined_json = {signals, output, call_qa}` structure. Therefore:
-- The B1/B2 language additions to the shared extractor prompt/schema automatically cover explore and seed_fincap. **No per-flow extractor work.**
-- **Side effect to be aware of**: settlement and msme also use this prompt, so they too will start extracting `language` (additive, harmless — but say so in your commit message).
+- The B1/B2 language additions to the shared extractor prompt/schema automatically cover explore, msme, and seed_fincap. **No per-flow extractor work.**
+- **Side effect to be aware of**: settlement also uses this prompt, so it too will start extracting `language` (additive, harmless — but say so in your commit message).
 - B3 (persist `language` in the stored output) and B4 (truncated-JSON retry) sit in the shared path — implement once, covers all flows.
-- Per-flow classifiers (`fusion_mfi_explore_classifier.py`, `seed_fincap_classifier.py`): **zero changes**, same as EMI.
+- Per-flow classifiers (`fusion_mfi_explore_classifier.py`, `fusion_msme_classifier.py`, `seed_fincap_classifier.py`): **zero changes**, same as EMI.
 
 ### E2. Narrative agents — per-flow prompt derivations
-Apply the C1 pattern to `prompts/fusion_mfi_explore_narrative_prompt.py` and `prompts/seed_fincap_narrative_prompt.py`:
+Apply the C1 pattern to `prompts/fusion_mfi_explore_narrative_prompt.py`, `prompts/fusion_msme_narrative_prompt.py`, and `prompts/seed_fincap_narrative_prompt.py`:
 1. Newest-history-record-is-the-call framing replacing any audio/recording framing.
 2. Remove `language` from the LLM output contract and examples **if present** — inspect each prompt first; these prompts differ in structure from EMI's (seed_fincap's is ~237 lines vs EMI's ~400+) and may lack some sections. If a prompt has no language field, skip that edit rather than forcing it.
 3. Strict tone-enum rule appended to the tone-selection section, using THAT prompt's actual tone vocabulary (check what enum each flow's schema/prompt expects — do not blindly copy EMI's 4 values if the flow defines different tones).
 4. C2 code changes (no audio attachment, language-from-`history[0]` with `"Hindi"` fallback, freshness guard, model flag) — implement in the shared narrative code path if it is shared, per-flow otherwise.
 
 ### E3. Prompt builders — per-flow strict-amounts derivation
-Apply the D pattern to `prompts/fusion_mfi_explore_prompt_builder_prompt.py` and `prompts/seed_fincap_prompt_builder_prompt.py`: the STRICT ZERO TOLERANCE digit-amounts rule (rupee amounts in words only; digits allowed for dates/times; final re-read-and-convert instruction), adapted to each prompt's structure. Same `BUILDER_MODEL` flag.
+Apply the D pattern to `prompts/fusion_mfi_explore_prompt_builder_prompt.py`, `prompts/fusion_msme_prompt_builder_prompt.py`, and `prompts/seed_fincap_prompt_builder_prompt.py`: the STRICT ZERO TOLERANCE digit-amounts rule (rupee amounts in words only; digits allowed for dates/times; final re-read-and-convert instruction), adapted to each prompt's structure. Same `BUILDER_MODEL` flag.
 
-### E4. Extra caution for these two flows
+### E4. Extra caution for these three flows
 - Since there is no benchmark baseline, the offline derivation asserts and unit tests are the ONLY safety net — they are mandatory, not optional, for these flows.
 - Keep each flow's changes in separate commits so any one flow can be reverted independently.
 - The `PCA_*_MODEL` env flags must allow per-flow override (e.g. `PCA_NARRATIVE_MODEL_SEED_FINCAP`) falling back to the global flag, so the user can roll back a single flow without touching EMI.
 
 ## Scope guards (read before starting)
 
-- Flows in scope: `fusion_mfi_emi` (benchmark-validated), plus `fusion_mfi_explore` and `seed_fincap` (user-directed, ported by analogy — see section E). Do NOT touch rnr/settlement/msme prompts, narrative, or builders — the only permitted settlement/msme impact is the incidental language field from the shared extractor prompt (E1).
+- Flows in scope: `fusion_mfi_emi` (benchmark-validated), plus `fusion_mfi_explore`, `fusion_msme`, and `seed_fincap` (user-directed, ported by analogy — see section E). Do NOT touch rnr or settlement prompts, narrative, or builders — the only permitted settlement impact is the incidental language field from the shared extractor prompt (E1).
 - Do not change the classifier, taxonomy, DB schema, or the voice agent's context-reading path.
 - Do not remove the Gemini/audio code paths — both paths must stay resident and selectable via the `PCA_*_MODEL` env vars (rollback = config flip).
 - Known open item (user-tracked, not yours): `emi_disclosure` block-version selection showed a directional bias (prod v3 → candidate v1, 85 cases/925); the user may supply additional selection criteria for that block later.
