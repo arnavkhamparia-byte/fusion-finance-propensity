@@ -45,12 +45,22 @@ INPUT_PATH = os.path.join(ROOT, "data", "full_cycle_results.json")
 RESULTS_PATH = os.path.join(ROOT, "data", "two_stage_dispo_results.json")
 
 MODEL = "gemini-2.5-flash"
-# USD per 1M tokens — same approximate table as run_full_cycle.py.
-PRICING = {"text_in": 0.30, "audio_in": 1.00, "out": 2.50}
+# USD per 1M tokens — approximate; raw tokens saved for exact repricing.
+# cached_in = discounted rate for cache-hit text input (OpenAI automatic
+# prompt caching); gemini path doesn't report cached tokens (rate unused).
+PRICING_BY_MODEL = {
+    "gemini-2.5-flash": {"text_in": 0.30, "cached_in": 0.30, "audio_in": 1.00, "out": 2.50},
+    "gemini-3.5-flash-lite": {"text_in": 0.30, "cached_in": 0.30, "audio_in": 1.00, "out": 2.50},
+    "gpt-audio-1.5": {"text_in": 2.50, "cached_in": 0.25, "audio_in": 32.00, "out": 10.00},
+}
+PRICING = PRICING_BY_MODEL[MODEL]
 
 
 def cost_usd(usage: dict) -> float:
-    return (usage.get("text_input_tokens", 0) / 1e6 * PRICING["text_in"]
+    cached = usage.get("cached_input_tokens", 0)
+    text_in = usage.get("text_input_tokens", 0) - cached
+    return (max(text_in, 0) / 1e6 * PRICING["text_in"]
+            + cached / 1e6 * PRICING.get("cached_in", PRICING["text_in"])
             + usage.get("audio_input_tokens", 0) / 1e6 * PRICING["audio_in"]
             + usage.get("output_tokens", 0) / 1e6 * PRICING["out"])
 
@@ -209,14 +219,17 @@ def save(results):
 
 
 async def main():
-    global MODEL, RESULTS_PATH
+    global MODEL, RESULTS_PATH, PRICING
     parser = argparse.ArgumentParser()
     parser.add_argument("--pilot", action="store_true", help="run first 2 accounts only")
-    parser.add_argument("--model", default=MODEL, help="Gemini model for Stage 1")
+    parser.add_argument("--model", default=MODEL, help="Stage-1 model")
     parser.add_argument("--out", default=RESULTS_PATH, help="results JSON path")
+    parser.add_argument("--sleep", type=float, default=0.0,
+                        help="seconds to sleep between accounts (TPM pacing)")
     args = parser.parse_args()
     MODEL = args.model
     RESULTS_PATH = args.out
+    PRICING = PRICING_BY_MODEL[MODEL]
 
     with open(INPUT_PATH) as f:
         entries = json.load(f)["results"]
@@ -243,6 +256,8 @@ async def main():
                   f"lang={res['language']} cost=${res['cost_usd']} "
                   f"lat={res['latency_s']}s", flush=True)
         save(results)
+        if args.sleep and i < len(entries):
+            await asyncio.sleep(args.sleep)
 
     print("\n=== SUMMARY ===")
     print(json.dumps(summarize(results), indent=2))

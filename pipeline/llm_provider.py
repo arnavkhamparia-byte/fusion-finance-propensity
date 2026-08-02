@@ -32,13 +32,14 @@ def get_usage() -> dict:
     return dict(_usage_ctx.get() or {})
 
 
-def _set_usage(text_in, audio_in, out, total_in):
+def _set_usage(text_in, audio_in, out, total_in, cached_in=0):
     global LAST_USAGE
     LAST_USAGE = {
         "text_input_tokens": text_in or 0,
         "audio_input_tokens": audio_in or 0,
         "output_tokens": out or 0,
         "total_input_tokens": total_in or 0,
+        "cached_input_tokens": cached_in or 0,
     }
     _usage_ctx.set(dict(LAST_USAGE))
 
@@ -176,6 +177,18 @@ def _azure_client_and_deployment(model: str):
     return client, deployment
 
 
+def _capture_openai_usage(response):
+    u = getattr(response, "usage", None)
+    if not u:
+        return
+    details = getattr(u, "prompt_tokens_details", None)
+    audio_in = (getattr(details, "audio_tokens", 0) or 0) if details else 0
+    cached_in = (getattr(details, "cached_tokens", 0) or 0) if details else 0
+    total_in = getattr(u, "prompt_tokens", 0) or 0
+    _set_usage(total_in - audio_in, audio_in, getattr(u, "completion_tokens", 0),
+               total_in, cached_in)
+
+
 async def _generate_openai(
     model: str,
     system: str | None,
@@ -214,12 +227,7 @@ async def _generate_openai(
             response = await asyncio.wait_for(
                 client.chat.completions.create(**kwargs), timeout=timeout_s
             )
-            u = getattr(response, "usage", None)
-            if u:
-                details = getattr(u, "prompt_tokens_details", None)
-                audio_in = (getattr(details, "audio_tokens", 0) or 0) if details else 0
-                total_in = getattr(u, "prompt_tokens", 0) or 0
-                _set_usage(total_in - audio_in, audio_in, getattr(u, "completion_tokens", 0), total_in)
+            _capture_openai_usage(response)
             return response.choices[0].message.content
         if "response_format" not in str(e) or "response_format" not in kwargs:
             raise
@@ -232,10 +240,5 @@ async def _generate_openai(
             client.chat.completions.create(**kwargs), timeout=timeout_s
         )
 
-    u = getattr(response, "usage", None)
-    if u:
-        details = getattr(u, "prompt_tokens_details", None)
-        audio_in = (getattr(details, "audio_tokens", 0) or 0) if details else 0
-        total_in = getattr(u, "prompt_tokens", 0) or 0
-        _set_usage(total_in - audio_in, audio_in, getattr(u, "completion_tokens", 0), total_in)
+    _capture_openai_usage(response)
     return response.choices[0].message.content
