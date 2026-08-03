@@ -1,0 +1,560 @@
+[
+ {
+  "account_id": 178479,
+  "cluster": "unanimous",
+  "prod": "Call Back Requested",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 30,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The call ended abruptly while the agent was speaking about the pending EMIs, with loud music playing in the background from the customer's side, and no commitment or request was made."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 190250,
+  "cluster": "unanimous",
+  "prod": "Dispute",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 24,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The agent stated the purpose of the call (10 EMIs pending), but the audio ended abruptly before any meaningful conversation or commitment could be obtained from the customer."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 163489,
+  "cluster": "unanimous",
+  "prod": "Promise To Pay",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 31,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The agent was explaining the outstanding loan amount and pending EMIs when the call abruptly ended without any commitment or response from the customer."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 184073,
+  "cluster": "unanimous",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Unclear",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 49,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Information Conveyed",
+   "confidence": "high",
+   "reason": "The automated system informed the caller that the person they were trying to reach was not available, and the caller acknowledged this information."
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 184158,
+  "cluster": "unanimous",
+  "prod": "Agree To Senior Manager Call",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 62,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The agent conveyed the loan details and asked for payment, but the call ended abruptly without the borrower providing any clear commitment or response."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 196686,
+  "cluster": "unanimous",
+  "prod": "Third Party Connect",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 25,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Unclear",
+   "confidence": "high",
+   "reason": "The response to the agent's question was extremely noisy and unintelligible, making it impossible to determine who spoke or what was communicated before the call ended."
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 138164,
+  "cluster": "unanimous",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Refuse To Pay",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Refuse To Pay"
+  },
+  "duration": 68,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Refuse To Pay",
+   "confidence": "high",
+   "reason": "The person identified as the borrower explicitly stated 'Nahi karenge' (We will not pay) when asked about restarting EMI payments, and no commitment was secured by the end of the call."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 184998,
+  "cluster": "scattered",
+  "prod": "Third Party Connect",
+  "models": {
+   "gemini-2.5-flash": "Financial Hardship",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 49,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Third Party Connect",
+   "confidence": "high",
+   "reason": "The person on the call, after initially confirming the name, eventually states that the borrower ('they') has gone to Delhi, indicating the borrower is not available."
+  },
+  "verdict_side": "prod"
+ },
+ {
+  "account_id": 203185,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Promise To Pay",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 44,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The customer gave dismissive and non-engaging responses, effectively shutting down the conversation and leading to the call ending without any meaningful discussion or commitment."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 185083,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 64,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The customer repeatedly mentioned 'net problem' and struggled to communicate, eventually stating they might have to disconnect, leading to the call ending without a meaningful conversation or commitment."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 70756,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 48,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": null,
+   "confidence": null,
+   "reason": "ERROR JSONDecodeError"
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 163226,
+  "cluster": "scattered",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 117,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Information Conveyed",
+   "confidence": "high",
+   "reason": "The agent clearly informed the borrower about the pending EMIs and the outstanding amount, but the borrower did not make any commitment to pay."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 184801,
+  "cluster": "scattered",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 31,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Information Conveyed",
+   "confidence": "high",
+   "reason": "The caller successfully identified the borrower and clearly communicated the pending EMI details and the outstanding amount due."
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 180049,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Third Party Connect",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 23,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The call disconnected immediately after the agent's initial greeting and question, without any meaningful conversation or response from the other party."
+  },
+  "verdict_side": "both"
+ },
+ {
+  "account_id": 193739,
+  "cluster": "partial",
+  "prod": "Dispute",
+  "models": {
+   "gemini-2.5-flash": "Dispute",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Refuse To Pay"
+  },
+  "duration": 120,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": null,
+   "confidence": null,
+   "reason": "ERROR JSONDecodeError"
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 196667,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 26,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Third Party Connect",
+   "confidence": "high",
+   "reason": "The agent asked for the borrower, but a different person answered and responded, indicating they were not the intended recipient."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 193390,
+  "cluster": "partial",
+  "prod": "Information Conveyed",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Information Conveyed",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 54,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The agent was unable to hear the customer due to technical issues and explicitly stated he would disconnect and call back, ending the current call without meaningful conversation or commitment."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 180821,
+  "cluster": "partial",
+  "prod": "Unclear",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Unclear",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 70,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The caller attempted to speak multiple times but received no response, eventually stating they would hang up and call again due to a perceived issue, thus ending the call without meaningful conversation."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 203212,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Third Party Connect",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 112,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Third Party Connect",
+   "confidence": "high",
+   "reason": "The person who answered the call was not the borrower and stated they would convey the message to the borrower."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 195597,
+  "cluster": "partial",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Payment Claimed",
+   "gemini-3-flash-preview": "Financial Hardship",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 111,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Payment Claimed",
+   "confidence": "high",
+   "reason": "The customer repeatedly states that a hospital certificate has been submitted and payment has been made or accounted for through it, asking the agent when the company will process or release that payment."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 194492,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 54,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The agent explicitly stated they could not hear the other party and disconnected the call with the intention to redial, indicating a communication failure leading to a hang-up."
+  },
+  "verdict_side": "both"
+ },
+ {
+  "account_id": 142390,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 23,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Third Party Connect",
+   "confidence": "high",
+   "reason": "The agent asked for a male borrower by name, and a female voice responded with 'hello', indicating a third-party connection before the call ended."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 70437,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 40,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Information Conveyed",
+   "confidence": "high",
+   "reason": "The agent clearly conveyed the pending EMI amount and the total due to the person on the call, who acknowledged the information before the call ended without a commitment."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 156666,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 38,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Information Conveyed",
+   "confidence": "high",
+   "reason": "The agent clearly conveyed details about the outstanding loan and EMIs, and the recipient acknowledged the call with 'Hello?' before the call ended without a commitment."
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 203265,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Information Conveyed",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 67,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Call Hang Up",
+   "confidence": "high",
+   "reason": "The customer repeatedly said \"Hello\" without engaging with the agent's questions, indicating a communication breakdown or disengagement, and the call ended without a meaningful conversation or commitment."
+  },
+  "verdict_side": "both"
+ },
+ {
+  "account_id": 95161,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Agree To Pay",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 119,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": null,
+   "confidence": null,
+   "reason": "ERROR JSONDecodeError"
+  },
+  "verdict_side": "neither"
+ },
+ {
+  "account_id": 195001,
+  "cluster": "partial",
+  "prod": "Promise To Pay",
+  "models": {
+   "gemini-2.5-flash": "Refuse To Pay",
+   "gemini-3-flash-preview": "Promise To Pay",
+   "gemini-3.6-flash": "Promise To Pay"
+  },
+  "duration": 138,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Promise To Pay",
+   "confidence": "high",
+   "reason": "The customer explicitly promised to pay half of the outstanding amount this week (within 8-10 days) and the remaining half next month."
+  },
+  "verdict_side": "both"
+ },
+ {
+  "account_id": 146639,
+  "cluster": "partial",
+  "prod": "Call Back Requested",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Back Requested",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 93,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Third Party Connect",
+   "confidence": "high",
+   "reason": "The agent asked for Laduben, but the person who answered identified himself as Dineshbhai Vegadji, indicating a third party connection."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 180889,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Agree To Pay",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Promise To Pay"
+  },
+  "duration": 55,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Agree To Pay",
+   "confidence": "medium",
+   "reason": "The borrower stated they would 'get it done once, in thousands,' indicating an agreement to pay, but without a specific amount or date to constitute a firm promise."
+  },
+  "verdict_side": "both"
+ },
+ {
+  "account_id": 95166,
+  "cluster": "partial",
+  "prod": "Agree To Senior Manager Call",
+  "models": {
+   "gemini-2.5-flash": "Agree To Senior Manager Call",
+   "gemini-3-flash-preview": "Agree To Senior Manager Call",
+   "gemini-3.6-flash": "Payment Claimed"
+  },
+  "duration": 90,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Payment Claimed",
+   "confidence": "high",
+   "reason": "The customer explicitly stated multiple times that the outstanding EMIs have already been paid by them, leading to a discrepancy that the agent escalated."
+  },
+  "verdict_side": "models"
+ },
+ {
+  "account_id": 195101,
+  "cluster": "partial",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Financial Hardship",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 250,
+  "date": "2026-08-03",
+  "verdict": {
+   "correct_label": "Financial Hardship",
+   "confidence": "high",
+   "reason": "The customer explicitly states that their mother is in the hospital, their shop is closed, and they have no work, indicating an inability to pay due to financial hardship."
+  },
+  "verdict_side": "both"
+ }
+]

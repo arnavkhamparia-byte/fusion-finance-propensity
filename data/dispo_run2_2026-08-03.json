@@ -1,0 +1,4556 @@
+{
+  "results": [
+    {
+      "account_id": 180049,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 23,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 562,
+            "output_tokens": 711,
+            "total_input_tokens": 14404,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004808,
+          "latency_s": 4.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 562,
+            "output_tokens": 673,
+            "total_input_tokens": 14404,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1259
+          },
+          "cost_usd": 0.038994,
+          "latency_s": 12.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184998,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 49,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1206,
+            "output_tokens": 677,
+            "total_input_tokens": 15048,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005079,
+          "latency_s": 5.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Business Loss",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1206,
+            "output_tokens": 698,
+            "total_input_tokens": 15048,
+            "cached_input_tokens": 14135,
+            "thinking_tokens": 2049
+          },
+          "cost_usd": 0.031833,
+          "latency_s": 16.2
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 156581,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 63,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1543,
+            "output_tokens": 709,
+            "total_input_tokens": 15385,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005295,
+          "latency_s": 5.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1543,
+            "output_tokens": 652,
+            "total_input_tokens": 15385,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1834
+          },
+          "cost_usd": 0.045451,
+          "latency_s": 22.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 156990,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 58,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1439,
+            "output_tokens": 671,
+            "total_input_tokens": 15281,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005187,
+          "latency_s": 5.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1439,
+            "output_tokens": 672,
+            "total_input_tokens": 15281,
+            "cached_input_tokens": 12108,
+            "thinking_tokens": 2512
+          },
+          "cost_usd": 0.037956,
+          "latency_s": 18.0
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 193739,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 120,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Refuse To Pay",
+          "sub_disposition": "Unwilling To Pay",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2988,
+            "output_tokens": 773,
+            "total_input_tokens": 16830,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006114,
+          "latency_s": 6.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Refuse To Pay",
+          "sub_disposition": "Unwilling To Pay",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2988,
+            "output_tokens": 691,
+            "total_input_tokens": 16830,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2195
+          },
+          "cost_usd": 0.051219,
+          "latency_s": 16.8
+        }
+      },
+      "prod_disposition": "No Answer",
+      "prod_sub": null,
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 196667,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 26,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 670,
+            "output_tokens": 676,
+            "total_input_tokens": 14512,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.00481,
+          "latency_s": 4.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 670,
+            "output_tokens": 662,
+            "total_input_tokens": 14512,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 989
+          },
+          "cost_usd": 0.036627,
+          "latency_s": 26.8
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180765,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 21,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 533,
+            "output_tokens": 708,
+            "total_input_tokens": 14375,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004789,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 533,
+            "output_tokens": 673,
+            "total_input_tokens": 14375,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 1948
+          },
+          "cost_usd": 0.031496,
+          "latency_s": 15.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 182713,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 109,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Borrower Died",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2558,
+            "output_tokens": 722,
+            "total_input_tokens": 16400,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005822,
+          "latency_s": 5.4
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Borrower Died",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2558,
+            "output_tokens": 681,
+            "total_input_tokens": 16400,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1499
+          },
+          "cost_usd": 0.04422,
+          "latency_s": 20.6
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195093,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 43,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Non Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1084,
+            "output_tokens": 697,
+            "total_input_tokens": 14926,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005048,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Non Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1084,
+            "output_tokens": 666,
+            "total_input_tokens": 14926,
+            "cached_input_tokens": 12121,
+            "thinking_tokens": 2053
+          },
+          "cost_usd": 0.033224,
+          "latency_s": 16.6
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Non Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 193390,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 54,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1345,
+            "output_tokens": 671,
+            "total_input_tokens": 15187,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005139,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1345,
+            "output_tokens": 631,
+            "total_input_tokens": 15187,
+            "cached_input_tokens": 12112,
+            "thinking_tokens": 2471
+          },
+          "cost_usd": 0.037073,
+          "latency_s": 19.8
+        }
+      },
+      "prod_disposition": "Information Conveyed",
+      "prod_sub": null,
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 191290,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 32,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 809,
+            "output_tokens": 711,
+            "total_input_tokens": 14651,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004932,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 809,
+            "output_tokens": 676,
+            "total_input_tokens": 14651,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 2560
+          },
+          "cost_usd": 0.037455,
+          "latency_s": 17.5
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 203164,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 63,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1574,
+            "output_tokens": 712,
+            "total_input_tokens": 15416,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005316,
+          "latency_s": 5.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1574,
+            "output_tokens": 631,
+            "total_input_tokens": 15416,
+            "cached_input_tokens": 12104,
+            "thinking_tokens": 1838
+          },
+          "cost_usd": 0.031728,
+          "latency_s": 14.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 203212,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 112,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Unclear",
+          "sub_disposition": "Other",
+          "language": "Tamil",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2763,
+            "output_tokens": 749,
+            "total_input_tokens": 16605,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005966,
+          "latency_s": 6.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2763,
+            "output_tokens": 654,
+            "total_input_tokens": 16605,
+            "cached_input_tokens": 9666,
+            "thinking_tokens": 3524
+          },
+          "cost_usd": 0.051635,
+          "latency_s": 51.1
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180821,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 70,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1728,
+            "output_tokens": 672,
+            "total_input_tokens": 15570,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005333,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Unclear",
+          "sub_disposition": "Voice Mail",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1728,
+            "output_tokens": 631,
+            "total_input_tokens": 15570,
+            "cached_input_tokens": 12101,
+            "thinking_tokens": 2421
+          },
+          "cost_usd": 0.037209,
+          "latency_s": 16.8
+        }
+      },
+      "prod_disposition": "Unclear",
+      "prod_sub": "Voice Mail",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 190789,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 35,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 863,
+            "output_tokens": 715,
+            "total_input_tokens": 14705,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004965,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 863,
+            "output_tokens": 657,
+            "total_input_tokens": 14705,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 1599
+          },
+          "cost_usd": 0.028716,
+          "latency_s": 13.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 157313,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 29,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 706,
+            "output_tokens": 720,
+            "total_input_tokens": 14548,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004894,
+          "latency_s": 5.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 706,
+            "output_tokens": 659,
+            "total_input_tokens": 14548,
+            "cached_input_tokens": 12133,
+            "thinking_tokens": 1860
+          },
+          "cost_usd": 0.030843,
+          "latency_s": 20.7
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195597,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 111,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Refuse To Pay",
+          "sub_disposition": "Unwilling To Pay",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2720,
+            "output_tokens": 791,
+            "total_input_tokens": 16562,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006007,
+          "latency_s": 5.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Medical Issue",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2720,
+            "output_tokens": 720,
+            "total_input_tokens": 16562,
+            "cached_input_tokens": 12071,
+            "thinking_tokens": 3014
+          },
+          "cost_usd": 0.044869,
+          "latency_s": 19.9
+        }
+      },
+      "prod_disposition": "Financial Hardship",
+      "prod_sub": "Medical Issue",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 178479,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 30,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 693,
+            "output_tokens": 671,
+            "total_input_tokens": 14535,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004814,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 693,
+            "output_tokens": 631,
+            "total_input_tokens": 14535,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2517
+          },
+          "cost_usd": 0.050134,
+          "latency_s": 37.2
+        }
+      },
+      "prod_disposition": "Call Back Requested",
+      "prod_sub": null,
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 71369,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 21,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 515,
+            "output_tokens": 671,
+            "total_input_tokens": 14357,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004724,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 515,
+            "output_tokens": 631,
+            "total_input_tokens": 14357,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1488
+          },
+          "cost_usd": 0.040606,
+          "latency_s": 27.9
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 190250,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 24,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 580,
+            "output_tokens": 675,
+            "total_input_tokens": 14422,
+            "cached_input_tokens": 12140,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.002487,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 580,
+            "output_tokens": 672,
+            "total_input_tokens": 14422,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 2021
+          },
+          "cost_usd": 0.032215,
+          "latency_s": 15.1
+        }
+      },
+      "prod_disposition": "Dispute",
+      "prod_sub": "Not Availed Loan",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 182086,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 32,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 791,
+            "output_tokens": 671,
+            "total_input_tokens": 14633,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004863,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 791,
+            "output_tokens": 672,
+            "total_input_tokens": 14633,
+            "cached_input_tokens": 12128,
+            "thinking_tokens": 1948
+          },
+          "cost_usd": 0.031885,
+          "latency_s": 15.7
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194492,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 54,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1331,
+            "output_tokens": 711,
+            "total_input_tokens": 15173,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005193,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1331,
+            "output_tokens": 631,
+            "total_input_tokens": 15173,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2154
+          },
+          "cost_usd": 0.047825,
+          "latency_s": 37.9
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 142390,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 23,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 576,
+            "output_tokens": 672,
+            "total_input_tokens": 14418,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004757,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 576,
+            "output_tokens": 629,
+            "total_input_tokens": 14418,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 2735
+          },
+          "cost_usd": 0.038248,
+          "latency_s": 19.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 70690,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 105,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2596,
+            "output_tokens": 684,
+            "total_input_tokens": 16438,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005784,
+          "latency_s": 5.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2596,
+            "output_tokens": 681,
+            "total_input_tokens": 16438,
+            "cached_input_tokens": 12075,
+            "thinking_tokens": 2400
+          },
+          "cost_usd": 0.038802,
+          "latency_s": 16.5
+        }
+      },
+      "prod_disposition": "Payment Claimed",
+      "prod_sub": "Full payment",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194662,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 21,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 530,
+            "output_tokens": 671,
+            "total_input_tokens": 14372,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004732,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 530,
+            "output_tokens": 653,
+            "total_input_tokens": 14372,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2194
+          },
+          "cost_usd": 0.047181,
+          "latency_s": 14.6
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 70437,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 40,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 967,
+            "output_tokens": 675,
+            "total_input_tokens": 14809,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004956,
+          "latency_s": 6.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 967,
+            "output_tokens": 677,
+            "total_input_tokens": 14809,
+            "cached_input_tokens": 12125,
+            "thinking_tokens": 1380
+          },
+          "cost_usd": 0.027086,
+          "latency_s": 11.9
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195162,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 55,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Other",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1368,
+            "output_tokens": 673,
+            "total_input_tokens": 15210,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005154,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Other",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1368,
+            "output_tokens": 684,
+            "total_input_tokens": 15210,
+            "cached_input_tokens": 12113,
+            "thinking_tokens": 1817
+          },
+          "cost_usd": 0.031697,
+          "latency_s": 15.0
+        }
+      },
+      "prod_disposition": "Financial Hardship",
+      "prod_sub": "Other",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184174,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 39,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 504,
+            "output_tokens": 703,
+            "total_input_tokens": 14346,
+            "cached_input_tokens": 12139,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.002491,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 504,
+            "output_tokens": 653,
+            "total_input_tokens": 14346,
+            "cached_input_tokens": 12137,
+            "thinking_tokens": 1468
+          },
+          "cost_usd": 0.026954,
+          "latency_s": 28.0
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 178426,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 26,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 641,
+            "output_tokens": 703,
+            "total_input_tokens": 14483,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004835,
+          "latency_s": 5.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 641,
+            "output_tokens": 672,
+            "total_input_tokens": 14483,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2143
+          },
+          "cost_usd": 0.047059,
+          "latency_s": 35.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 138049,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 59,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1475,
+            "output_tokens": 682,
+            "total_input_tokens": 15317,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005221,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1475,
+            "output_tokens": 684,
+            "total_input_tokens": 15317,
+            "cached_input_tokens": 12109,
+            "thinking_tokens": 2526
+          },
+          "cost_usd": 0.038243,
+          "latency_s": 19.0
+        }
+      },
+      "prod_disposition": "Payment Claimed",
+      "prod_sub": "Full payment",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 156548,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 30,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 729,
+            "output_tokens": 676,
+            "total_input_tokens": 14571,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004839,
+          "latency_s": 5.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 729,
+            "output_tokens": 686,
+            "total_input_tokens": 14571,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1660
+          },
+          "cost_usd": 0.042971,
+          "latency_s": 17.3
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 70320,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 45,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1115,
+            "output_tokens": 761,
+            "total_input_tokens": 14957,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.00516,
+          "latency_s": 5.2
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1115,
+            "output_tokens": 690,
+            "total_input_tokens": 14957,
+            "cached_input_tokens": 12121,
+            "thinking_tokens": 1909
+          },
+          "cost_usd": 0.03219,
+          "latency_s": 16.0
+        }
+      },
+      "prod_disposition": "Payment Claimed",
+      "prod_sub": "Full payment",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 94173,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 107,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2663,
+            "output_tokens": 744,
+            "total_input_tokens": 16505,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005908,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2663,
+            "output_tokens": 679,
+            "total_input_tokens": 16505,
+            "cached_input_tokens": 12070,
+            "thinking_tokens": 1809
+          },
+          "cost_usd": 0.033571,
+          "latency_s": 15.4
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184499,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 24,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 585,
+            "output_tokens": 671,
+            "total_input_tokens": 14427,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004759,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 585,
+            "output_tokens": 672,
+            "total_input_tokens": 14427,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 1645
+          },
+          "cost_usd": 0.028838,
+          "latency_s": 14.1
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 71526,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 75,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1829,
+            "output_tokens": 720,
+            "total_input_tokens": 15671,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005455,
+          "latency_s": 5.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1829,
+            "output_tokens": 691,
+            "total_input_tokens": 15671,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2113
+          },
+          "cost_usd": 0.048743,
+          "latency_s": 38.1
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 94196,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 56,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1406,
+            "output_tokens": 671,
+            "total_input_tokens": 15248,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.00517,
+          "latency_s": 4.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1406,
+            "output_tokens": 672,
+            "total_input_tokens": 15248,
+            "cached_input_tokens": 12108,
+            "thinking_tokens": 2163
+          },
+          "cost_usd": 0.034765,
+          "latency_s": 16.1
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 156666,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 38,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Marathi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 920,
+            "output_tokens": 724,
+            "total_input_tokens": 14762,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005007,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 920,
+            "output_tokens": 636,
+            "total_input_tokens": 14762,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2712
+          },
+          "cost_usd": 0.052275,
+          "latency_s": 18.8
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 203185,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 44,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1052,
+            "output_tokens": 709,
+            "total_input_tokens": 14894,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.00505,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1052,
+            "output_tokens": 672,
+            "total_input_tokens": 14894,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1856
+          },
+          "cost_usd": 0.045093,
+          "latency_s": 16.4
+        }
+      },
+      "prod_disposition": "Refuse To Pay",
+      "prod_sub": "Unwilling To Pay",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184840,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 27,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 693,
+            "output_tokens": 675,
+            "total_input_tokens": 14535,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004819,
+          "latency_s": 5.2
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 693,
+            "output_tokens": 634,
+            "total_input_tokens": 14535,
+            "cached_input_tokens": 12133,
+            "thinking_tokens": 1774
+          },
+          "cost_usd": 0.029825,
+          "latency_s": 14.8
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 163489,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 31,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Odia",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 774,
+            "output_tokens": 731,
+            "total_input_tokens": 14616,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004944,
+          "latency_s": 5.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Odia",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 774,
+            "output_tokens": 658,
+            "total_input_tokens": 14616,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1909
+          },
+          "cost_usd": 0.045027,
+          "latency_s": 22.7
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 203265,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 67,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1647,
+            "output_tokens": 676,
+            "total_input_tokens": 15489,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005298,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1647,
+            "output_tokens": 654,
+            "total_input_tokens": 15489,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1869
+          },
+          "cost_usd": 0.045941,
+          "latency_s": 41.0
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 165571,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 105,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Odia",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2648,
+            "output_tokens": 677,
+            "total_input_tokens": 16490,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.0058,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Odia",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2648,
+            "output_tokens": 667,
+            "total_input_tokens": 16490,
+            "cached_input_tokens": 16094,
+            "thinking_tokens": 2474
+          },
+          "cost_usd": 0.038276,
+          "latency_s": 142.2
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180334,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 33,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 814,
+            "output_tokens": 672,
+            "total_input_tokens": 14656,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004876,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 814,
+            "output_tokens": 672,
+            "total_input_tokens": 14656,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1877
+          },
+          "cost_usd": 0.044925,
+          "latency_s": 27.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 185083,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 64,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1595,
+            "output_tokens": 676,
+            "total_input_tokens": 15437,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005272,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1595,
+            "output_tokens": 678,
+            "total_input_tokens": 15437,
+            "cached_input_tokens": 12104,
+            "thinking_tokens": 2336
+          },
+          "cost_usd": 0.036665,
+          "latency_s": 17.0
+        }
+      },
+      "prod_disposition": "Refuse To Pay",
+      "prod_sub": "Unwilling To Pay",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 193731,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 25,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 632,
+            "output_tokens": 671,
+            "total_input_tokens": 14474,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004783,
+          "latency_s": 5.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 632,
+            "output_tokens": 672,
+            "total_input_tokens": 14474,
+            "cached_input_tokens": 12132,
+            "thinking_tokens": 1232
+          },
+          "cost_usd": 0.025198,
+          "latency_s": 12.1
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 181415,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 33,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 801,
+            "output_tokens": 712,
+            "total_input_tokens": 14643,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004929,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 801,
+            "output_tokens": 720,
+            "total_input_tokens": 14643,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 1623
+          },
+          "cost_usd": 0.029406,
+          "latency_s": 13.9
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 70756,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 48,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Marathi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1199,
+            "output_tokens": 675,
+            "total_input_tokens": 15041,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005073,
+          "latency_s": 4.4
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Medical Issue",
+          "language": "Marathi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1199,
+            "output_tokens": 676,
+            "total_input_tokens": 15041,
+            "cached_input_tokens": 12116,
+            "thinking_tokens": 2081
+          },
+          "cost_usd": 0.033744,
+          "latency_s": 16.6
+        }
+      },
+      "prod_disposition": "Refuse To Pay",
+      "prod_sub": "Unwilling To Pay",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 196626,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 93,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2288,
+            "output_tokens": 697,
+            "total_input_tokens": 16130,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.00565,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2288,
+            "output_tokens": 666,
+            "total_input_tokens": 16130,
+            "cached_input_tokens": 12081,
+            "thinking_tokens": 2130
+          },
+          "cost_usd": 0.035768,
+          "latency_s": 16.0
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 185291,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 71,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1748,
+            "output_tokens": 678,
+            "total_input_tokens": 15590,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005352,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Other",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1748,
+            "output_tokens": 697,
+            "total_input_tokens": 15590,
+            "cached_input_tokens": 12100,
+            "thinking_tokens": 1472
+          },
+          "cost_usd": 0.029294,
+          "latency_s": 13.8
+        }
+      },
+      "prod_disposition": "Financial Hardship",
+      "prod_sub": "Other",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 185008,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 74,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1858,
+            "output_tokens": 703,
+            "total_input_tokens": 15700,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005444,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Non Acceptable date - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1858,
+            "output_tokens": 666,
+            "total_input_tokens": 15700,
+            "cached_input_tokens": 12096,
+            "thinking_tokens": 3007
+          },
+          "cost_usd": 0.042999,
+          "latency_s": 21.0
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Non Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 163226,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 117,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2893,
+            "output_tokens": 753,
+            "total_input_tokens": 16735,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006037,
+          "latency_s": 5.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2893,
+            "output_tokens": 649,
+            "total_input_tokens": 16735,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 3512
+          },
+          "cost_usd": 0.062551,
+          "latency_s": 26.2
+        }
+      },
+      "prod_disposition": "Financial Hardship",
+      "prod_sub": "Other",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 95161,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 119,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2958,
+            "output_tokens": 758,
+            "total_input_tokens": 16800,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006077,
+          "latency_s": 5.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2958,
+            "output_tokens": 663,
+            "total_input_tokens": 16800,
+            "cached_input_tokens": 12064,
+            "thinking_tokens": 3139
+          },
+          "cost_usd": 0.045846,
+          "latency_s": 22.2
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184158,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 62,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1550,
+            "output_tokens": 675,
+            "total_input_tokens": 15392,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005248,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1550,
+            "output_tokens": 388,
+            "total_input_tokens": 15392,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2835
+          },
+          "cost_usd": 0.052095,
+          "latency_s": 18.7
+        }
+      },
+      "prod_disposition": "Agree To Senior Manager Call",
+      "prod_sub": "Other",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195001,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 138,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 3426,
+            "output_tokens": 697,
+            "total_input_tokens": 17268,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006219,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 3426,
+            "output_tokens": 685,
+            "total_input_tokens": 17268,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2005
+          },
+          "cost_usd": 0.050112,
+          "latency_s": 17.7
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 181785,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 36,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 893,
+            "output_tokens": 708,
+            "total_input_tokens": 14735,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004969,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 893,
+            "output_tokens": 652,
+            "total_input_tokens": 14735,
+            "cached_input_tokens": 12124,
+            "thinking_tokens": 2394
+          },
+          "cost_usd": 0.035877,
+          "latency_s": 16.2
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184073,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 49,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Unclear",
+          "sub_disposition": "Voice Mail",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1228,
+            "output_tokens": 693,
+            "total_input_tokens": 15070,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005114,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Unclear",
+          "sub_disposition": "Voice Mail",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1228,
+            "output_tokens": 631,
+            "total_input_tokens": 15070,
+            "cached_input_tokens": 12117,
+            "thinking_tokens": 3167
+          },
+          "cost_usd": 0.043155,
+          "latency_s": 21.6
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 137960,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 61,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1512,
+            "output_tokens": 708,
+            "total_input_tokens": 15354,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005279,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1512,
+            "output_tokens": 672,
+            "total_input_tokens": 15354,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2246
+          },
+          "cost_usd": 0.049293,
+          "latency_s": 53.5
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 146639,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 93,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Unclear",
+          "sub_disposition": "Other",
+          "language": "Gujarati",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2335,
+            "output_tokens": 752,
+            "total_input_tokens": 16177,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005756,
+          "latency_s": 5.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Gujarati",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2335,
+            "output_tokens": 684,
+            "total_input_tokens": 16177,
+            "cached_input_tokens": 12082,
+            "thinking_tokens": 2698
+          },
+          "cost_usd": 0.041111,
+          "latency_s": 21.2
+        }
+      },
+      "prod_disposition": "Call Back Requested",
+      "prod_sub": null,
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 193946,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 24,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 603,
+            "output_tokens": 676,
+            "total_input_tokens": 14445,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004776,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 603,
+            "output_tokens": 677,
+            "total_input_tokens": 14445,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1809
+          },
+          "cost_usd": 0.044041,
+          "latency_s": 24.8
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180889,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 55,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1376,
+            "output_tokens": 731,
+            "total_input_tokens": 15218,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005245,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1376,
+            "output_tokens": 650,
+            "total_input_tokens": 15218,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2098
+          },
+          "cost_usd": 0.047559,
+          "latency_s": 31.7
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183223,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 117,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "High Intent - Online",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2907,
+            "output_tokens": 690,
+            "total_input_tokens": 16749,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005949,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "High Intent - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2907,
+            "output_tokens": 657,
+            "total_input_tokens": 16749,
+            "cached_input_tokens": 12063,
+            "thinking_tokens": 2156
+          },
+          "cost_usd": 0.03687,
+          "latency_s": 22.5
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 202983,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 52,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1302,
+            "output_tokens": 675,
+            "total_input_tokens": 15144,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005124,
+          "latency_s": 6.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1302,
+            "output_tokens": 656,
+            "total_input_tokens": 15144,
+            "cached_input_tokens": 12112,
+            "thinking_tokens": 1733
+          },
+          "cost_usd": 0.030591,
+          "latency_s": 41.6
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180183,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 86,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Other",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2173,
+            "output_tokens": 687,
+            "total_input_tokens": 16015,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005577,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2173,
+            "output_tokens": 653,
+            "total_input_tokens": 16015,
+            "cached_input_tokens": 12084,
+            "thinking_tokens": 2783
+          },
+          "cost_usd": 0.041352,
+          "latency_s": 32.0
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 181586,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 44,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1097,
+            "output_tokens": 728,
+            "total_input_tokens": 14939,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005101,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1097,
+            "output_tokens": 693,
+            "total_input_tokens": 14939,
+            "cached_input_tokens": 12121,
+            "thinking_tokens": 3854
+          },
+          "cost_usd": 0.049695,
+          "latency_s": 39.0
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 185289,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 26,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 638,
+            "output_tokens": 661,
+            "total_input_tokens": 14480,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004771,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 638,
+            "output_tokens": 631,
+            "total_input_tokens": 14480,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1646
+          },
+          "cost_usd": 0.042213,
+          "latency_s": 33.7
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 196686,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 25,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 614,
+            "output_tokens": 706,
+            "total_input_tokens": 14456,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004827,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 614,
+            "output_tokens": 671,
+            "total_input_tokens": 14456,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 1265
+          },
+          "cost_usd": 0.025453,
+          "latency_s": 28.3
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184246,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 29,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 740,
+            "output_tokens": 671,
+            "total_input_tokens": 14582,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004837,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 740,
+            "output_tokens": 620,
+            "total_input_tokens": 14582,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1555
+          },
+          "cost_usd": 0.041448,
+          "latency_s": 24.2
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 182167,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 33,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 823,
+            "output_tokens": 729,
+            "total_input_tokens": 14665,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004966,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 823,
+            "output_tokens": 657,
+            "total_input_tokens": 14665,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 2239
+          },
+          "cost_usd": 0.034416,
+          "latency_s": 17.8
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 95166,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 90,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Tamil",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2258,
+            "output_tokens": 684,
+            "total_input_tokens": 16100,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005615,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Tamil",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2258,
+            "output_tokens": 678,
+            "total_input_tokens": 16100,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 3186
+          },
+          "cost_usd": 0.058926,
+          "latency_s": 38.0
+        }
+      },
+      "prod_disposition": "Agree To Senior Manager Call",
+      "prod_sub": "Other",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180418,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 95,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2357,
+            "output_tokens": 726,
+            "total_input_tokens": 16199,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005728,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Unclear",
+          "sub_disposition": "Other",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2357,
+            "output_tokens": 631,
+            "total_input_tokens": 16199,
+            "cached_input_tokens": 12082,
+            "thinking_tokens": 2234
+          },
+          "cost_usd": 0.036491,
+          "latency_s": 32.9
+        }
+      },
+      "prod_disposition": "Unclear",
+      "prod_sub": "Voice Mail",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194719,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 57,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1430,
+            "output_tokens": 724,
+            "total_input_tokens": 15272,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005262,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1430,
+            "output_tokens": 680,
+            "total_input_tokens": 15272,
+            "cached_input_tokens": 12107,
+            "thinking_tokens": 2468
+          },
+          "cost_usd": 0.03762,
+          "latency_s": 18.0
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 181294,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 39,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 980,
+            "output_tokens": 677,
+            "total_input_tokens": 14822,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004966,
+          "latency_s": 5.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 980,
+            "output_tokens": 657,
+            "total_input_tokens": 14822,
+            "cached_input_tokens": 12125,
+            "thinking_tokens": 2601
+          },
+          "cost_usd": 0.037914,
+          "latency_s": 18.7
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 138164,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 68,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1687,
+            "output_tokens": 675,
+            "total_input_tokens": 15529,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005317,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1687,
+            "output_tokens": 685,
+            "total_input_tokens": 15529,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 3985
+          },
+          "cost_usd": 0.065324,
+          "latency_s": 32.1
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195101,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 250,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Medical Issue",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 6243,
+            "output_tokens": 682,
+            "total_input_tokens": 20085,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.007605,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 6243,
+            "output_tokens": 700,
+            "total_input_tokens": 20085,
+            "cached_input_tokens": 11994,
+            "thinking_tokens": 3216
+          },
+          "cost_usd": 0.051878,
+          "latency_s": 24.9
+        }
+      },
+      "prod_disposition": "Financial Hardship",
+      "prod_sub": "Medical Issue",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180128,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 42,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1068,
+            "output_tokens": 676,
+            "total_input_tokens": 14910,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005008,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1068,
+            "output_tokens": 676,
+            "total_input_tokens": 14910,
+            "cached_input_tokens": 12121,
+            "thinking_tokens": 1721
+          },
+          "cost_usd": 0.030302,
+          "latency_s": 14.0
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195059,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 25,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 625,
+            "output_tokens": 728,
+            "total_input_tokens": 14467,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004865,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 625,
+            "output_tokens": 626,
+            "total_input_tokens": 14467,
+            "cached_input_tokens": 12139,
+            "thinking_tokens": 1887
+          },
+          "cost_usd": 0.030661,
+          "latency_s": 14.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180470,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 69,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Not Sure of Amount",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1723,
+            "output_tokens": 753,
+            "total_input_tokens": 15565,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005451,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "Low Intent - Online",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1723,
+            "output_tokens": 681,
+            "total_input_tokens": 15565,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 3307
+          },
+          "cost_usd": 0.05924,
+          "latency_s": 21.6
+        }
+      },
+      "prod_disposition": "Payment Claimed",
+      "prod_sub": "Not Sure of Amount",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184801,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 31,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 783,
+            "output_tokens": 676,
+            "total_input_tokens": 14625,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004866,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 783,
+            "output_tokens": 655,
+            "total_input_tokens": 14625,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 2670
+          },
+          "cost_usd": 0.038217,
+          "latency_s": 30.9
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183972,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 21,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 537,
+            "output_tokens": 671,
+            "total_input_tokens": 14379,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004736,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 537,
+            "output_tokens": 673,
+            "total_input_tokens": 14379,
+            "cached_input_tokens": 12138,
+            "thinking_tokens": 1925
+          },
+          "cost_usd": 0.031295,
+          "latency_s": 17.5
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194965,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 32,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 807,
+            "output_tokens": 718,
+            "total_input_tokens": 14649,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004941,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 807,
+            "output_tokens": 671,
+            "total_input_tokens": 14649,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 2599
+          },
+          "cost_usd": 0.037758,
+          "latency_s": 18.5
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 93510,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 45,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1111,
+            "output_tokens": 707,
+            "total_input_tokens": 14953,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005077,
+          "latency_s": 4.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Tamil",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1111,
+            "output_tokens": 630,
+            "total_input_tokens": 14953,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 2954
+          },
+          "cost_usd": 0.054685,
+          "latency_s": 18.2
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 184507,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 62,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1565,
+            "output_tokens": 685,
+            "total_input_tokens": 15407,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005271,
+          "latency_s": 5.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Not Sure of Amount",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1565,
+            "output_tokens": 701,
+            "total_input_tokens": 15407,
+            "cached_input_tokens": 12104,
+            "thinking_tokens": 2817
+          },
+          "cost_usd": 0.041155,
+          "latency_s": 21.0
+        }
+      },
+      "prod_disposition": "Refuse To Pay",
+      "prod_sub": "Unwilling To Pay",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 193790,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 22,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Do Not Know Borrower",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 540,
+            "output_tokens": 675,
+            "total_input_tokens": 14382,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004743,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 540,
+            "output_tokens": 672,
+            "total_input_tokens": 14382,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1520
+          },
+          "cost_usd": 0.041301,
+          "latency_s": 17.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180419,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 33,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 827,
+            "output_tokens": 678,
+            "total_input_tokens": 14669,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004891,
+          "latency_s": 4.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 827,
+            "output_tokens": 696,
+            "total_input_tokens": 14669,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 1550
+          },
+          "cost_usd": 0.028572,
+          "latency_s": 13.0
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 94603,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 61,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1532,
+            "output_tokens": 710,
+            "total_input_tokens": 15374,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005292,
+          "latency_s": 5.5
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1532,
+            "output_tokens": 629,
+            "total_input_tokens": 15374,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1939
+          },
+          "cost_usd": 0.046173,
+          "latency_s": 14.1
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 138426,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 41,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1014,
+            "output_tokens": 672,
+            "total_input_tokens": 14856,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004975,
+          "latency_s": 5.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1014,
+            "output_tokens": 653,
+            "total_input_tokens": 14856,
+            "cached_input_tokens": 12120,
+            "thinking_tokens": 2257
+          },
+          "cost_usd": 0.034839,
+          "latency_s": 14.6
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 195781,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 44,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Dispute",
+          "sub_disposition": "Not Availed Loan",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1100,
+            "output_tokens": 690,
+            "total_input_tokens": 14942,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005045,
+          "latency_s": 5.3
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1100,
+            "output_tokens": 703,
+            "total_input_tokens": 14942,
+            "cached_input_tokens": 12121,
+            "thinking_tokens": 2600
+          },
+          "cost_usd": 0.038504,
+          "latency_s": 19.6
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194796,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 33,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 823,
+            "output_tokens": 710,
+            "total_input_tokens": 14665,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004937,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 823,
+            "output_tokens": 621,
+            "total_input_tokens": 14665,
+            "cached_input_tokens": 12129,
+            "thinking_tokens": 2283
+          },
+          "cost_usd": 0.034488,
+          "latency_s": 16.2
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 182719,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 107,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2691,
+            "output_tokens": 698,
+            "total_input_tokens": 16533,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005853,
+          "latency_s": 6.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Financial Hardship",
+          "sub_disposition": "Other",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2691,
+            "output_tokens": 624,
+            "total_input_tokens": 16533,
+            "cached_input_tokens": 12070,
+            "thinking_tokens": 2659
+          },
+          "cost_usd": 0.040768,
+          "latency_s": 24.7
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 71036,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 189,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Agree To Pay",
+          "sub_disposition": "High Intent - Online",
+          "language": "Telugu",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 4711,
+            "output_tokens": 686,
+            "total_input_tokens": 18553,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.006845,
+          "latency_s": 5.2
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Telugu",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 4711,
+            "output_tokens": 654,
+            "total_input_tokens": 18553,
+            "cached_input_tokens": 12023,
+            "thinking_tokens": 2426
+          },
+          "cost_usd": 0.042024,
+          "latency_s": 17.8
+        }
+      },
+      "prod_disposition": "Agree To Pay",
+      "prod_sub": "Low Intent - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 194930,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 57,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1424,
+            "output_tokens": 677,
+            "total_input_tokens": 15266,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005188,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1424,
+            "output_tokens": 676,
+            "total_input_tokens": 15266,
+            "cached_input_tokens": 14126,
+            "thinking_tokens": 1729
+          },
+          "cost_usd": 0.029078,
+          "latency_s": 118.3
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Family Member Picked Up",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183092,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 63,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1595,
+            "output_tokens": 677,
+            "total_input_tokens": 15437,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005273,
+          "latency_s": 5.8
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Dispute",
+          "sub_disposition": "Not Availed Loan",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1595,
+            "output_tokens": 2754,
+            "total_input_tokens": 15437,
+            "cached_input_tokens": 12104,
+            "thinking_tokens": 2386
+          },
+          "cost_usd": 0.055798,
+          "latency_s": 27.8
+        }
+      },
+      "prod_disposition": "Dispute",
+      "prod_sub": "Not Availed Loan",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 142440,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 59,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Full payment",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1466,
+            "output_tokens": 748,
+            "total_input_tokens": 15308,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005315,
+          "latency_s": 5.1
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Payment Claimed",
+          "sub_disposition": "Not Sure of Amount",
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1466,
+            "output_tokens": 671,
+            "total_input_tokens": 15308,
+            "cached_input_tokens": 12108,
+            "thinking_tokens": 4274
+          },
+          "cost_usd": 0.053845,
+          "latency_s": 30.6
+        }
+      },
+      "prod_disposition": "Dispute",
+      "prod_sub": "Not Availed Loan",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183614,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 66,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1640,
+            "output_tokens": 698,
+            "total_input_tokens": 15482,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005327,
+          "latency_s": 5.0
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Punjabi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1640,
+            "output_tokens": 667,
+            "total_input_tokens": 15482,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1458
+          },
+          "cost_usd": 0.042348,
+          "latency_s": 12.8
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 192864,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 29,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 717,
+            "output_tokens": 676,
+            "total_input_tokens": 14559,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004833,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 717,
+            "output_tokens": 677,
+            "total_input_tokens": 14559,
+            "cached_input_tokens": 12134,
+            "thinking_tokens": 2081
+          },
+          "cost_usd": 0.03301,
+          "latency_s": 17.4
+        }
+      },
+      "prod_disposition": "Third Party Connect",
+      "prod_sub": "Do Not Know Borrower",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183890,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 39,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 971,
+            "output_tokens": 737,
+            "total_input_tokens": 14813,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005052,
+          "latency_s": 4.7
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Third Party Connect",
+          "sub_disposition": "Family Member Picked Up",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 971,
+            "output_tokens": 394,
+            "total_input_tokens": 14813,
+            "cached_input_tokens": 12125,
+            "thinking_tokens": 2572
+          },
+          "cost_usd": 0.035273,
+          "latency_s": 17.3
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 183067,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 21,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Information Conveyed",
+          "sub_disposition": null,
+          "language": "Hindi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 524,
+            "output_tokens": 662,
+            "total_input_tokens": 14366,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.004716,
+          "latency_s": 6.2
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 524,
+            "output_tokens": 672,
+            "total_input_tokens": 14366,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1867
+          },
+          "cost_usd": 0.0444,
+          "latency_s": 15.8
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 157091,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 95,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Promise To Pay",
+          "sub_disposition": "Acceptable date - Online",
+          "language": "Marathi",
+          "match": true,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2355,
+            "output_tokens": 696,
+            "total_input_tokens": 16197,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005682,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Unclear",
+          "sub_disposition": "Other",
+          "language": "Marathi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 2355,
+            "output_tokens": 620,
+            "total_input_tokens": 16197,
+            "cached_input_tokens": 12082,
+            "thinking_tokens": 1806
+          },
+          "cost_usd": 0.032537,
+          "latency_s": 16.6
+        }
+      },
+      "prod_disposition": "Promise To Pay",
+      "prod_sub": "Non Acceptable date - Online",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 180963,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 62,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1559,
+            "output_tokens": 711,
+            "total_input_tokens": 15401,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005307,
+          "latency_s": 4.6
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Hindi",
+          "match": true,
+          "sub_match": true,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1559,
+            "output_tokens": 654,
+            "total_input_tokens": 15401,
+            "cached_input_tokens": 12104,
+            "thinking_tokens": 1330
+          },
+          "cost_usd": 0.027341,
+          "latency_s": 105.4
+        }
+      },
+      "prod_disposition": "Call Hang Up",
+      "prod_sub": "More Than 20 Sec",
+      "prod_row_is_call_date": true
+    },
+    {
+      "account_id": 182194,
+      "call_date_ist": "2026-08-03",
+      "call_duration_s": 56,
+      "arms": {
+        "gemini-3.1-flash-lite": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1388,
+            "output_tokens": 714,
+            "total_input_tokens": 15230,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 0
+          },
+          "cost_usd": 0.005226,
+          "latency_s": 4.9
+        },
+        "gemini-3.5-flash": {
+          "disposition": "Call Hang Up",
+          "sub_disposition": "More Than 20 Sec",
+          "language": "Punjabi",
+          "match": false,
+          "sub_match": false,
+          "usage": {
+            "text_input_tokens": 13842,
+            "audio_input_tokens": 1388,
+            "output_tokens": 631,
+            "total_input_tokens": 15230,
+            "cached_input_tokens": 0,
+            "thinking_tokens": 1661
+          },
+          "cost_usd": 0.043473,
+          "latency_s": 15.0
+        }
+      },
+      "prod_disposition": "Information Conveyed",
+      "prod_sub": null,
+      "prod_row_is_call_date": true
+    }
+  ],
+  "summary": {
+    "accounts": 100,
+    "valid_reference": 100,
+    "gemini-3.1-flash-lite": {
+      "runs": 100,
+      "errors": 0,
+      "disposition_match": "60/100",
+      "sub_match": "52/100",
+      "languages": {
+        "Hindi": 60,
+        "Punjabi": 20,
+        "Marathi": 7,
+        "Tamil": 9,
+        "Odia": 2,
+        "Gujarati": 1,
+        "Telugu": 1
+      },
+      "tokens": {
+        "text_input_tokens": 1384200,
+        "cached_input_tokens": 24279,
+        "audio_input_tokens": 143773,
+        "output_tokens": 69861,
+        "thinking_tokens": 0
+      },
+      "cache_hit_rate": 0.018,
+      "total_cost_usd": 0.5182,
+      "avg_cost_usd": 0.005182,
+      "avg_latency_s": 5.0,
+      "confusions": [
+        {
+          "prod": "Call Hang Up",
+          "ours": "Information Conveyed",
+          "n": 7
+        },
+        {
+          "prod": "Refuse To Pay",
+          "ours": "Call Hang Up",
+          "n": 3
+        },
+        {
+          "prod": "Agree To Pay",
+          "ours": "Information Conveyed",
+          "n": 3
+        },
+        {
+          "prod": "Third Party Connect",
+          "ours": "Call Hang Up",
+          "n": 2
+        },
+        {
+          "prod": "Call Hang Up",
+          "ours": "Third Party Connect",
+          "n": 2
+        },
+        {
+          "prod": "Information Conveyed",
+          "ours": "Call Hang Up",
+          "n": 2
+        }
+      ]
+    },
+    "gemini-3.5-flash": {
+      "runs": 100,
+      "errors": 0,
+      "disposition_match": "71/100",
+      "sub_match": "63/100",
+      "languages": {
+        "Punjabi": 30,
+        "Marathi": 7,
+        "Hindi": 50,
+        "Tamil": 9,
+        "Odia": 2,
+        "Gujarati": 1,
+        "Telugu": 1
+      },
+      "tokens": {
+        "text_input_tokens": 1384200,
+        "cached_input_tokens": 804809,
+        "audio_input_tokens": 143773,
+        "output_tokens": 67956,
+        "thinking_tokens": 221169
+      },
+      "cache_hit_rate": 0.581,
+      "total_cost_usd": 3.9929,
+      "avg_cost_usd": 0.039929,
+      "avg_latency_s": 24.7,
+      "confusions": [
+        {
+          "prod": "Call Hang Up",
+          "ours": "Third Party Connect",
+          "n": 3
+        },
+        {
+          "prod": "Information Conveyed",
+          "ours": "Call Hang Up",
+          "n": 2
+        },
+        {
+          "prod": "Refuse To Pay",
+          "ours": "Call Hang Up",
+          "n": 2
+        },
+        {
+          "prod": "Financial Hardship",
+          "ours": "Agree To Pay",
+          "n": 2
+        },
+        {
+          "prod": "Agree To Pay",
+          "ours": "Third Party Connect",
+          "n": 2
+        },
+        {
+          "prod": "Third Party Connect",
+          "ours": "Financial Hardship",
+          "n": 1
+        }
+      ]
+    }
+  },
+  "pricing_usd_per_1m": {
+    "gemini-2.5-flash": {
+      "text_in": 0.3,
+      "cached_in": 0.075,
+      "audio_in": 1.0,
+      "out": 2.5
+    },
+    "gemini-3-flash-preview": {
+      "text_in": 0.5,
+      "cached_in": 0.125,
+      "audio_in": 1.0,
+      "out": 3.0
+    },
+    "gemini-3.6-flash": {
+      "text_in": 1.5,
+      "cached_in": 0.375,
+      "audio_in": 1.5,
+      "out": 7.5
+    },
+    "gemini-3.1-flash-lite": {
+      "text_in": 0.25,
+      "cached_in": 0.0625,
+      "audio_in": 0.5,
+      "out": 1.5
+    },
+    "gemini-3.5-flash": {
+      "text_in": 1.5,
+      "cached_in": 0.375,
+      "audio_in": 1.5,
+      "out": 9.0
+    }
+  }
+}

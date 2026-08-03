@@ -1,0 +1,374 @@
+[
+ {
+  "account_id": 178479,
+  "cluster": "unanimous",
+  "prod": "Call Back Requested",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 30,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 190250,
+  "cluster": "unanimous",
+  "prod": "Dispute",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 24,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 163489,
+  "cluster": "unanimous",
+  "prod": "Promise To Pay",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 31,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 184073,
+  "cluster": "unanimous",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Unclear",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 49,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 184158,
+  "cluster": "unanimous",
+  "prod": "Agree To Senior Manager Call",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 62,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 196686,
+  "cluster": "unanimous",
+  "prod": "Third Party Connect",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 25,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 138164,
+  "cluster": "unanimous",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Refuse To Pay",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Refuse To Pay"
+  },
+  "duration": 68,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 184998,
+  "cluster": "scattered",
+  "prod": "Third Party Connect",
+  "models": {
+   "gemini-2.5-flash": "Financial Hardship",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 49,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 203185,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Promise To Pay",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 44,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 185083,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 64,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 70756,
+  "cluster": "scattered",
+  "prod": "Refuse To Pay",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 48,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 163226,
+  "cluster": "scattered",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 117,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 184801,
+  "cluster": "scattered",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 31,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 180049,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Third Party Connect",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 23,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 193739,
+  "cluster": "partial",
+  "prod": "Dispute",
+  "models": {
+   "gemini-2.5-flash": "Dispute",
+   "gemini-3-flash-preview": "Refuse To Pay",
+   "gemini-3.6-flash": "Refuse To Pay"
+  },
+  "duration": 120,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 196667,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 26,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 193390,
+  "cluster": "partial",
+  "prod": "Information Conveyed",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Information Conveyed",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 54,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 180821,
+  "cluster": "partial",
+  "prod": "Unclear",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Unclear",
+   "gemini-3.6-flash": "Unclear"
+  },
+  "duration": 70,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 203212,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Third Party Connect",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 112,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 195597,
+  "cluster": "partial",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Payment Claimed",
+   "gemini-3-flash-preview": "Financial Hardship",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 111,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 194492,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 54,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 142390,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 23,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 70437,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 40,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 156666,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Unclear",
+   "gemini-3-flash-preview": "Call Hang Up",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 38,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 203265,
+  "cluster": "partial",
+  "prod": "Call Hang Up",
+  "models": {
+   "gemini-2.5-flash": "Call Hang Up",
+   "gemini-3-flash-preview": "Information Conveyed",
+   "gemini-3.6-flash": "Call Hang Up"
+  },
+  "duration": 67,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 95161,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Agree To Pay",
+   "gemini-3-flash-preview": "Third Party Connect",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 119,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 195001,
+  "cluster": "partial",
+  "prod": "Promise To Pay",
+  "models": {
+   "gemini-2.5-flash": "Refuse To Pay",
+   "gemini-3-flash-preview": "Promise To Pay",
+   "gemini-3.6-flash": "Promise To Pay"
+  },
+  "duration": 138,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 146639,
+  "cluster": "partial",
+  "prod": "Call Back Requested",
+  "models": {
+   "gemini-2.5-flash": "Information Conveyed",
+   "gemini-3-flash-preview": "Call Back Requested",
+   "gemini-3.6-flash": "Third Party Connect"
+  },
+  "duration": 93,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 180889,
+  "cluster": "partial",
+  "prod": "Agree To Pay",
+  "models": {
+   "gemini-2.5-flash": "Agree To Pay",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Promise To Pay"
+  },
+  "duration": 55,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 95166,
+  "cluster": "partial",
+  "prod": "Agree To Senior Manager Call",
+  "models": {
+   "gemini-2.5-flash": "Agree To Senior Manager Call",
+   "gemini-3-flash-preview": "Agree To Senior Manager Call",
+   "gemini-3.6-flash": "Payment Claimed"
+  },
+  "duration": 90,
+  "date": "2026-08-03"
+ },
+ {
+  "account_id": 195101,
+  "cluster": "partial",
+  "prod": "Financial Hardship",
+  "models": {
+   "gemini-2.5-flash": "Financial Hardship",
+   "gemini-3-flash-preview": "Agree To Pay",
+   "gemini-3.6-flash": "Financial Hardship"
+  },
+  "duration": 250,
+  "date": "2026-08-03"
+ }
+]
