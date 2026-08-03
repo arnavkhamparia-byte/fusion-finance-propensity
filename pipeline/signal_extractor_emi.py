@@ -68,6 +68,7 @@ async def extract_signals(
     current_datetime: str,
     model: str = "gemini-2.5-flash",
     include_language: bool = True,
+    max_output_tokens: int = 8000,
 ) -> dict:
     """
     Stage 1: extract raw factual signals from call audio. No classification.
@@ -96,7 +97,7 @@ async def extract_signals(
             {"audio_bytes": audio_bytes, "mime_type": mime_type},
         ],
         schema=schema_model.model_json_schema(),
-        max_output_tokens=8000,
+        max_output_tokens=max_output_tokens,
         timeout_s=GEMINI_TIMEOUT_S,
     )
 

@@ -32,7 +32,7 @@ def get_usage() -> dict:
     return dict(_usage_ctx.get() or {})
 
 
-def _set_usage(text_in, audio_in, out, total_in, cached_in=0):
+def _set_usage(text_in, audio_in, out, total_in, cached_in=0, thinking=0):
     global LAST_USAGE
     LAST_USAGE = {
         "text_input_tokens": text_in or 0,
@@ -40,6 +40,7 @@ def _set_usage(text_in, audio_in, out, total_in, cached_in=0):
         "output_tokens": out or 0,
         "total_input_tokens": total_in or 0,
         "cached_input_tokens": cached_in or 0,
+        "thinking_tokens": thinking or 0,
     }
     _usage_ctx.set(dict(LAST_USAGE))
 
@@ -111,7 +112,10 @@ async def _generate_gemini(
             if str(getattr(d, "modality", "")).endswith("AUDIO"):
                 audio_in = getattr(d, "token_count", 0) or 0
         total_in = getattr(um, "prompt_token_count", 0) or 0
-        _set_usage(total_in - audio_in, audio_in, getattr(um, "candidates_token_count", 0), total_in)
+        _set_usage(total_in - audio_in, audio_in, getattr(um, "candidates_token_count", 0),
+                   total_in,
+                   cached_in=getattr(um, "cached_content_token_count", 0) or 0,
+                   thinking=getattr(um, "thoughts_token_count", 0) or 0)
     return response.text
 
 
