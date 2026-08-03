@@ -54,6 +54,8 @@ PRICING = {
     "gemini-2.5-flash":       {"text_in": 0.30, "cached_in": 0.075, "audio_in": 1.00, "out": 2.50},
     "gemini-3-flash-preview": {"text_in": 0.50, "cached_in": 0.125, "audio_in": 1.00, "out": 3.00},
     "gemini-3.6-flash":       {"text_in": 1.50, "cached_in": 0.375, "audio_in": 1.50, "out": 7.50},
+    "gemini-3.1-flash-lite":  {"text_in": 0.25, "cached_in": 0.0625, "audio_in": 0.50, "out": 1.50},
+    "gemini-3.5-flash":       {"text_in": 1.50, "cached_in": 0.375, "audio_in": 1.50, "out": 9.00},
 }
 
 SELECT_SQL = """
@@ -197,14 +199,39 @@ async def main():
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--pilot", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
+    parser.add_argument("--models", default=None, help="comma-separated model list override")
+    parser.add_argument("--out", default=None)
+    parser.add_argument("--accounts-from", default=None,
+                        help="reuse account set from a prior results JSON")
     args = parser.parse_args()
+    global MODELS, RESULTS_PATH
+    if args.models:
+        MODELS = args.models.split(",")
+    if args.out:
+        RESULTS_PATH = args.out
     limit = 2 if args.pilot else args.limit
 
     conn = await asyncpg.connect(
         host=os.environ["DB_HOST"], port=int(os.environ.get("DB_PORT", 5432)),
         database="fusion_finance_mfi", user=os.environ["DB_USER"], password=os.environ["DB_PASS"])
     try:
-        rows = await conn.fetch(SELECT_SQL)
+        if args.accounts_from:
+            prev = json.load(open(args.accounts_from))["results"]
+            ids = [r["account_id"] for r in prev]
+            rows = await conn.fetch(
+                """SELECT account_id, call_duration, call_recording_url,
+                          to_char(processed_at AT TIME ZONE 'Asia/Kolkata','YYYY-MM-DD') AS call_date_ist,
+                          processed_at::text AS processed_at
+                   FROM activity_taskactivity t
+                   WHERE t.account_id = ANY($1::int[]) AND t.flow='fusion_mfi_emi'
+                     AND t.activity_type='AI Call'
+                     AND (t.processed_at AT TIME ZONE 'Asia/Kolkata')::date = DATE '2026-08-03'
+                     AND t.call_duration > 20
+                   ORDER BY t.account_id, t.processed_at DESC""", ids)
+            seen = set()
+            rows = [r for r in rows if r["account_id"] not in seen and not seen.add(r["account_id"])]
+        else:
+            rows = await conn.fetch(SELECT_SQL)
     finally:
         await conn.close()
     rows = sorted(rows, key=lambda r: r["processed_at"], reverse=True)[:limit]
